@@ -1,0 +1,997 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+date{}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Thesis Proposal
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\series default
+\size small
+\color black
+Submitted in partial fulfillment of the requirements for the degree of
+\size default
+\color inherit
+
+\begin_inset Newline newline
+\end_inset
+
+Ph.D.
+ in Computer Science
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+SpIRIT: Smart Identification of Refactoring opportuniTIes
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Ing.
+ Santiago A.
+ Vidal
+\end_layout
+
+\begin_layout Standard
+\align center
+Student
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Dra.
+ Claudia A.
+ Marcos
+\end_layout
+
+\begin_layout Standard
+\align center
+Advisor 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Dr.
+ Andrés Díaz Pace
+\end_layout
+
+\begin_layout Standard
+\align center
+Co-Advisor
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Address
+\align center
+Facultad de Ciencias Exactas
+\begin_inset Newline newline
+\end_inset
+
+Departamento de Computación y Sistemas
+\begin_inset Newline newline
+\end_inset
+
+Universidad Nacional del Centro de la Pcia.
+ de Bs.
+ As.
+\begin_inset Newline newline
+\end_inset
+
+December 2011
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Section
+System Evolution
+\end_layout
+
+\begin_layout Section
+Refactoring
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+EXPLICAR BAD SMELLS
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Related Works
+\end_layout
+
+\begin_layout Standard
+In this section we review different approaches for analyzing the evolution
+ of systems.
+\end_layout
+
+\begin_layout Standard
+Several approaches have been presented to analyze some aspects of the history
+ of systems.
+ Some of them try to discover bad smells in the source code in order to
+ propose refactorings to remove them.
+ 
+\end_layout
+
+\begin_layout Standard
+Chatzigeorgiou and Manakos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chatzigeorgiou2010"
+
+\end_inset
+
+ study the evolution of the bad smell of a system through its history.
+ Specifically, they analyze the occurrence of three kind of bad smell initially
+ presented by Fowler 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fowler1999"
+
+\end_inset
+
+.
+ This study identified that most of the bad smells were create when new
+ features are added to the systems.
+ Also, it identified that most of them were not removed.
+\end_layout
+
+\begin_layout Standard
+Hayashi et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Hayashi2006"
+
+\end_inset
+
+ propose a software agent that analyze the changes made by a developer in
+ a system.
+ If a change creates a bad smell the agent suggests a Fowler's refactoring
+ to be applied.
+ While some modifications, to be proposed by the agent, are formally defined
+ in this paper, it is not clear how the agent identifies the bad smell or
+ which kind of them are supported.
+\end_layout
+
+\begin_layout Standard
+Ratzinger et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ratzinger2005"
+
+\end_inset
+
+ extends the definition of bad smells to 
+\emph on
+change smells
+\emph default
+ in order to identify possible classes of a system to be refactorized.
+ This work proposes two change smells to identify coupling between classes.
+ Specifically, one of them identifies the situation in which a main class
+ of the systems is modified at the same time that other peripheral classes.
+ The other smell identifies the situation in which a class only define access
+ methods to its variables and other class implements features based on the
+ first class.
+ Once that a change smell is detected a Fowler's refactoring is proposed
+ to be applied.
+\end_layout
+
+\begin_layout Standard
+Tsantalis and Chatzigeorgiou 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tsantalis2011"
+
+\end_inset
+
+ follow the hypothesis that those fragments of code that were modified in
+ the past are more likely to be modified in the future.
+ Using this hypothesis the authors rank refactoring suggestions to solve
+ bad smell.
+ In this ranking, those refactorings whose target code was modified in the
+ past will have the highest priority.
+ To calculate the probability of change of a component the approach uses
+ historical volatility models taken from the field of financial markets.
+\end_layout
+
+\begin_layout Standard
+Tsantalis and Chatzigeorgiou also present approaches to identify state-checking
+ problems and the decomposition of large methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tsantalis2010,Tsantalis2011a"
+
+\end_inset
+
+.
+ In these approaches the refactorings proposed are ranked according the
+ impact of the refactorings on the code (i.e.
+ number of statements modified).
+\end_layout
+
+\begin_layout Standard
+Marinescu et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Marinescu2010"
+
+\end_inset
+
+ presents a tool to detect design problems through the use of bad smells.
+ For each design problem detected, the tool proposes a list of 
+\emph on
+refactorings tips
+\emph default
+ to be applied.
+\end_layout
+
+\begin_layout Standard
+Macia et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Macia2012,Macia2012a"
+
+\end_inset
+
+ analyze the impact of bad smells in the architectural design of systems.
+ They found that, in 60% of cases, the removal of a bad smell helps to improve
+ the architecture stopping it degradation.
+ Also, they identify that some kind of bad smells negatively affects the
+ evolution of systems.
+ For this reason, they identification during early stages of the development
+ of systems would decelerate the architecture degradation processes.
+\end_layout
+
+\begin_layout Standard
+Other approaches have dealt with the use of software metrics to discover
+ potential design problems in the source code.
+\end_layout
+
+\begin_layout Standard
+Demeyer et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Demeyer2000"
+
+\end_inset
+
+ propose an approach to identify which refactorings were applied during
+ the history of a system.
+ This work is based on heuristics that use different metrics such as the
+ total number of lines of code of a method or the number of hierarchy relationsh
+ips of a class.
+\end_layout
+
+\begin_layout Standard
+Gîrba et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Girba2004"
+
+\end_inset
+
+ present a technique to discover classes that should be refactorized.
+ This work is based on the hypothesis that those classes that were modified
+ more frequently in the past, are more likely to be modified in the future.
+ For this reason, this work analyze each class of a version of a system
+ using an algorithm that helps to determine the probability of change of
+ the class in future versions.
+ If the class is likely to change then it is marked as candidate class to
+ be refactored.
+ To measure the change of a class between versions only the addition or
+ deletion of methods is used.
+ The paper does not cover the analysis of possible problems in the classes
+ to be refactored or the suggestion of the refactorings that should be applied.
+\end_layout
+
+\begin_layout Standard
+Gîrba and Ducasse 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Girba2006"
+
+\end_inset
+
+ present a meta-model called Hismo to analyze the evolution of systems through
+ their history.
+ Hismo is constructed in a generic way (therefore, it can be used with any
+ programming language) and it models evolution as a first class entity.
+ The validation of this meta-model is conducted through it application to
+ different case studies.
+\end_layout
+
+\begin_layout Standard
+LinHui et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "LinHui2010"
+
+\end_inset
+
+ analyze the history of systems to identify the relationships between different
+ modules of an architecture.
+ Based on this information refactorings are proposed.
+ Additionally, an interactive process based on domain-knowledge is proposed
+ to apply the refactorings.
+\end_layout
+
+\begin_layout Standard
+Ratzinger et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ratzinger2007"
+
+\end_inset
+
+ propose the use of data mining techniques to predict the refactorings applicati
+on during the history of a system.
+ Several metrics are used in the identification such as size of a class,
+ number of authors of a class, complexity, number of bugs, etc.
+ Using these metrics the approach identify the refactorings that were applied
+ in the past.
+ After the training phase the approach predicts the number of refactorings
+ that could be applied in a future version.
+\end_layout
+
+\begin_layout Standard
+Schofield et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schofield2006"
+
+\end_inset
+
+ analyze the changes during the history of a system using heuristics.
+ These heuristics are based on different metrics, analysis of return of
+ inversions after an application of a refactorings, and differences of design
+ between different versions.
+\end_layout
+
+\begin_layout Standard
+Wong et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wong2011"
+
+\end_inset
+
+ propose an approach to detect violations in the modularity of components.
+ This detections is achieved by identifying which components had evolved
+ together during the history of a system.
+ In these cases the authors have the assumption that the component must
+ be very coupled and a violation to the modularity must exists.
+\end_layout
+
+\begin_layout Standard
+Xing and Stroulia 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xing2005"
+
+\end_inset
+
+ present an algorithm called UMLDiff to identify changes in the design between
+ two versions of a system.
+ The input of the algorithm are the UML meta-models of the classes to be
+ compared.
+ This algorithm is used in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Xing2003"
+
+\end_inset
+
+ to identify and classify those refactorings that were applied during the
+ history of a system.
+\end_layout
+
+\begin_layout Standard
+In order to identify the changes during the evolution of a system some approache
+s have presented 
+\end_layout
+
+\begin_layout Standard
+D'Ambros and Lanza 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "D'Ambros2009"
+
+\end_inset
+
+ present visualizations to analyze the evolution of a system based on its
+ different versions.
+ They present two groups of visualizations: 
+\emph on
+in the large
+\emph default
+, and 
+\emph on
+in the small
+\emph default
+.
+ The former focuses on identifying changes and different commits into a
+ class.
+ The latter focuses on finding bugs in the classes and also on analyzing
+ the size and complexity of them.
+ 
+\end_layout
+
+\begin_layout Standard
+D'Ambros and Lanza 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "D'Ambros2010"
+
+\end_inset
+
+ propose an approach to analyze the evolution of systems using different
+ kind of visualizations.
+ The visualizations help to calculate coupling between modules, correlation
+ between classes and complexity of classes.
+ An interesting feature of this work is that it focuses on the collaborative
+ work during the maintenance of a system through the addition of annotations
+ on the visualizations of the components.
+\end_layout
+
+\begin_layout Standard
+Lanza 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lanza2001"
+
+\end_inset
+
+ proposes the use of an evolution matrix to visualize the changes of classes
+ during the history of a system.
+ Each cell of the matrix contains a specific version of a class.
+ A class is visualized as a rectangle where the width and height are defined
+ based on metrics (e.g.
+ number of methods and number of instance variables).
+ This work also proposes a categorization of the classes visualized on the
+ matrix.
+ These categories are patterns found during the history and they are based
+ on the size of the classes, the percentage of modification between versions,
+ and the creation or deletion of classes.
+ 
+\end_layout
+
+\begin_layout Standard
+Pinzger et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Pinzger2005"
+
+\end_inset
+
+ use Kiviat diagrams to analyze the trend of several metrics during the
+ history of a system.
+ The approach focuses on two kind of graphics: the fist one shows metrics
+ for a module and the second one focuses on metrics related with the relationshi
+ps between the modules.
+\end_layout
+
+\begin_layout Standard
+Voinea et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Voinea2005"
+
+\end_inset
+
+ present a technique to visualize the evolution of systems using line-oriented
+ displays.
+ The different views presented have the aim of showing the changes of a
+ component during the versions of a system, indicating the developers that
+ made changes, establishing correlations between changes, and displaying
+ which components have a higher ratio of volatility.
+ 
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+Habria que dividir los trabajos relacionados segun:
+\end_layout
+
+\begin_layout Itemize
+Refactoring
+\end_layout
+
+\begin_layout Itemize
+Analisis de historia
+\end_layout
+
+\begin_layout Itemize
+Visualiacion
+\end_layout
+
+\begin_layout Plain Layout
+Indicating the gap in knowledge and possible limitations 
+\end_layout
+
+\begin_layout Itemize
+Few researchers have addressed the problem / issue / question of … 
+\end_layout
+
+\begin_layout Itemize
+Previous work has only focused on / been limited to / failed to address
+ … 
+\end_layout
+
+\begin_layout Itemize
+A basic / common / fundamental / crucial / major issue of … 
+\end_layout
+
+\begin_layout Itemize
+The central / core problem of 
+\end_layout
+
+\begin_layout Itemize
+A challenging / An intriguing / An important / A neglected area in the field
+ of … 
+\end_layout
+
+\begin_layout Itemize
+Current solutions to X are inconsistent / inadequate / incorrect / ineffective
+ / inefficient / over-simplistic / unsatisfactory 
+\end_layout
+
+\begin_layout Itemize
+Many hypotheses regarding X appear to be ill-defined / unfounded / not well
+ grounded / unsupported / questionable / disputable / debatable 
+\end_layout
+
+\begin_layout Itemize
+The characteristics of X are not well understood / are misunderstood / have
+ not been dealt with in depth.
+ 
+\end_layout
+
+\begin_layout Itemize
+It is not yet known / has not yet been established whether X can do Y.
+ 
+\end_layout
+
+\begin_layout Itemize
+X is still poorly / not widely understood.
+ 
+\end_layout
+
+\begin_layout Itemize
+X is often impractical / not feasible / costly … 
+\end_layout
+
+\begin_layout Itemize
+Techniques to solve X are computationally demanding / subject to high overheads
+ / time consuming / impractical / frequently unfeasible.
+ 
+\end_layout
+
+\begin_layout Itemize
+A major defect / difficulty / drawback / disadvantage / flaw of X is … 
+\end_layout
+
+\begin_layout Itemize
+One of the main issues in our knowledge of / what we know about X is a lack
+ of … 
+\end_layout
+
+\begin_layout Itemize
+This particular / specific area of X has been overlooked / has been neglected
+ / remains unclear … 
+\end_layout
+
+\begin_layout Itemize
+Despite this interest, no one to the best of our knowledge / as far as we
+ know has studied … 
+\end_layout
+
+\begin_layout Itemize
+Although this approach is interesting, it suffers from / fails to take into
+ account / does not allow for … 
+\end_layout
+
+\begin_layout Itemize
+In spite of / Despite its shortcomings, this method has been widely applied
+ to … 
+\end_layout
+
+\begin_layout Itemize
+However, there is still a need for / has been little discussion on … 
+\end_layout
+
+\begin_layout Itemize
+Moreover, other solutions / research programs / approaches have failed to
+ provide … 
+\end_layout
+
+\begin_layout Itemize
+Most studies have only focused / tended to focus on …
+\end_layout
+
+\begin_layout Itemize
+To date / Until now this methodology has only been applied to … 
+\end_layout
+
+\begin_layout Itemize
+There is still some / much / considerable controversy surrounding … 
+\end_layout
+
+\begin_layout Itemize
+There has been some disagreement concerning / regarding / with regard to
+ whether 
+\end_layout
+
+\begin_layout Itemize
+There is little / no general agreement on … 
+\end_layout
+
+\begin_layout Itemize
+The community has raised some issues / concerns about … 
+\end_layout
+
+\begin_layout Itemize
+Concerns have arisen / been raised which question / call into question the
+ validity of … 
+\end_layout
+
+\begin_layout Itemize
+In the light of recent events in x, there is now some / much / considerable
+ concern about …
+\end_layout
+
+\begin_layout Plain Layout
+Giving general panorama of past-to-present literature 
+\end_layout
+
+\begin_layout Itemize
+There is a considerable / vast amount of literature on … 
+\end_layout
+
+\begin_layout Itemize
+In the literature there are many / several / a surprising number of / few
+ examples of … 
+\end_layout
+
+\begin_layout Itemize
+What we know / is known about X is largely based on … 
+\end_layout
+
+\begin_layout Itemize
+Much / Not much / Very little is known about … 
+\end_layout
+
+\begin_layout Itemize
+Many / Few studies have been published on … [Ref] 
+\end_layout
+
+\begin_layout Itemize
+Various approaches have been proposed / put forward / suggested / hypothesized
+ to solve this issue [Ref].
+ 
+\end_layout
+
+\begin_layout Itemize
+X has been identified / indicated as being … [Ref] 
+\end_layout
+
+\begin_layout Itemize
+X has been shown / demonstrated / proved / found to be … [Ref] 
+\end_layout
+
+\begin_layout Itemize
+X has been widely investigated / studied / addressed … [Ref] 
+\end_layout
+
+\begin_layout Itemize
+Xs have been receiving / gaining much attention due to … 
+\end_layout
+
+\begin_layout Itemize
+In the traditional / classical approach, X is used to … 
+\end_layout
+
+\begin_layout Itemize
+In recent years there has been considerable / growing interest in … [Ref]
+\end_layout
+
+\begin_layout Itemize
+A growing body of literature has examined / investigated / studied / analyzed
+ / evaluated … [Ref] 
+\end_layout
+
+\begin_layout Itemize
+Much work on the potential of X has been carried out [Ref], yet / however
+ there are still some critical issues … [Ref]
+\end_layout
+
+\begin_layout Plain Layout
+Using the opinions of others to justify your criticism of someone’s work
+ 
+\end_layout
+
+\begin_layout Itemize
+As mentioned by Burgess [2011], Henri’s argument / approach / reasoning
+ relies too heavily on … 
+\end_layout
+
+\begin_layout Itemize
+As others have highlighted [34, 45, 60], Ozil’s approach raises many doubts
+ / is questionable … 
+\end_layout
+
+\begin_layout Itemize
+Several authors / experts / researchers / analysts have expressed doubts
+ about / called into question / challenged Guyot on the grounds that …..
+ 
+\end_layout
+
+\begin_layout Itemize
+Marchesi [2010] has already noted an inconsistency with Hahn’s claim / methodolo
+gy / method / results / approach … 
+\end_layout
+
+\begin_layout Itemize
+Friedrich’s approach [2013] has not escaped criticism / been subjected to
+ much criticism and has been strongly / vigorously challenged … 
+\end_layout
+
+\begin_layout Itemize
+Many experts now contend / believe / argue that rather than using Pappov’s
+ approach it might be more useful to … 
+\end_layout
+
+\begin_layout Itemize
+Their analysis has not found / met with / received general acceptance …
+ 
+\end_layout
+
+\begin_layout Itemize
+Some recent criticisms of / critical comments on Kim’s work are summarized
+ in [25].
+ 
+\end_layout
+
+\begin_layout Itemize
+The most well-known critic of Sadie’s findings is … who argued / proposed
+ / suggested that an alternative explanation might be that / could be found
+ in …
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Previous work has been limited to propose refactorings to those approaches
+ that look for bad smells.
+ The approaches that use software metrics usually only focus on discover
+ the problems but no solutions are proposed.
+ Also, few researchers have worked on software metrics related at package
+ or methods levels, instead, most of them are based on classes.
+ Additionally, there is still a need for analyze the relationship between
+ methods, classes, and packages in order to discover design flaws.
+\end_layout
+
+\begin_layout Standard
+A challenging issue is how to prioritize the refactorings to be proposed.
+ We think that has been little discussion on the creation of a ranking of
+ refactorings using several criteria and in the achievement of an analysis
+ of risks and benefits of the application of a refactoring.
+\end_layout
+
+\begin_layout Section
+Proposal
+\end_layout
+
+\begin_layout Section
+Refactoring Patterns Recognition 
+\end_layout
+
+\begin_layout Section
+State of Development
+\end_layout
+
+\begin_layout Section
+Task Schedule
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "references"
+options "acm"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
