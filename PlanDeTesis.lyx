@@ -149,7 +149,7 @@ SpIRIT: Smart Identification of Refactoring opportuniTIes
 
 \begin_layout Standard
 \align center
-Ing.
+Mg.
  Santiago A.
  Vidal
 \end_layout
@@ -238,11 +238,21 @@ Universidad Nacional del Centro de la Pcia.
 \begin_inset Newline newline
 \end_inset
 
-December 2011
+February 2012
 \begin_inset Newpage pagebreak
 \end_inset
 
 
+\end_layout
+
+\begin_layout Section*
+Abstract
+\end_layout
+
+\begin_layout Section*
+
+\lang spanish
+Resumen
 \end_layout
 
 \begin_layout Section
@@ -253,16 +263,624 @@ Introduction
 System Evolution
 \end_layout
 
-\begin_layout Section
-Refactoring
+\begin_layout Standard
+Once systems are developed and deployed, they will become progressively
+ less useful owing to changes in the environment 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Lehman1985"
+
+\end_inset
+
+.
+ This behavior causes software aging 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Parnas1994"
+
+\end_inset
+
+ and the need to evolve the system to new requirements preserving the architectu
+re and simplicity of the software.
+ This situation was identified by Lehman 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lehman1985"
+
+\end_inset
+
+ specifically by the following laws:
+\end_layout
+
+\begin_layout Itemize
+Continuing Change: A system that is used in a real-world environment must
+ be continually adapted, otherwise it becomes progressively less satisfactory.
+\end_layout
+
+\begin_layout Itemize
+Increasing Complexity: As a system is evolved, its complexity increases
+ unless work is done to maintain or reduce it.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
+An inference from these laws is that software maintenance is necessary in
+ order to avoid these problems and to simplify the evolution of systems.
+ Software maintenance is defined as:
+\end_layout
+
+\begin_layout Itemize
+The process of modifying a software system or component after delivery to
+ correct faults, improve performance or other attributes, or adapt to a
+ changed environment 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEE1999-Std610-12"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+The software product undergoes modification to code and associated documentation
+ due to a problem or the need for improvement.
+ The objective is to modify the existing software product while preserving
+ its integrity 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISOStd"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Maintenance activities have been categorized into four classes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lientz1980"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Adaptive: modification of software environment.
+\end_layout
+
+\begin_layout Itemize
+Perfective: implementation of new user requirements.
+\end_layout
+
+\begin_layout Itemize
+Corrective: reparation of errors.
+\end_layout
+
+\begin_layout Itemize
+Preventive: prevention of future problems.
+\end_layout
+
+\begin_layout Standard
+Some research has shown that approximately 75% of maintenance falls into
+ adaptive and perfective classes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lientz1980,Nosek"
+
+\end_inset
+
+.
+ That is to say that the addition of new user requirements or the modification
+ of the existing ones is one of the main problems of software evolution
+ and maintenance 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bennett2000"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+In order to make changes in a system, it is necessary to understand it.
+ This is hard to do because when a legacy system must be extended or adapted
+ some of the following problems may emerge 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Demeyer2003"
+
+\end_inset
+
+: the original developers are not available, obsolete programming techniques
+ or languages were used, large changes were applied without regard to the
+ original design, the documentation is incomplete or it does not exist,
+ there are no test cases, etc.
+ All of these problems make maintenance difficult and expensive.
+ Another attribute of the system that must be considered is its complexity.
+ The more complex a system is, the more expensive it is to maintain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Banker1993"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+For these reasons, in order to extend or adapt a legacy system, a reverse
+ engineering application is used 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Cross1992"
+
+\end_inset
+
+.
+ Reverse engineering is the process of analyzing a subject system to identify
+ the system’s components and their interrelationships and create representations
+ of the system in another form or at a higher level of abstraction.
+ Once the system is understood, new requirements can be added to the system
+ through re-engineering 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Cross1992"
+
+\end_inset
+
+.
+ Re-engineering is the examination and modification of a subject system
+ to reconstitute it in a new form and the subsequent implementation of the
+ new form.
+ This process is illustrated in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Addition-of-requirements"
+
+\end_inset
+
+.
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/ReverseEngineeringAndReengineering.eps
+	BoundingBox 25bp 595bp 375bp 827bp
+	clip
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Addition of requirements to a legacy system.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Addition-of-requirements"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Incorporating requirements involves the addition of new source code and/or
+ restructuring the existing code taking into account the maintainability
+ and modularity of the resulting code.
+ The technique known as refactoring 
+\begin_inset CommandInset citation
+LatexCommand citep
+key "Fowler1999"
+
+\end_inset
+
+ is used in order to achieve this goal.
+ Refactoring is the process of changing a software system in such a way
+ that it does not alter the external behavior of the code yet improves its
+ internal structure.
+ This process allows the restructuration of the source code improving the
+ time it takes and the effort needed to make future modifications of the
+ system.
+ Some benefits that are derived from the refactoring application are: reduction
+ of duplicate code, improvement of quality attributes such as the legibility
+ of the code, maintenance, or reduction of coupling.
+ For these reasons, refactoring can be seen as a viable strategy to deal
+ with software evolution.
+ Furthermore, some methodologies of agile development, such as XP 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Beck2004"
+
+\end_inset
+
+, present refactoring as one of the most important practices.
+\end_layout
+
+\begin_layout Standard
+The activities for the refactoring application can be summed up as follows
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mens2004"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Enumerate
+Identify the code fragments where the system should be refactored.
+\end_layout
+
+\begin_layout Enumerate
+Determine which refactorings should be applied to the identified code fragments.
+\end_layout
+
+\begin_layout Enumerate
+Check whether the refactoring to be applied preserves the external behavior
+ of the code.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Apply the refactoring.
+\end_layout
+
+\begin_layout Enumerate
+Assess the effects of the refactoring on quality characteristics of the
+ software (e.g., complexity, maintainability) or the process (e.g., productivity,
+ cost, effort).
+ 
+\end_layout
+
+\begin_layout Enumerate
+Maintain the consistency between the refactored code and the other software
+ artifacts (e.g., documentation, requirements, tests).
+\end_layout
+
+\begin_layout Standard
+With the goal of easily applying a refactoring, most of the current IDEs
+ (e.g., Eclipse
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
+http://www.eclipse.org/
+\end_layout
+
+\end_inset
+
+, NetBeans
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.netbeans.org/
+\end_layout
+
+\end_inset
+
+) include tools that support refactoring by allowing its application semi-automa
+tically.
+ These tools are useful because they increase productivity and reduce debugging
+ and testing 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "OConnor2005"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Improving Maintenance with Refactoring
+\end_layout
+
+\begin_layout Standard
+As mentioned above, the first activity of a refactoring process is the identific
+ation of the code fragments that should be refactorized in order to improve
+ its evolvability.
+ This activity is usually achieve by the use of code smells 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fowler1999"
+
+\end_inset
+
+.
+ Code smells are symptoms in the source code that usually allow the identificati
+on of a deeper problem.
+ In this way, the code smells acts as an anti-pattern indicating code that
+ should be improved.
+ Some of the symptoms used by code smells are duplicated code, methods or
+ classes too large, too many parameters, violations in the encapsulation
+ of a class, etc.
+ The most popular catalog of code smells is that proposed by Fowler and
+ Beck 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fowler1999"
+
+\end_inset
+
+ (Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:A-code-smell"
+
+\end_inset
+
+).
+ For each code smell, there is an associated refactoring (or a group of
+ them) to solve the problem.
+ In order to help the developer to find code smells in systems, several
+ tools have been presented such as PMD
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://pmd.sourceforge.net/
+\end_layout
+
+\end_inset
+
+ and FindBugs
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://findbugs.sourceforge.net/
+\end_layout
+
+\end_inset
+
+.
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="9cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Code Smells
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Within Classes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Comments, Dead Code, Duplicated Code, Inconsistent Names, Large Class, Long
+ Method, Long Parameter List, Speculative Generality, Type Embedded in Name,
+ Uncommunicative Name
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Between Classes
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Data Class, Data Clumps, Divergent Change, Feature Envy, Inappropriate Intimacy,
+ Lazy Class, Message Chains, Middle Man, Parallel Inheritance Hierarchies,
+ Primitive Obsession, Refused Bequest, Shotgun Surgery
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+A code smell catalog.
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:A-code-smell"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Also, the use of object-oriented metrics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chidamber1994"
+
+\end_inset
+
+ is useful to identify hot spots to be refactored.
+ Through the use of this kind of metrics several problems can be spotted
+ such as methods with high complexity or too many dependencies between classes.
+\end_layout
+
+\begin_layout Standard
+Nevertheless, the identification of code fragments that should be refactorized
+ is still a problem.
+ Many of the bad smell identified by the refactoring tools not always indicate
+ a problem.
+ For example, some long methods are not necessarily a design problem.
+ Also, the way in which a code smell should be refactored is not always
+ trivial.
+ In some case several restructurings of the code are needed in order to
+ ensure that the behavior of the code does not change 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mens2004"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Another problem is that when tools are used to detect hot spots that should
+ be refactored, they usually find a large number of them.
+ So, the developer does not know with certainty which of them should have
+ a higher priority because of they relevance.
+ 
+\end_layout
+
+\begin_layout Standard
+The determination of the set of refactorings to be applied in order to solve
+ a code smell is not trivial.
+ This is because the refactoring to be applied depend on the code smell
+ and the context in which the refactoring is applied.
+ For example, in some scenarios the application of the refactoring proposed
+ by the code smell is not possible.
+ So, an additional refactoring should be applied in order to enable the
+ application of the proposed refactoring.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, when a hot spot is found the developer does not know the costs
+ and benefits of refactoring it.
+ This analysis should be based in time to completion and a set of metrics
+ to show the developer the possible improvements in the quality of the source
+ code.
+\end_layout
+
+\begin_layout Standard
+For these reasons, 
+\color black
+we believe that it is desirable to have tools that provide better assistance
+ to the developer during the refactoring process detecting hot spots, prioritizi
+ng them, making automatic analysis of
+\color inherit
+ tradeoff and suggesting and applying refactorings.
+ 
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
 EXPLICAR BAD SMELLS
+\end_layout
+
+\begin_layout Plain Layout
+TIENE QUE QUEDAR BIEN CLARO CUALES SON LOS PROBLEMAS QUE VAMOS A ATACAR
+\end_layout
+
+\begin_layout Plain Layout
+Lo importante es discriminar: problemas concretos, hipotesis, enfoque de
+ solucion.
+\end_layout
+
+\begin_layout Plain Layout
+Los mayores problemas en el momento de realizar un refactoring son...
+ Nosotros buscaremos solucionar esos problemas en este trabajo.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+Problemas:
+\end_layout
+
+\begin_layout Itemize
+deteccion de los lugares a refactorizar en un sistema (hot spots)
+\end_layout
+
+\begin_layout Itemize
+priorizacion de los hot spots segun que tan criticos son para el sistema
+\end_layout
+
+\begin_layout Itemize
+Obtener un conjunto de posibles refactorings a aplicar
+\end_layout
+
+\begin_layout Itemize
+"analisis costo-beneficio de los distintos refactorings que pueden ser aplicados
+ para resolver el problema teniendo en cuenta las ventajas y desventajas
+ de cada uno
 \end_layout
 
 \end_inset
@@ -271,7 +889,7 @@ EXPLICAR BAD SMELLS
 \end_layout
 
 \begin_layout Section
-Related Works
+Related Work
 \end_layout
 
 \begin_layout Standard
@@ -295,7 +913,7 @@ key "Chatzigeorgiou2010"
 
 \end_inset
 
- study the evolution of the bad smell of a system through its history.
+ study the evolution of the bad smells of a system through its history.
  Specifically, they analyze the occurrence of three kind of bad smell initially
  presented by Fowler 
 \begin_inset CommandInset citation
@@ -319,8 +937,8 @@ key "Hayashi2006"
 
 \end_inset
 
- propose a software agent that analyze the changes made by a developer in
- a system.
+ propose a software agent that analyzes the changes made by a developer
+ in a system.
  If a change creates a bad smell the agent suggests a Fowler's refactoring
  to be applied.
  While some modifications, to be proposed by the agent, are formally defined
@@ -353,6 +971,43 @@ change smells
 \end_layout
 
 \begin_layout Standard
+Liu et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2011"
+
+\end_inset
+
+ analyze the relationships between a set of 11 bad smells with the goal
+ of proposing an order of the refactorings to be applied when more than
+ a bad smell was found in a fragment of code.
+ The sequence of refactorings proposed is based on different criteria that
+ allows a lower number of restructurings.
+ However, it does not consider other factors, such as the severity of bad
+ smells.
+ Owing to the algorithm used to calculate the sequence of refactorings rely
+ on a previous manual analysis of the dependencies between bad smell it
+ is not possible to consider other bad smells in the sequences.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+We analyze the relationships among different kinds of bad smells and their
+ influence on detection and resolution sequences.
+ We identify the need to arrange detection and resolution sequences of different
+ kinds of bad smells using a motivating example.
+ We also recommend a resolution sequence for commonly occurring bad smells,
+ and validate it on two nontrivial applications.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Tsantalis and Chatzigeorgiou 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -380,9 +1035,9 @@ key "Tsantalis2010,Tsantalis2011a"
 \end_inset
 
 .
- In these approaches the refactorings proposed are ranked according the
+ In these approaches the proposed refactorings are ranked according the
  impact of the refactorings on the code (i.e.
- number of statements modified).
+ number of modified statements).
 \end_layout
 
 \begin_layout Standard
@@ -412,12 +1067,12 @@ key "Macia2012,Macia2012a"
 \end_inset
 
  analyze the impact of bad smells in the architectural design of systems.
- They found that, in 60% of cases, the removal of a bad smell helps to improve
- the architecture stopping it degradation.
+ They found that, in 60% of cases, the removal of a bad smell helps the
+ architecture, stopping its degradation.
  Also, they identify that some kind of bad smells negatively affects the
  evolution of systems.
  For this reason, they identification during early stages of the development
- of systems would decelerate the architecture degradation processes.
+ of systems alleviate the architecture degradation process.
 \end_layout
 
 \begin_layout Standard
@@ -456,8 +1111,8 @@ key "Girba2004"
  For this reason, this work analyze each class of a version of a system
  using an algorithm that helps to determine the probability of change of
  the class in future versions.
- If the class is likely to change then it is marked as candidate class to
- be refactored.
+ If the class is likely to change, then it is marked as candidate class
+ to be refactored.
  To measure the change of a class between versions only the addition or
  deletion of methods is used.
  The paper does not cover the analysis of possible problems in the classes
@@ -540,10 +1195,10 @@ key "Wong2011"
 \end_inset
 
  propose an approach to detect violations in the modularity of components.
- This detections is achieved by identifying which components had evolved
+ This detection is achieved by identifying which components had evolved
  together during the history of a system.
  In these cases the authors have the assumption that the component must
- be very coupled and a violation to the modularity must exists.
+ be very coupled and a violation to the modularity must exist.
 \end_layout
 
 \begin_layout Standard
@@ -666,7 +1321,7 @@ key "Voinea2005"
 
  present a technique to visualize the evolution of systems using line-oriented
  displays.
- The different views presented have the aim of showing the changes of a
+ The different views presented have the goal of showing the changes of a
  component during the versions of a system, indicating the developers that
  made changes, establishing correlations between changes, and displaying
  which components have a higher ratio of volatility.
@@ -951,23 +1606,55 @@ The most well-known critic of Sadie’s findings is … who argued / proposed
 \begin_layout Standard
 Previous work has been limited to propose refactorings to those approaches
  that look for bad smells.
- The approaches that use software metrics usually only focus on discover
+ The approaches that use software metrics usually only focus on discovering
  the problems but no solutions are proposed.
- Also, few researchers have worked on software metrics related at package
+ Also, few researchers have worked on software metrics related to package
  or methods levels, instead, most of them are based on classes.
- Additionally, there is still a need for analyze the relationship between
+ Additionally, there is still a need for analyzing the relationship between
  methods, classes, and packages in order to discover design flaws.
 \end_layout
 
 \begin_layout Standard
 A challenging issue is how to prioritize the refactorings to be proposed.
- We think that has been little discussion on the creation of a ranking of
- refactorings using several criteria and in the achievement of an analysis
- of risks and benefits of the application of a refactoring.
+ We think that has been little discussion on the ranking of refactorings
+ using several criteria and in the achievement of risk-benefit analysis
+ of refactorings.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+It is evident that not all refactoring have the same importance or effect
+ in a given situation.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
 Proposal
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Aca tenemos que poner la hipotesis de la historia y otras hipotesis que
+ haya
+\end_layout
+
+\begin_layout Plain Layout
+Multiplataforma, para eso usaremos Moose
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -980,6 +1667,59 @@ State of Development
 
 \begin_layout Section
 Task Schedule
+\end_layout
+
+\begin_layout Standard
+In this section we describe the activities that must be accomplished in
+ order to finish the proposed approach:
+\end_layout
+
+\begin_layout Itemize
+Design and implementation of the Spirit user interface.
+ Time estimated: 2 months.
+\end_layout
+
+\begin_layout Itemize
+Design and implementation of the Spirit mechanisms to detect hotspots in
+ the history to be refactored.
+ Time estimated: 4 months.
+\end_layout
+
+\begin_layout Itemize
+Design and implementation of the Spirit mechanisms to prioritize hotspots
+ based on urgency.
+ Time estimated: 2 months.
+\end_layout
+
+\begin_layout Itemize
+Design and implementation of the Spirit mechanisms to rank refactorings
+ to be applied to a hotspot based on risk-analysis.
+ Time estimated: 5 months.
+\end_layout
+
+\begin_layout Itemize
+Implementation of strategies to visualize hotspots in the history.
+ Time estimated: 2 months.
+\end_layout
+
+\begin_layout Itemize
+Experimentation with systems to evaluate and validate the approach.
+ Time estimated: 3 months.
+\end_layout
+
+\begin_layout Itemize
+Analysis of the experimentation results.
+ Time estimated: 1 month.
+\end_layout
+
+\begin_layout Itemize
+Publication of results (done simultaneously with the others tasks).
+ 
+\end_layout
+
+\begin_layout Itemize
+Redaction of a thesis report.
+ Time estimated: 3 months.
 \end_layout
 
 \begin_layout Standard

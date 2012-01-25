@@ -1,0 +1,2548 @@
+%!PS-Adobe-3.0
+%%Title: Visio-Reingenieria Ingenieria reversa refactorng.vsd
+%%Creator: PScript5.dll Version 5.2.2
+%%CreationDate: 4/5/2011 13:16:15
+%%For: Santiago
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%Orientation: Portrait
+%%PageOrder: Special
+%%DocumentNeededResources: (atend)
+%%DocumentSuppliedResources: (atend)
+%%DocumentData: Clean7Bit
+%%TargetDevice: () (52.3) 320
+%%LanguageLevel: 1
+%%EndComments
+
+%%BeginDefaults
+%%PageBoundingBox: 0 0 595 842
+%%ViewingOrientation: 1 0 0 1
+%%EndDefaults
+
+
+%%BeginProlog
+%%BeginResource: file Pscript_WinNT_ErrorHandler 5.0 0
+/currentpacking where{pop/oldpack currentpacking def/setpacking where{pop false
+setpacking}if}if/$brkpage 64 dict def $brkpage begin/prnt{dup type/stringtype
+ne{=string cvs}if dup length 6 mul/tx exch def/ty 10 def currentpoint/toy exch
+def/tox exch def 1 setgray newpath tox toy 2 sub moveto 0 ty rlineto tx 0
+rlineto 0 ty neg rlineto closepath fill tox toy moveto 0 setgray show}bind def
+/nl{currentpoint exch pop lmargin exch moveto 0 -10 rmoveto}def/=={/cp 0 def
+typeprint nl}def/typeprint{dup type exec}readonly def/lmargin 72 def/rmargin 72
+def/tprint{dup length cp add rmargin gt{nl/cp 0 def}if dup length cp add/cp
+exch def prnt}readonly def/cvsprint{=string cvs tprint( )tprint}readonly def
+/integertype{cvsprint}readonly def/realtype{cvsprint}readonly def/booleantype
+{cvsprint}readonly def/operatortype{(--)tprint =string cvs tprint(-- )tprint}
+readonly def/marktype{pop(-mark- )tprint}readonly def/dicttype{pop
+(-dictionary- )tprint}readonly def/nulltype{pop(-null- )tprint}readonly def
+/filetype{pop(-filestream- )tprint}readonly def/savetype{pop(-savelevel- )
+tprint}readonly def/fonttype{pop(-fontid- )tprint}readonly def/nametype{dup
+xcheck not{(/)tprint}if cvsprint}readonly def/stringtype{dup rcheck{(\()tprint
+tprint(\))tprint}{pop(-string- )tprint}ifelse}readonly def/arraytype{dup rcheck
+{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}forall(])
+tprint}ifelse}{pop(-array- )tprint}ifelse}readonly def/packedarraytype{dup
+rcheck{dup xcheck{({)tprint{typeprint}forall(})tprint}{([)tprint{typeprint}
+forall(])tprint}ifelse}{pop(-packedarray- )tprint}ifelse}readonly def/courier
+/Courier findfont 10 scalefont def end errordict/handleerror{systemdict begin
+$error begin $brkpage begin newerror{/newerror false store vmstatus pop pop 0
+ne{grestoreall}if errorname(VMerror)ne{showpage}if initgraphics courier setfont
+lmargin 720 moveto errorname(VMerror)eq{userdict/ehsave known{clear userdict
+/ehsave get restore 2 vmreclaim}if vmstatus exch pop exch pop PrtVMMsg}{
+(ERROR: )prnt errorname prnt nl(OFFENDING COMMAND: )prnt/command load prnt
+$error/ostack known{nl nl(STACK:)prnt nl nl $error/ostack get aload length{==}
+repeat}if}ifelse systemdict/showpage get exec(%%[ Error: )print errorname
+=print(; OffendingCommand: )print/command load =print( ]%%)= flush}if end end
+end}dup 0 systemdict put dup 4 $brkpage put bind readonly put/currentpacking
+where{pop/setpacking where{pop oldpack setpacking}if}if
+%%EndResource
+%%BeginProcSet: Pscript_Res_Emul 5.0 0
+/defineresource where{pop}{userdict begin/defineresource{userdict/Resources 2
+copy known{get begin}{15 dict dup begin put}ifelse exch readonly exch
+currentdict 1 index known not{dup 30 dict def}if load 3 -1 roll 2 index put
+end}bind readonly def/findresource{userdict/Resources get exch get exch get}
+bind readonly def/resourceforall{pop pop pop pop}bind readonly def
+/resourcestatus{userdict/Resources 2 copy known{get exch 2 copy known{get exch
+known{0 -1 true}{false}ifelse}{pop pop pop false}ifelse}{pop pop pop pop false}
+ifelse}bind readonly def end}ifelse
+%%EndProcSet
+userdict /Pscript_WinNT_Incr 230 dict dup begin put
+%%BeginResource: file Pscript_FatalError 5.0 0
+userdict begin/FatalErrorIf{{initgraphics findfont 1 index 0 eq{exch pop}{dup
+length dict begin{1 index/FID ne{def}{pop pop}ifelse}forall/Encoding
+{ISOLatin1Encoding}stopped{StandardEncoding}if def currentdict end
+/ErrFont-Latin1 exch definefont}ifelse exch scalefont setfont counttomark 3 div
+cvi{moveto show}repeat showpage quit}{cleartomark}ifelse}bind def end
+%%EndResource
+userdict begin/PrtVMMsg{vmstatus exch sub exch pop gt{[
+(La impresora no tiene suficiente memoria disponible para este trabajo.)100 500
+(Realice una de las siguientes operaciones e intente imprimir de nuevo:)100 485
+(Escoja "Optimizar para portabilidad" como formato de salida.)115 470
+(En el panel Configuración de dispositivo, compruebe que "Memoria PostScript disponible" tiene el valor correcto.)
+115 455(Reduzca el número de fuentes del documento.)115 440
+(Imprima el documento por partes.)115 425 12/Times-Roman showpage
+(%%[ PrinterError: Low Printer VM ]%%)= true FatalErrorIf}if}bind def end
+version cvi 2016 ge{/VM?{pop}bind def}{/VM? userdict/PrtVMMsg get def}ifelse
+105000 VM?
+%%BeginResource: file Pscript_Win_Basic 5.0 0
+/d/def load def/,/load load d/~/exch , d/?/ifelse , d/!/pop , d/`/begin , d/^
+/index , d/@/dup , d/+/translate , d/$/roll , d/U/userdict , d/M/moveto , d/-
+/rlineto , d/&/currentdict , d/:/gsave , d/;/grestore , d/F/false , d/T/true ,
+d/N/newpath , d/E/end , d/Ac/arc , d/An/arcn , d/A/ashow , d/D/awidthshow , d/C
+/closepath , d/V/div , d/O/eofill , d/L/fill , d/I/lineto , d/-c/curveto , d/-M
+/rmoveto , d/+S/scale , d/Ji/setfont , d/Lc/setlinecap , d/Lj/setlinejoin , d
+/Lw/setlinewidth , d/Lm/setmiterlimit , d/sd/setdash , d/S/show , d/LH/showpage
+, d/K/stroke , d/W/widthshow , d/R/rotate , d/L2? false/languagelevel where{pop
+languagelevel 2 ge{pop true}if}if d L2?{/xS/xshow , d/yS/yshow , d/zS/xyshow ,
+d}if/b{bind d}bind d/bd{bind d}bind d/xd{~ d}bd/ld{, d}bd/bn/bind ld/lw/Lw ld
+/lc/Lc ld/lj/Lj ld/sg/setgray ld/ADO_mxRot null d/self & d/OrgMx matrix
+currentmatrix d/reinitialize{: OrgMx setmatrix[/TextInit/GraphInit/UtilsInit
+counttomark{@ where{self eq}{F}?{cvx exec}{!}?}repeat cleartomark ;}b
+/initialize{`{/Pscript_Win_Data where{!}{U/Pscript_Win_Data & put}?/ADO_mxRot ~
+d/TextInitialised? F d reinitialize E}{U/Pscript_Win_Data 230 dict @ ` put
+/ADO_mxRot ~ d/TextInitialised? F d reinitialize}?}b/terminate{!{& self eq
+{exit}{E}?}loop E}b/suspend/terminate , d/resume{` Pscript_Win_Data `}b U `
+/lucas 21690 d/featurebegin{countdictstack lucas[}b/featurecleanup{stopped
+{cleartomark @ lucas eq{! exit}if}loop countdictstack ~ sub @ 0 gt{{E}repeat}
+{!}?}b E/snap{transform 0.25 sub round 0.25 add ~ 0.25 sub round 0.25 add ~
+itransform}b/dsnap{dtransform round ~ round ~ idtransform}b/nonzero_round{@ 0.5
+ge{round}{@ -0.5 lt{round}{0 ge{1}{-1}?}?}?}b/nonzero_dsnap{dtransform
+nonzero_round ~ nonzero_round ~ idtransform}b U<04>cvn{}put/rr{1 ^ 0 - 0 ~ -
+neg 0 - C}b/irp{4 -2 $ + +S fx 4 2 $ M 1 ^ 0 - 0 ~ - neg 0 -}b/rp{4 2 $ M 1 ^ 0
+- 0 ~ - neg 0 -}b/solid{[]0 sd}b/g{@ not{U/DefIf_save save put}if U/DefIf_bool
+2 ^ put}b/DefIf_El{if U/DefIf_bool get not @{U/DefIf_save get restore}if}b/e
+{DefIf_El !}b/UDF{L2?{undefinefont}{!}?}b/UDR{L2?{undefineresource}{! !}?}b
+/freeVM{/Courier findfont[40 0 0 -40 0 0]makefont Ji 2 vmreclaim}b/hfRedefFont
+{findfont @ length dict `{1 ^/FID ne{d}{! !}?}forall & E @ ` ~{/CharStrings 1
+dict `/.notdef 0 d & E d}if/Encoding 256 array 0 1 255{1 ^ ~/.notdef put}for d
+E definefont !}bind d/hfMkCIDFont{/CIDFont findresource @ length 2 add dict `{1
+^ @/FID eq ~ @/XUID eq ~/UIDBase eq or or{! !}{d}?}forall/CDevProc ~ d/Metrics2
+16 dict d/CIDFontName 1 ^ d & E 1 ^ ~/CIDFont defineresource ![~]composefont !}
+bind d
+%%EndResource
+%%BeginResource: file Pscript_Win_Utils_L1 5.0 0
+/rf{N rp L}b/fx{1 1 dtransform @ 0 ge{1 sub 1}{1 add -0.25}? 3 -1 $ @ 0 ge{1
+sub 1}{1 add -0.25}? 3 1 $ 4 1 $ idtransform 4 -2 $ idtransform}b/BZ{4 -2 $
+snap + +S fx rf}b/rs{N rp C K}b/rc{N rp clip N}b/UtilsInit{}b/setcolorspace{!}b
+/scol{[/setgray/setrgbcolor/setcolor/setcmykcolor/setcolor/setgray]~ get cvx
+exec}b/colspRefresh{}b/AddFontInfoBegin{/FontInfo 8 dict @ `}bind d/AddFontInfo
+{/GlyphNames2Unicode 16 dict d/GlyphNames2HostCode 16 dict d}bind d
+/AddFontInfoEnd{E d}bind d
+%%EndResource
+end
+%%EndProlog
+
+%%BeginSetup
+statusdict begin (%%[ ProductName: ) print product print ( ]%%)= flush end
+[ 1 0 0 1 0 0 ] false Pscript_WinNT_Incr dup /initialize get exec
+featurebegin{
+%%BeginNonPPDFeature: JobTimeout 0
+0 /languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/JobTimeout  4 -1 roll put setuserparams}{statusdict/setjobtimeout get exec}ifelse
+%%EndNonPPDFeature
+}featurecleanup
+
+featurebegin{
+%%BeginNonPPDFeature: WaitTimeout 300
+300 /languagelevel where{pop languagelevel}{1}ifelse 2 ge{1 dict dup/WaitTimeout 4 -1 roll put setuserparams}{statusdict/waittimeout 3 -1 roll put}ifelse
+%%EndNonPPDFeature
+}featurecleanup
+
+featurebegin{
+%%BeginFeature: *Resolution 600dpi
+
+%%EndFeature
+}featurecleanup
+featurebegin{
+%%BeginFeature: *PageSize A4
+a4
+%%EndFeature
+}featurecleanup
+1 setlinecap 1 setlinejoin
+/mysetup [ 72 600 V 0 0 -72 600 V 0 842.0003 ] def 
+%%EndSetup
+
+userdict begin /VMsave save def end
+%%Page: 1 1
+%%PageBoundingBox: 0 0 595 842
+%%EndPageComments
+%%BeginPageSetup
+/DeviceRGB dup setcolorspace /colspABC exch def
+mysetup concat colspRefresh
+%%EndPageSetup
+
+0 0 0 1 scol 27000 VM?
+11 dict begin
+/FontName /TT20o00 def
+/FontMatrix [1 2048 div 0 0 1 2048 div 0 0 ] def
+/Encoding  256 array 0 1 255 {1 index exch /.notdef put} for  def
+/PaintType 0 def
+/FontType 1 def
+/FontBBox { 0 0 0 0 } def
+AddFontInfoBegin
+AddFontInfo
+AddFontInfoEnd
+currentdict
+end
+
+currentfile eexec
+9e67edc6f3ddb54d987dfb0ad4392351758f10eff40ef287a1387512b853
+046f6e589e2c97d48fdb38d54b68757f1dc48a239a5da408c2bfd473eac0
+3ab6b0025b87770e5f3b06904c282a51ee189ce871258447b47d83c5fad2
+326aa26e4c7f0ff21a841a463c859f102729802bbfa6ac0c2766f6b09317
+a247f37b339b99b7588bee2e861ed9de7a8990c512001ce21da50f4516f7
+553cc5df31ac42402c2b4e2b106773ccdac45a8dee89d3d35ce4f9afb022
+79592359efd5293f35df57216c84236a1347e922a61c45691be2c137b65f
+08f4b3113b88e58dce4bd559387db7a00fe16460e5ab8fc835ea6ed9b938
+610bff26bc7ddabb1afefe7bcbbd8d3032e7d8a1995dcb29df16291a65a0
+b58f3c89a616bfc03a75f518fa62824a56881aca73765182fd4fc9b7a67b
+bfaff172b6ee07966794ad8c133d57c97c6ce8f627dfb0af2398588f1602
+c47c64178eb285a43d01dcfd90f4f34bbbec892e3e97d97eb3bb6e532869
+f69d4d58485acb379dc237759c0f826426e40d806803619c619fc3326fb1
+d7aa133b3cf583e022c5677db32288ef12694bd28f92ac4fcec45afda490
+f2a39ac60c37a679e8aca6c2e503f06b5a37bfd5ebf71c599bf913c22690
+76eef4bfb2b9e33f9ddcb61c9a89bbde4127e95ef560f524e743073932dd
+3d60f03d8819bb1884cc896ca58290923929f4e8e77085871c8592b5eb87
+85c7fd1df3958502e217702b80923eca192104d54a6e3ae4aeef880eb761
+f5f99356c3087adf541361be11b8e8b87a54fa9099322944111da1b5bd06
+7c651eb76a64dd455054296fe3bfbcc7a7d7f3a03b009a8c1b3c3ea745a5
+06c30e19a8f8774d9d36956d2d8171671d3f7b7ca10f662929a45491516c
+fe6c89ec97d305834e35f7e8d26f76b5a7435619d7d7b6ac841a4ddda1da
+2b4a330a9a5830bc053f2de80fdc8259b77e76096c5d905a0f0cc20378ca
+e230e6b89ff5232c0603122b16ca9487d011bb1dd5e03eb16ddb8e443efe
+9ff03c389dd4cd14ae0e0bdb28866022e2e5b066c4aea6a32d8d20a226b3
+96644844dffa8d69878c3344d4c3b9ad3fb28d592d04f6c51460eef5b3e1
+799767a0a030675c23153511815d2541a5f74d1944d939fa91b8a70b3f9c
+e22b6800378aad63ac002ff6d599318cbb666f9f136004b9c7538d548ebc
+e7cca792cee217434c1ed79e5a9f93d807f09f6071a4dedab6994d11057d
+44e780da39cac2cec63d8c8e58e2acb41d2abf44760d6a9a5ca7da5b5578
+111131f7068880bc32ba8ba224cedce727118b613cfbdb93134aba68a4b8
+eb5d6e55112faaedf55ec468d6ccda4e31b8aa4d0ece5ac0978a6c35aacb
+3ec748161730877570ae35e92442c4c623e5fb80168ef41695c88e246e7b
+a68f4b2e6052ba7f942ab78a7e7029899ebe6ad4db12054a700603844285
+756c092283b6518872c9f44b443cbc9c715d03640cd63816166059bcd986
+33204f7280ebbc3fb97fcf38332c062cf48bff0eaab799e2b83bebc66189
+d2a4ffd6a55362581ab041833e534655c9c7bc33d26c7e29afa72c123142
+f62b03e2792777a4e01481029a28050cad461aab097821c7024e2f2b2a15
+bd24d60a48d551590853e9ab4bdefe576240bbb6144accaa56522647d38d
+6764304e71c6eba0d015d3dd3601d75af0293fe239e979c8a24aadfed70a
+67cfd21bb50ae99a9e77f4c31f219891926390a4d51cf9a1f47db97e9d66
+5bd6f92194506c2f8fd67dd8c5d3a29857812bd4a6c792b5d281027795f2
+ba0de7d6e2e3f7f3d3dfddec06f2a34d3052891726518f6ad06cb991fb4f
+a483ce6a35e22e911ce7db1f01194df91ee277d0ae63a94bc583ed7fcd21
+d7e903ddb9505939e15480b801163988eacd7dd5fd1f236145f6b5087b15
+2958c6a95e3f0168b128f0d4f17f2658c174aea4c4eda5a7948c37bec925
+61904b6bdc749e854c96bb946a8c0552137a2a8a65a1d9bf3e9c0d048568
+5e0417df8643dbad7ab80fb6c7a4f662f32b49992577698a725d3405f950
+b280c9d44f220d326a20cd78d4ae126305f008494499f750bb037f7f9c74
+3f9df27a92c323a61af7bc217bcbc58d06580c8bc32b3c6e4fd04b40cf21
+63674c308ba2a2bf9e273e0c7c4832c006dd348d664884df70a3c255eb15
+14b286d038c39e48dc5adf086ca319ceaf24d126f7f5a287dbee04e43a54
+30834a265505fa00a7bde8f161c72931b692fb67527f786a9158d10d44c5
+75cc43841632242eb20e0096cf76dd0ef4588e9ff435e8e53795870c51a3
+75030bf20a16fa391798fc7a5bd453666a03c63f3b402b15e306079f0b3a
+a4bd74e735d68829e3f8abcaf02b93a7d4c9b377c360e162328e6e2ca2bf
+499b33cbbc2cf38cbdc3f4af5bd00417ed665347b100bee3a5a5ef0254b6
+ad79e4ba6074467e2b6b4ec55cdb23fd09e5817e96fea50a2693b607e18f
+aae73d803c20998a3f98ff9399ea58ea344ce4e1d95c28f84a057b922050
+0f5108ddada75a1aff0f82e21dcf6eb4e476408d469f1540d5068fcfac5a
+453b445563c6f5dda2f8426604caca65546d69a4ceb471ba33efde9155ea
+4910908a1ba53b71ca3d81d349ead54ab697614c7e86fc69aba806c3a1e3
+8fad3239596b64055fdf28f0d5c7b21904715502bd581bc9158095a1fa72
+52b88ce0492e4b1585d0ce287827f411e6c7468bfbda7d7aee5e3883c55d
+c113ded3f93b39aaf8281f9e5e722df8f19f01c0878b7878280a0efe5221
+8746de0b5f34932d2fd54f64827ce0c199bc6a9c82449a841233db4993e4
+1faf83542bc1b11db805451b1ca62b1956c15be70000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+/TT20o00 findfont /Encoding get
+dup 1 /L put
+dup 2 /e put
+dup 3 /g put
+dup 4 /a put
+dup 5 /c put
+dup 6 /y put
+dup 7 /space put
+dup 8 /s put
+dup 9 /t put
+dup 10 /m put
+pop
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Text 5.0 0
+/TextInit{TextInitialised? not{/Pscript_Windows_Font & d/TextInitialised? T d
+/fM[1 0 0 1 0 0]d/mFM matrix d/iMat[1 0 0.212557 1 0 0]d}if}b/copyfont{1 ^
+length add dict `{1 ^/FID ne{d}{! !}?}forall & E}b/EncodeDict 11 dict d/bullets
+{{/bullet}repeat}b/rF{3 copyfont @ ` ~ EncodeDict ~ get/Encoding ~ 3 ^/0 eq{&
+/CharStrings known{CharStrings/Eth known not{! EncodeDict/ANSIEncodingOld get}
+if}if}if d E}b/mF{@ 7 1 $ findfont ~{@/Encoding get @ StandardEncoding eq{! T}{
+{ISOLatin1Encoding}stopped{! F}{eq}?{T}{@ ` T 32 1 127{Encoding 1 ^ get
+StandardEncoding 3 -1 $ get eq and}for E}?}?}{F}?{1 ^ ~ rF}{0 copyfont}? 6 -2 $
+! ! ~ !/pd_charset @ where{~ get 128 eq{@ FDV 2 copy get @ length array copy
+put pd_CoverFCRange}if}{!}? 2 ^ ~ definefont fM 5 4 -1 $ put fM 4 0 put fM
+makefont Pscript_Windows_Font 3 1 $ put}b/sLT{: Lw -M currentpoint snap M 0 - 0
+Lc K ;}b/xUP null d/yUP null d/uW null d/xSP null d/ySP null d/sW null d/sSU{N
+/uW ~ d/yUP ~ d/xUP ~ d}b/sU{xUP yUP uW sLT}b/sST{N/sW ~ d/ySP ~ d/xSP ~ d}b/sT
+{xSP ySP sW sLT}b/sR{: + R 0 0 M}b/sRxy{: matrix astore concat 0 0 M}b/eR/; , d
+/AddOrigFP{{&/FontInfo known{&/FontInfo get length 6 add}{6}? dict `
+/WinPitchAndFamily ~ d/WinCharSet ~ d/OrigFontType ~ d/OrigFontStyle ~ d
+/OrigFontName ~ d & E/FontInfo ~ d}{! ! ! ! !}?}b/mFS{makefont
+Pscript_Windows_Font 3 1 $ put}b/mF42D{0 copyfont `/FontName ~ d 2 copy ~ sub 1
+add dict `/.notdef 0 d 2 copy 1 ~{@ 3 ^ sub Encoding ~ get ~ d}for & E
+/CharStrings ~ d ! ! & @ E/FontName get ~ definefont}b/mF42{15 dict ` @ 4 1 $
+FontName ~ d/FontType 0 d/FMapType 2 d/FontMatrix[1 0 0 1 0 0]d 1 ^ 254 add 255
+idiv @ array/Encoding ~ d 0 1 3 -1 $ 1 sub{@ Encoding 3 1 $ put}for/FDepVector
+Encoding length array d/CharStrings 2 dict `/.notdef 0 d & E d 0 1 Encoding
+length 1 sub{@ @ 10 lt{! FontName length 1 add string}{100 lt{FontName length 2
+add string}{FontName length 3 add string}?}? @ 0 FontName @ length string cvs
+putinterval @ 3 -1 $ @ 4 1 $ 3 string cvs FontName length ~ putinterval cvn 1 ^
+256 mul @ 255 add 3 -1 $ 4 ^ findfont mF42D FDepVector 3 1 $ put}for & @ E
+/FontName get ~ definefont ! ! ! mF}b/mF_OTF_V{~ ! ~ ! 4 -1 $ ! findfont 2 ^ ~
+definefont fM @ @ 4 6 -1 $ neg put 5 0 put 90 matrix R matrix concatmatrix
+makefont Pscript_Windows_Font 3 1 $ put}b/mF_TTF_V{3{~ !}repeat 3 -1 $ !
+findfont 1 ^ ~ definefont Pscript_Windows_Font 3 1 $ put}b/UmF{L2?
+{Pscript_Windows_Font ~ undef}{!}?}b/UmF42{@ findfont/FDepVector get{/FontName
+get undefinefont}forall undefinefont}b
+%%EndResource
+end reinitialize
+F /F0 0 /0 F /TT20o00 mF 
+/F0S63YFFFFFF9C F0 [99.941 0 0 -100 0 0 ] mFS
+F0S63YFFFFFF9C Ji 
+245 290 M <01>S 
+301 290 M <02>S  356 290 M <03>S  412 290 M <04>S  468 290 M <05>S  518 290 M <06>S  568 290 M <07>S  595 290 M <08>S  645 290 M <06>S  695 290 M <08>S  745 290 M <09>S  773 290 M <02>S  829 290 M <0A>S  
+4500 VM?
+
+currentfile eexec
+9e67edc6b841302ace1159f70091fb9a7f9720c8a176d4bbe0cbc7b824e2
+4ab9e796fd4c0a067d82157a60f9f44499c275c4a4d22ada1f84795e0f81
+bb45921070cacaef4643d6505c4ba5850c57ce2f96277a72ed427bbdeb8a
+b1c20b1d941fd409eea7ad741a9f44b5a3b9db4411402f3c64b004bab326
+33c37b268756a4ac08212c856605aa254908305c9e78dab443f38846c269
+0e58d7de1ffb06fd713b01f127b87c3787737a7afb10af65af228688be62
+fbf366e4ecdbc1940f75a5c9ee6bf65bc80f89fd53aef2369de6a28ab2c0
+dd5304cf7ba1b915d2782330a347c11ed160896b4ea78bff74835db2e3b5
+08151657c7938bfb736228316e505a0a5d8c847128ab88ec53a74090c887
+8c62919cec31307f7f5d2582b7571d4173374b552a634c6663ab647dac93
+4d12f9240044aee0a36fe308798a8b9b2d5968d69e470e1e6458ea37ae3a
+c57d808c1213f2c30d0b40ce9d19fbb97998c8c0565cffdcee64f2066b7a
+1f57a0091d27787a6d79b6f7aaed13ea5d88a8a5cd2a16a2996e60e9f786
+0d7a6ceffb9c3d91a7d8c31aa75d47c1f70b6682aa6f4a06900e62a2f03f
+3442a822d8a5cc85f50b3b1ea50b182a8f8a07e27e95d8743653db982325
+d3dea47b6929cfff8645f0f9ef1f5d678b434083e9295b74d4b0d92a2de7
+4bc0e3708776abf4e983433d5006122ee42b3a85eed0d4c05fd3bd292645
+3b1f7c06b4f95b53e80a93fee1e1d283713c2f4470761dc2d1080d655b20
+fd6e754f9dc1f86bdd0db30a6db4e40b8b7500467ad2c5b6e3913b5a1935
+07cabb47419d5864ccb5187186e5947c9a781767807504a08d78f5c0d842
+5c07df28dac555dd0ab0bc28a38ec9610ec8ac836fec340199c88a3e15df
+b55c121cf6e6d30060ebce71f8636b91f8bf4b127fa80f8165d3ce4d9a03
+1db4b1aa47fb4709000ecc14938dc5a880e153b95a628f4cee12fa6c7a65
+8f90ab6a310c071690cdff85d99bc88eb20f9a6f79ff36d3c0dd90c98530
+ae52e11bed3173acf94fb264f7b8350b18ce648448974cb2ba012aac8fd1
+adaeed61b1d45930a595b04bbdb3f546959adaa3d78a35898ca160b4cbcc
+7c68de4cd81f3830185aefc4847e2b56940000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+/TT20o00 findfont /Encoding get
+dup 11 /S put
+dup 12 /w put
+dup 13 /i put
+dup 14 /h put
+dup 15 /n put
+pop
+2270 253 M <0B>S 
+2337 253 M <06>S  2387 253 M <08>S  2437 253 M <09>S  2465 253 M <02>S  2520 253 M <0A>S  2604 253 M <07>S  2631 253 M <0C>S  2704 253 M <0D>S  2726 253 M <09>S  2754 253 M <0E>S  2809 253 M <07>S  2837 253 M <0F>S  2893 253 M <02>S  2948 253 M <0C>S  3020 253 M <07>S  
+2700 VM?
+
+currentfile eexec
+9e67edc6b841302ace1159f70091fb9a7f9720c8a176d4bbe0cbc7b824e2
+4ab9e796fd4c0a067d82157a60f9f44499c275c4a4d22ada1f84795e0f81
+bb45921070caeb4b26be62bbf3972026f168f653aef89ad44f81edd1175e
+d0d24e27eb3f6c0c99ceac13e9824556b58d4dc0d75441d720943c94e43d
+1ed70d269d34a6c02b5566081b3fb56ae07f9c978882379bf81b49d3cb60
+f2cb3e60f9e7e972807b7e2d888b01776f93f6dbdcb9c5a482d4f7d9004f
+9a680a69ae6344f75cdc8141b45be52ae07d52a4837bdb5240ec2ea2dbde
+e4bb8415cea59867dfbf229c5f626ef905f8af8254c4b719af2458964d59
+d4b2711c96ccb94e3117fe80bab1dab58b46fd007dd9df40ea613ca1f766
+339839cbb2ad8e987e79929abde5b960736aeae7e957ea29674e2d2a8da5
+a08867b41ff38196480da0d1cd74aa0e0d32ae7d05cb23bd18e7dbeb6dff
+f8b953da64e5a5548f6258c697bcea59cca309907ce704ede5670d8a8437
+7adcf89e846b6d39ae446d1d25f85a2f44c4a06feee3f7141a3115923d88
+a5cd35b4cdd1f2c6f093258cf80e1cdf24d38239c5359ae4c131dcaa0cef
+b03e228c1f1964f392111322e29435362a15d2b43a0ef835b672ef1fb96b
+dd3578f2d933e635ddbf41dc89ff9f9cb9777786869015ef3b1f343641b7
+0e587ce58d304ce30de4447fae41e7f905fa1b79fa3539e7ba430000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+/TT20o00 findfont /Encoding get
+dup 16 /r put
+dup 17 /q put
+dup 18 /u put
+pop
+2354 373 M <10>S 
+2387 373 M <02>S  2442 373 M <11>S  2498 373 M <12>S  2554 373 M <0D>S  2576 373 M <10>S  2609 373 M <02>S  2665 373 M <0A>S  2748 373 M <02>S  2804 373 M <0F>S  2859 373 M <09>S  2887 373 M <08>S  
+VMsave restore
+mysetup concat colspRefresh
+30000 VM?
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_WinNT_Compat 5.0 0
+userdict/Pscript_WinNT_Compat 19 dict dup begin/bd{bind def}bind def/ld{load
+def}bd/$x matrix def/ANSIVec[16#0/grave 16#1/acute 16#2/circumflex 16#3/tilde
+16#4/macron 16#5/breve 16#6/dotaccent 16#7/dieresis 16#8/ring 16#9/cedilla 16#A
+/hungarumlaut 16#B/ogonek 16#C/caron 16#D/dotlessi 16#27/quotesingle 16#60
+/grave 16#7C/bar 16#82/quotesinglbase 16#83/florin 16#84/quotedblbase 16#85
+/ellipsis 16#86/dagger 16#87/daggerdbl 16#88/circumflex 16#89/perthousand 16#8A
+/Scaron 16#8B/guilsinglleft 16#8C/OE 16#91/quoteleft 16#92/quoteright 16#93
+/quotedblleft 16#94/quotedblright 16#95/bullet 16#96/endash 16#97/emdash 16#98
+/tilde 16#99/trademark 16#9A/scaron 16#9B/guilsinglright 16#9C/oe 16#9F
+/Ydieresis 16#A0/space 16#A1/exclamdown 16#A4/currency 16#A5/yen 16#A6
+/brokenbar 16#A7/section 16#A8/dieresis 16#A9/copyright 16#AA/ordfeminine 16#AB
+/guillemotleft 16#AC/logicalnot 16#AD/hyphen 16#AE/registered 16#AF/macron
+16#B0/degree 16#B1/plusminus 16#B2/twosuperior 16#B3/threesuperior 16#B4/acute
+16#B5/mu 16#B6/paragraph 16#B7/periodcentered 16#B8/cedilla 16#B9/onesuperior
+16#BA/ordmasculine 16#BB/guillemotright 16#BC/onequarter 16#BD/onehalf 16#BE
+/threequarters 16#BF/questiondown 16#C0/Agrave 16#C1/Aacute 16#C2/Acircumflex
+16#C3/Atilde 16#C4/Adieresis 16#C5/Aring 16#C6/AE 16#C7/Ccedilla 16#C8/Egrave
+16#C9/Eacute 16#CA/Ecircumflex 16#CB/Edieresis 16#CC/Igrave 16#CD/Iacute 16#CE
+/Icircumflex 16#CF/Idieresis 16#D0/Eth 16#D1/Ntilde 16#D2/Ograve 16#D3/Oacute
+16#D4/Ocircumflex 16#D5/Otilde 16#D6/Odieresis 16#D7/multiply 16#D8/Oslash
+16#D9/Ugrave 16#DA/Uacute 16#DB/Ucircumflex 16#DC/Udieresis 16#DD/Yacute 16#DE
+/Thorn 16#DF/germandbls 16#E0/agrave 16#E1/aacute 16#E2/acircumflex 16#E3
+/atilde 16#E4/adieresis 16#E5/aring 16#E6/ae 16#E7/ccedilla 16#E8/egrave 16#E9
+/eacute 16#EA/ecircumflex 16#EB/edieresis 16#EC/igrave 16#ED/iacute 16#EE
+/icircumflex 16#EF/idieresis 16#F0/eth 16#F1/ntilde 16#F2/ograve 16#F3/oacute
+16#F4/ocircumflex 16#F5/otilde 16#F6/odieresis 16#F7/divide 16#F8/oslash 16#F9
+/ugrave 16#FA/uacute 16#FB/ucircumflex 16#FC/udieresis 16#FD/yacute 16#FE/thorn
+16#FF/ydieresis]def currentdict{dup type/operatortype eq{[exch]cvx def}{pop
+pop}ifelse}forall/initialize{currentdict exch begin begin}bind def/terminate{
+/@FL where not{pop end end}{pop}ifelse}bind def/suspend/terminate load def
+/resume/initialize load def/RS{/pagesave where{pop pagesave restore}{$x matrix
+invertmatrix concat}ifelse}def/SS{/pagesave save def}def/CB{pop pop pop pop}def
+/B{pop pop pop pop}def/:/gsave load def/;/grestore load def/N/newpath load def
+end put
+%%EndResource
+end reinitialize
+Pscript_WinNT_Compat begin /$x mysetup def end
+Pscript_WinNT_Incr dup /suspend get exec
+Pscript_WinNT_Compat dup /initialize get exec
+%%BeginDocument: Pscript_Win_PassThrough
+/languagelevel where {pop languagelevel} {1} ifelse
+2 ge dup {currentglobal exch true setglobal globaldict} {userdict} ifelse
+/GpPBeg1 {
+    gsave initclip
+    16 dict begin
+    /c {curveto} def /l {lineto} def /m {moveto} def
+    /rc {rcurveto} def /rl {rlineto} def
+    /NP {newpath} def /CP {closepath} def /SC {setrgbcolor} def
+    /GSE {end grestore} def
+} put
+{setglobal} if
+GpPBeg1
+1 1 1 SC
+NP 425 1606 m 685 1606 l 685 1984 l 425 1984 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 425 1984 m 685 1984 l 685 1606 l 425 1606 l 425 1984 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 472 1701 m 638 1701 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 472 1748 m 638 1748 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 472 1795 m 638 1795 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 472 1842 m 638 1842 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 472 1885 m 638 1885 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 543 1653 m 803 1653 l 803 2031 l 543 2031 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 543 2031 m 803 2031 l 803 1653 l 543 1653 l 543 2031 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 590 1748 m 756 1748 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 590 1795 m 756 1795 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 590 1842 m 756 1842 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 590 1890 m 756 1890 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 590 1932 m 756 1932 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 283 590 m 449 590 l 449 661 l 283 661 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 283 661 m 449 661 l 449 590 l 283 590 l 283 661 l CP 
+stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 685 590 m 921 590 l 921 732 l 685 732 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 685 732 m 921 732 l 921 590 l 685 590 l 685 732 l CP 
+stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 449 402 m 685 402 l 685 472 l 449 472 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 449 472 m 685 472 l 685 402 l 449 402 l 449 472 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 496 472 m 430 538 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 454 552 m 378 590 l 416 514 l 454 552 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 449 661 m 611 678 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 607 650 m 685 685 l 602 704 l 607 650 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 685 472 m 770 543 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 782 518 m 827 590 l 747 559 l 782 518 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 567 1535 m 567 854 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 540 860 m 567 779 l 594 860 l 540 860 l CP 
+eofill
+GSE
+
+%%EndDocument
+
+Pscript_WinNT_Compat dup /suspend get exec
+Pscript_WinNT_Incr dup /resume get exec
+/DeviceRGB dup setcolorspace /colspABC exch def
+0 0 0 1 scol 30215 VM?
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_T3Hdr 5.0 0
+{version cvi 2016 ge{32/FontType resourcestatus{pop pop true}{false}ifelse}
+{false}ifelse}exec/Is2016andT32? exch def/T32DefSBCMap{/CIDInit/ProcSet
+findresource begin 10 dict begin begincmap/CIDSystemInfo 3 dict dup begin
+/Registry(Adobe)def/Ordering(Identity1)def/Supplement 0 def end def/CMapType 0
+def/WMode 0 def 1 begincodespacerange<00><ff>endcodespacerange 1 begincidrange
+<00><ff>0 endcidrange endcmap/DrvSBCMap currentdict/CMap defineresource pop end
+end}bind def Is2016andT32?{T32DefSBCMap}def/T32RsrcBegin{Is2016andT32?{
+/BitmapFontInit/ProcSet findresource begin}if}bind def/T32RsrcEnd{Is2016andT32?
+{end}if}bind def/AddT32Char{6 1 roll 0 get 7 1 roll pop pop 5 1 roll pop
+findfont/TT32R get addglyph}bind def/AddT3Char{findfont dup 5 2 roll 1 index
+length 0 gt{cvx 1 index exch 4 exch put dup(imagemask)cvx cvn 5 exch put cvx}
+{pop cvx}ifelse 3 -1 roll/CharProcs get 3 1 roll put dup/Encoding get 5 -1 roll
+4 index put/Metrics get 3 1 roll put}bind def/AddT3T32Char Is2016andT32?{
+/AddT32Char}{/AddT3Char}ifelse load def/GreNewFontT32{5 dict begin exch
+/FontMatrix exch def exch/FontBBox exch def exch pop exch pop/CIDFontType 4 def
+dup currentdict end/CIDFont defineresource 3 -1 roll dup/DrvSBCMap dup/CMap
+resourcestatus{pop pop}{T32DefSBCMap}ifelse 5 -1 roll[exch]composefont dup
+length dict copy dup/FID undef begin exch/TT32R exch def currentdict end
+definefont/BitmapFontInit/ProcSet findresource begin/TT32R get[14 0 0 0 0 0]<>0
+4 -1 roll addglyph end}bind def/GreNewFontT3{11 dict begin pop/FontType 3 def
+/FontMatrix exch def/FontBBox exch def/Encoding exch def/CharProcs 257 dict def
+CharProcs/.notdef{}put/Metrics 257 dict def Metrics/.notdef 3 -1 roll put
+AddFontInfoBegin AddFontInfo AddFontInfoEnd/BuildChar{userdict begin/char exch
+def dup/charname exch/Encoding get char get def dup/Metrics get charname 2 copy
+known{get aload pop}{pop/.notdef get aload pop}ifelse setcachedevice begin
+Encoding char get CharProcs exch 2 copy known{get}{pop/.notdef get}ifelse end
+exec end}def currentdict end definefont pop}bind def/GreNewFont{Is2016andT32?
+{GreNewFontT32}{GreNewFontT3}ifelse}bind def/UDF3{Is2016andT32?{/BitmapFontInit
+/ProcSet findresource begin dup/CIDFont findresource removeall/CIDFont
+undefineresource undefinefont end}{pop UDF}ifelse}bind def
+%%EndResource
+end reinitialize
+/TT21b00
+[83 0 0 0 0 0 ] 
+ 256 array 0 1 255 {1 index exch /.notdef put} for 
+[0 0 0 0 ] 
+[1 83 div 0 0 -1 83 div 0 0 ]
+/__TT21b00
+GreNewFont
+T32RsrcBegin
+
+1
+/R [60 0 -60 -57 0 -7 ] 
+/R [60 50 true [1 0 0 1 60 57 ]  0 0]
+[<0000000000000010
+0000000000000070
+00000000000001f0
+00000000000003f0
+000ff00000000ff0
+007ffe0000003ff0
+01ffff800000fff0
+07ffffc00001fff0
+0fffffe00007fff0
+1ffffff0001fffe0
+1ffffff8003fff80
+3ffffff800fffe00
+3ff81ffc01fffc00
+7fe003fc03fff000
+7fc001fe0fffc000
+7f8000fe1fff8000
+7f0000fe3ffe0000
+ff00007f3ff80000
+ff00007f7ff00000
+fe00007fffc00000
+fe00003fff800000
+fe00003ffe000000
+fe00003ffc000000
+fe00003ff8000000
+fe00003ff0000000
+fe00003fe0000000
+fe00003fc0000000
+fe00003fc0000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fe00003f80000000
+fffffffffffffff0
+fffffffffffffff0
+fffffffffffffff0
+fffffffffffffff0
+fffffffffffffff0
+fffffffffffffff0
+fffffffffffffff0
+fffffffffffffff0
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Text 5.0 0
+/TextInit{TextInitialised? not{/Pscript_Windows_Font & d/TextInitialised? T d
+/fM[1 0 0 1 0 0]d/mFM matrix d/iMat[1 0 0.212557 1 0 0]d}if}b/copyfont{1 ^
+length add dict `{1 ^/FID ne{d}{! !}?}forall & E}b/EncodeDict 11 dict d/bullets
+{{/bullet}repeat}b/rF{3 copyfont @ ` ~ EncodeDict ~ get/Encoding ~ 3 ^/0 eq{&
+/CharStrings known{CharStrings/Eth known not{! EncodeDict/ANSIEncodingOld get}
+if}if}if d E}b/mF{@ 7 1 $ findfont ~{@/Encoding get @ StandardEncoding eq{! T}{
+{ISOLatin1Encoding}stopped{! F}{eq}?{T}{@ ` T 32 1 127{Encoding 1 ^ get
+StandardEncoding 3 -1 $ get eq and}for E}?}?}{F}?{1 ^ ~ rF}{0 copyfont}? 6 -2 $
+! ! ~ !/pd_charset @ where{~ get 128 eq{@ FDV 2 copy get @ length array copy
+put pd_CoverFCRange}if}{!}? 2 ^ ~ definefont fM 5 4 -1 $ put fM 4 0 put fM
+makefont Pscript_Windows_Font 3 1 $ put}b/sLT{: Lw -M currentpoint snap M 0 - 0
+Lc K ;}b/xUP null d/yUP null d/uW null d/xSP null d/ySP null d/sW null d/sSU{N
+/uW ~ d/yUP ~ d/xUP ~ d}b/sU{xUP yUP uW sLT}b/sST{N/sW ~ d/ySP ~ d/xSP ~ d}b/sT
+{xSP ySP sW sLT}b/sR{: + R 0 0 M}b/sRxy{: matrix astore concat 0 0 M}b/eR/; , d
+/AddOrigFP{{&/FontInfo known{&/FontInfo get length 6 add}{6}? dict `
+/WinPitchAndFamily ~ d/WinCharSet ~ d/OrigFontType ~ d/OrigFontStyle ~ d
+/OrigFontName ~ d & E/FontInfo ~ d}{! ! ! ! !}?}b/mFS{makefont
+Pscript_Windows_Font 3 1 $ put}b/mF42D{0 copyfont `/FontName ~ d 2 copy ~ sub 1
+add dict `/.notdef 0 d 2 copy 1 ~{@ 3 ^ sub Encoding ~ get ~ d}for & E
+/CharStrings ~ d ! ! & @ E/FontName get ~ definefont}b/mF42{15 dict ` @ 4 1 $
+FontName ~ d/FontType 0 d/FMapType 2 d/FontMatrix[1 0 0 1 0 0]d 1 ^ 254 add 255
+idiv @ array/Encoding ~ d 0 1 3 -1 $ 1 sub{@ Encoding 3 1 $ put}for/FDepVector
+Encoding length array d/CharStrings 2 dict `/.notdef 0 d & E d 0 1 Encoding
+length 1 sub{@ @ 10 lt{! FontName length 1 add string}{100 lt{FontName length 2
+add string}{FontName length 3 add string}?}? @ 0 FontName @ length string cvs
+putinterval @ 3 -1 $ @ 4 1 $ 3 string cvs FontName length ~ putinterval cvn 1 ^
+256 mul @ 255 add 3 -1 $ 4 ^ findfont mF42D FDepVector 3 1 $ put}for & @ E
+/FontName get ~ definefont ! ! ! mF}b/mF_OTF_V{~ ! ~ ! 4 -1 $ ! findfont 2 ^ ~
+definefont fM @ @ 4 6 -1 $ neg put 5 0 put 90 matrix R matrix concatmatrix
+makefont Pscript_Windows_Font 3 1 $ put}b/mF_TTF_V{3{~ !}repeat 3 -1 $ !
+findfont 1 ^ ~ definefont Pscript_Windows_Font 3 1 $ put}b/UmF{L2?
+{Pscript_Windows_Font ~ undef}{!}?}b/UmF42{@ findfont/FDepVector get{/FontName
+get undefinefont}forall undefinefont}b
+%%EndResource
+end reinitialize
+F /F0 0 /0 F /TT21b00 mF 
+/F0S52 F0 [82.813 0 0 -82.813 0 0 ] mFS
+F0S52 Ji 
+461 1565 M <01>S 
+3215 VM?
+T32RsrcBegin
+
+2
+/e [46 0 -45 -43 1 -3 ] 
+/e [46 40 true [1 0 0 1 45 43 ]  0 0]
+[<00007f804000
+0007ff807000
+001fff807c00
+007fff807e00
+01ffff80ff80
+03ffff80ffc0
+07ffff80ffc0
+0ffe3f807fe0
+1ff83f803ff0
+1fe03f800ff0
+3fc03f800ff8
+3f803f8007f8
+7f803f8003f8
+7f003f8003f8
+7f003f8003fc
+ff003f8001fc
+fe003f8001fc
+fe003f8001fc
+fe003f8001fc
+fe003f8001fc
+fe003f8001fc
+fe003f8001fc
+fe003f8001fc
+fe003f8003fc
+ff003f8003fc
+7f003f8003f8
+7f003f8007f8
+7f803f800ff8
+3fc03f800ff0
+3fe03f801ff0
+1ff03f807fe0
+0ff83f81ffe0
+0ffe3f8fffc0
+07ffffffff80
+03ffffffff00
+00fffffffe00
+007ffffff800
+001ffffff000
+0007ffff8000
+00007ff80000
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1505 M <02>S 
+3215 VM?
+T32RsrcBegin
+
+3
+/v [42 0 -44 -40 0 -1 ] 
+/v [44 39 true [1 0 0 1 44 40 ]  0 0]
+[<800000000000
+f00000000000
+fe0000000000
+ffc000000000
+fff800000000
+ffff00000000
+ffffe0000000
+fffffc000000
+1fffff000000
+03ffffe00000
+007ffffc0000
+000fffff8000
+0001fffff000
+00007ffffe00
+00000fffffc0
+000001fffff0
+0000003ffff0
+00000007fff0
+00000000fff0
+000000001ff0
+00000000fff0
+00000007fff0
+0000003ffff0
+000001fffff0
+00000fffff80
+00007ffffe00
+0003fffff000
+000fffff8000
+007ffffc0000
+03ffffe00000
+1fffff000000
+fffff8000000
+ffffe0000000
+ffff00000000
+fff800000000
+ffc000000000
+fe0000000000
+f00000000000
+800000000000
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1459 M <03>S 
+461 1417 M <02>S 
+3215 VM?
+T32RsrcBegin
+
+4
+/r [28 0 -45 -29 0 -6 ] 
+/r [45 23 true [1 0 0 1 45 29 ]  0 0]
+[<300000000000
+7c0000000000
+7f8000000000
+7f0000000000
+ff0000000000
+fe0000000000
+fe0000000000
+fe0000000000
+fe0000000000
+fe0000000000
+ff0000000000
+7f0000000000
+7f8000000000
+3fc000000000
+1ff000000000
+07ff00000000
+03fffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1371 M <04>S 
+3215 VM?
+T32RsrcBegin
+
+5
+/s [42 0 -45 -39 1 -3 ] 
+/s [46 36 true [1 0 0 1 45 39 ]  0 0]
+[<0000000fe000
+0000003ffc00
+003000ffff00
+01f001ffff80
+07f001ffffc0
+0ff803ffffe0
+1ff803ffffe0
+1ff807fe1ff0
+3ff807fc0ff0
+3fe00ff807f8
+7fc00ff803f8
+7f800ff003f8
+7f001ff003fc
+7f001ff001fc
+fe001fe001fc
+fe001fe001fc
+fe003fe001fc
+fe003fe001fc
+fe003fe001fc
+fe007fc001fc
+fe007fc001fc
+fe007fc001fc
+fe007f8003fc
+ff00ff8003f8
+7f00ff8003f8
+7f00ff0007f8
+7f81ff000ff8
+3fc3ff001ff0
+3ffffe007ff0
+1ffffe01ffe0
+1ffffc01ffc0
+0ffff801ff80
+07fff001ff00
+01ffe000fe00
+007f0000f800
+00000000c000
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1343 M <05>S 
+461 1302 M <02>S 
+3215 VM?
+T32RsrcBegin
+
+6
+/space [23 0 0 0 1 1 ] 
+/space [1 1 true [1 0 0 1 0 0 ]  0 0]
+[<00
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1255 M <06>S 
+461 1232 M <02>S 
+3215 VM?
+T32RsrcBegin
+
+7
+/n [46 0 -45 -40 0 -6 ] 
+/n [45 34 true [1 0 0 1 45 40 ]  0 0]
+[<003ffffffff8
+01fffffffff8
+07fffffffff8
+0ffffffffff8
+1ffffffffff8
+3ffffffffff8
+3ffffffffff8
+7ff800000000
+7fe000000000
+7f8000000000
+ff8000000000
+ff0000000000
+ff0000000000
+fe0000000000
+fe0000000000
+fe0000000000
+fe0000000000
+fe0000000000
+7e0000000000
+7f0000000000
+7f0000000000
+3f0000000000
+3f8000000000
+1fc000000000
+0fe000000000
+07f800000000
+03ff00000000
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+7ffffffffff8
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1186 M <07>S 
+3215 VM?
+T32RsrcBegin
+
+8
+/g [46 0 -45 -40 18 -3 ] 
+/g [63 37 true [1 0 0 1 45 40 ]  0 0]
+[<7fffffffffff0000
+7ffffffffffff000
+7ffffffffffffe00
+7fffffffffffff00
+7fffffffffffff80
+7fffffffffffffc0
+7fffffffffffffe0
+07ff800fff807ff0
+0ffc0001ff801ff8
+1ff000007fc007f8
+1fe000003fe003fc
+3fc000001fe003fc
+7f8000000ff001fc
+7f00000007f001fc
+7f00000007f000fe
+fe00000003f800fe
+fe00000003f800fe
+fe00000003f800fe
+fe00000003f800fe
+fe00000003f800fe
+fe00000003f800fe
+fe00000003f800fe
+ff00000007f800fe
+7f00000007f000fe
+7f8000000ff001fe
+7fc000001ff001fc
+3fe000003fe003fc
+3ff000007fe007fc
+1ffc0001ffc00ff8
+0fff800fff803ff8
+0fffffffff003ff0
+03fffffffe003ff0
+01fffffffc007fe0
+00fffffff8007fc0
+003fffffe0007f00
+0007ffff00007c00
+00007ff000000000
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1139 M <08>S 
+3215 VM?
+T32RsrcBegin
+
+9
+/i [18 0 -60 -13 0 -6 ] 
+/i [60 7 true [1 0 0 1 60 13 ]  0 0]
+[<fe00fffffffffff0
+fe00fffffffffff0
+fe00fffffffffff0
+fe00fffffffffff0
+fe00fffffffffff0
+fe00fffffffffff0
+fe00fffffffffff0
+>
+ ]
+/TT21b00 AddT3T32Char
+T32RsrcEnd
+461 1093 M <09>S 
+461 1074 M <07>S 
+461 1028 M <02>S 
+461 982 M <02>S 
+461 935 M <04>S 
+461 908 M <09>S 
+461 889 M <07>S 
+461 843 M <08>S 
+30000 VM?
+Pscript_WinNT_Compat begin /$x mysetup def end
+Pscript_WinNT_Incr dup /suspend get exec
+Pscript_WinNT_Compat dup /initialize get exec
+%%BeginDocument: Pscript_Win_PassThrough
+GpPBeg1
+1 1 1 SC
+NP 2350 1630 m 2610 1630 l 2610 2008 l 2350 2008 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2350 2008 m 2610 2008 l 2610 1630 l 2350 1630 l 2350 2008 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2397 1724 m 2563 1724 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2397 1771 m 2563 1771 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2397 1819 m 2563 1819 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2397 1866 m 2563 1866 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2397 1908 m 2563 1908 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 2433 1559 m 2693 1559 l 2693 1937 l 2433 1937 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2433 1937 m 2693 1937 l 2693 1559 l 2433 1559 l 2433 1937 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2480 1653 m 2645 1653 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2480 1701 m 2645 1701 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2480 1748 m 2645 1748 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2480 1795 m 2645 1795 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2480 1838 m 2645 1838 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 2515 1488 m 2775 1488 l 2775 1866 l 2515 1866 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2515 1866 m 2775 1866 l 2775 1488 l 2515 1488 l 2515 1866 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2563 1583 m 2728 1583 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2563 1630 m 2728 1630 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2563 1677 m 2728 1677 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2563 1724 m 2728 1724 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2563 1767 m 2728 1767 l stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 2539 437 m 2775 437 l 2775 508 l 2539 508 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2539 508 m 2775 508 l 2775 437 l 2539 437 l 2539 508 l CP 
+stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 2197 661 m 2433 661 l 2433 732 l 2197 732 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2197 732 m 2433 732 l 2433 661 l 2197 661 l 2197 732 l CP 
+stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 2539 661 m 2775 661 l 2775 732 l 2539 732 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2539 732 m 2775 732 l 2775 661 l 2539 661 l 2539 732 l CP 
+stroke
+GSE
+GpPBeg1
+1 1 1 SC
+NP 2870 661 m 3106 661 l 3106 732 l 2870 732 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2870 732 m 3106 732 l 3106 661 l 2870 661 l 2870 732 l CP 
+stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2657 508 m 2394 630 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 2411 652 m 2326 661 l 2389 603 l 2411 652 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2657 543 m 2657 587 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 2684 580 m 2657 661 l 2630 580 l 2684 580 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2657 508 m 2920 630 l stroke
+GSE
+GpPBeg1
+0 0 0 SC
+NP 2926 603 m 2988 661 l 2903 652 l 2926 603 l CP 
+eofill
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+1.9997 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 2657 508 m 2657 626 l stroke
+GSE
+GpPBeg1
+1 setlinecap
+1 setlinejoin
+10 setmiterlimit
+5.9992 setlinewidth
+[] 0 setdash
+0 0 0 SC
+NP 804 1654 m 804 1654 992 898 1222 631 c 1222 632 l 1326 512 1439 491 1681 496 c 1682 497 l 1921 502 2285 533 2350 1630 c stroke
+GSE
+
+%%EndDocument
+
+Pscript_WinNT_Compat dup /suspend get exec
+Pscript_WinNT_Incr dup /resume get exec
+/DeviceRGB dup setcolorspace /colspABC exch def
+0 0 0 1 scol 33440 VM?
+/TT22b00
+[83 0 0 0 0 0 ] 
+ 256 array 0 1 255 {1 index exch /.notdef put} for 
+[0 0 0 0 ] 
+[1 83 div 0 0 -1 83 div 0 0 ]
+/__TT22b00
+GreNewFont
+T32RsrcBegin
+
+1
+/R [60 0 7 -60 57 0 ] 
+/R [50 60 true [1 0 0 1 -7 60 ]  0 0]
+[<ffffffff800000
+fffffffff80000
+fffffffffe0000
+ffffffffff8000
+ffffffffffc000
+ffffffffffe000
+ffffffffffe000
+ff000001fff000
+ff0000003ff000
+ff0000001ff800
+ff0000000ff800
+ff00000007f800
+ff00000007fc00
+ff00000003fc00
+ff00000003fc00
+ff00000003fc00
+ff00000003fc00
+ff00000003fc00
+ff00000003fc00
+ff00000007fc00
+ff00000007f800
+ff00000007f800
+ff0000000ff800
+ff0000001ff000
+ff0000007ff000
+ff000003ffe000
+ffffffffffc000
+ffffffffff8000
+ffffffffff0000
+fffffffffc0000
+fffffffff00000
+ffffffff800000
+fffffffe000000
+ff0003ff000000
+ff0000ffc00000
+ff00007fe00000
+ff00003ff00000
+ff00001ff00000
+ff00000ff80000
+ff000007fc0000
+ff000007fe0000
+ff000003fe0000
+ff000001ff0000
+ff000001ff8000
+ff000000ff8000
+ff0000007fc000
+ff0000007fc000
+ff0000003fe000
+ff0000003ff000
+ff0000001ff000
+ff0000000ff800
+ff0000000ff800
+ff00000007fc00
+ff00000007fc00
+ff00000003fe00
+ff00000001ff00
+ff00000001ff00
+ff00000000ff80
+ff00000000ff80
+ff000000007fc0
+>
+ ]
+/TT22b00 AddT3T32Char
+
+2
+/e [46 0 3 -45 43 1 ] 
+/e [40 46 true [1 0 0 1 -3 45 ]  0 0]
+[<0001ff8000
+000ffff000
+003ffffc00
+007fffff00
+01ffffff80
+03ffffffc0
+07ffffffe0
+07ff00fff0
+0ff8001ff0
+1ff00007f8
+1fc00003f8
+3fc00001fc
+3f800001fc
+7f000000fe
+7f000000fe
+7e0000007e
+7e0000007e
+fe0000007f
+ffffffffff
+ffffffffff
+ffffffffff
+ffffffffff
+ffffffffff
+ffffffffff
+ffffffffff
+fe00000000
+fe00000000
+fe00000000
+ff00000000
+7f00000000
+7f00000000
+7f80000000
+7f80000070
+3fc00000ff
+3fc00001fe
+3fe00001fe
+1ff80007fc
+0ffc000ffc
+0fff807ff8
+07fffffff0
+03fffffff0
+01ffffffe0
+00ffffff80
+003fffff00
+000ffffc00
+0001ffc000
+>
+ ]
+/TT22b00 AddT3T32Char
+T32RsrcEnd
+F /F1 0 /0 F /TT22b00 mF 
+/F1S52 F1 [82.813 0 0 -82.813 0 0 ] mFS
+F1S52 Ji 
+1340 427 M <01>S 
+1401 427 M <02>S  
+3219 VM?
+T32RsrcBegin
+
+3
+/hyphen [28 0 3 -25 26 -18 ] 
+/hyphen [23 7 true [1 0 0 1 -3 25 ]  0 0]
+[<fffffe
+fffffe
+fffffe
+fffffe
+fffffe
+fffffe
+fffffe
+>
+ ]
+/TT22b00 AddT3T32Char
+T32RsrcEnd
+1447 427 M <03>S 
+12881 VM?
+T32RsrcBegin
+
+4
+/n [46 0 6 -45 40 0 ] 
+/n [34 45 true [1 0 0 1 -6 45 ]  0 0]
+[<0000ff0000
+fe07ffe000
+fe1ffff800
+fe3ffffc00
+fe7ffffe00
+feffffff00
+ffffffff00
+fffe07ff80
+fff001ff80
+ffe0007f80
+ffc0007fc0
+ff80003fc0
+ff80003fc0
+ff00001fc0
+ff00001fc0
+ff00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+fe00001fc0
+>
+ ]
+/TT22b00 AddT3T32Char
+
+5
+/g [46 0 3 -45 40 18 ] 
+/g [37 63 true [1 0 0 1 -3 45 ]  0 0]
+[<0003fc0000
+001fff83f8
+007fffc3f8
+00fffff3f8
+03fffffbf8
+07fffffff8
+07fffffff8
+0ffe03fff8
+1ff800fff8
+1ff0007ff8
+3fe0003ff8
+3fc0001ff8
+3f80000ff8
+7f80000ff8
+7f000007f8
+7f000007f8
+7f000007f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+fe000003f8
+7f000007f8
+7f000007f8
+7f000007f8
+7f80000ff8
+3f80000ff8
+3fc0001ff8
+3fe0003ff8
+1ff0007ff8
+1ff800fff8
+0ffe03fff8
+07fffffff8
+03fffffff8
+01fffffff8
+00fffff3f8
+007fffe3f8
+001fff83f8
+0003fc03f8
+00000003f8
+00000003f8
+00000003f8
+00000003f0
+78000007f0
+7f000007f0
+7f00000ff0
+7f80000fe0
+7fc0001fe0
+3fe0007fe0
+3ff801ffc0
+1fffffff80
+1fffffff00
+0ffffffe00
+03fffffc00
+01fffff800
+007fffe000
+000ffe0000
+>
+ ]
+/TT22b00 AddT3T32Char
+
+6
+/i [18 0 6 -60 13 0 ] 
+/i [7 60 true [1 0 0 1 -6 60 ]  0 0]
+[<fe
+fe
+fe
+fe
+fe
+fe
+fe
+00
+00
+00
+00
+00
+00
+00
+00
+00
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+fe
+>
+ ]
+/TT22b00 AddT3T32Char
+
+7
+/r [28 0 6 -45 29 0 ] 
+/r [23 45 true [1 0 0 1 -6 45 ]  0 0]
+[<000fe0
+fc3ffc
+fc7ffe
+fcfffe
+fcfffc
+fdfffc
+fffff8
+fff838
+ffe008
+ffc000
+ff8000
+ff8000
+ff0000
+ff0000
+ff0000
+ff0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+fe0000
+>
+ ]
+/TT22b00 AddT3T32Char
+T32RsrcEnd
+1475 427 M <02>S 
+1521 427 M <04>S  1567 427 M <05>S  1614 427 M <06>S  1632 427 M <04>S  1679 427 M <02>S  1725 427 M <02>S  1771 427 M <07>S  1799 427 M <06>S  1817 427 M <04>S  1864 427 M <05>S  
+Pscript_WinNT_Incr begin
+%%BeginResource: file Pscript_Win_Dib_L1 5.0 0
+/iw 0 d/ih 0 d/im_save 0 d/s 0 d/polarity 0 d/smoothflag 0 d/mystring 0 d/bpc 0
+d/setup1asciiproc{[currentfile mystring/readhexstring cvx/! cvx]cvx bind}b
+/setup1binaryproc{[currentfile mystring/readstring cvx/! cvx]cvx bind}b
+/setup2asciiproc{[/Level2ImagesError , aload ! T FatalErrorIf}b
+/setup2binaryproc/setup2asciiproc , d/mycolorspace{colspABC}d/pp 1 string d/ss
+1 string d/rledecodebinary{/DC 0 d/BC 0 d{DC mystring length ge{exit}if
+currentfile ss readstring ! 0 get/BC ~ d BC 127 le{/BC BC 1 add d DC 1 DC BC
+add 1 sub{mystring ~ currentfile ss readstring ! 0 get put}for}{/BC 257 BC sub
+d currentfile ss readstring ! 0 get/pp ~ d DC 1 DC BC add 1 sub{mystring ~ pp
+put}for}?/DC DC BC add d}loop mystring}b/rledecodeascii{/DC 0 d/BC 0 d{DC
+mystring length ge{exit}if currentfile ss readhexstring ! 0 get/BC ~ d BC 127
+le{/BC BC 1 add d DC 1 DC BC add 1 sub{mystring ~ currentfile ss readhexstring
+! 0 get put}for}{/BC 257 BC sub d currentfile ss readhexstring ! 0 get/pp ~ d
+DC 1 DC BC add 1 sub{mystring ~ pp put}for}?/DC DC BC add d}loop mystring}b
+/setup1asciidecodeproc{[/rledecodeascii cvx]cvx bind}b/setup1binarydecodeproc{[
+/rledecodebinary cvx]cvx bind}b/myimagedict{/myimagedict 10 dict d myimagedict
+@ `/ImageType 1 d/MultipleDataSource F d E}b/imageprocarray[/setup1binaryproc
+/setup1asciiproc/setup2binaryproc/setup2asciiproc/setup1binarydecodeproc
+/setup1asciidecodeproc]d/Q{/im_save save d scol imageprocarray ~ get/s ~ , d
+/polarity ~ d/smoothflag ~ d +/dx 2 ^ d/dy 1 ^ d +S/mystring ~ string d/bpc ~ d
+/ih ~ d/iw ~ d fx rf}b/X{/im_save save d ! ! imageprocarray ~ get/s ~ , d
+/polarity ~ d/smoothflag ~ d +/dx 2 ^ d/dy 1 ^ d +S/mystring ~ string d/bpc ~ d
+/ih ~ d/iw ~ d}b/Z{im_save restore}b/Y{scol iw ih polarity[iw 0 0 ih 0 0]s
+imagemask}b/testsystemdict{where{systemdict eq{T}{F}?}{F}?}b/c 1 d/colorimage
+where{! T}{F}?{/c 0 statusdict `/processcolors where{! ! processcolors}{
+/deviceinfo where{! deviceinfo/Colors known{!{deviceinfo/Colors get}}if}if}? E
+d c 0 ne{/colorimage testsystemdict/setcolortransfer testsystemdict
+/currentcolortransfer testsystemdict/currentcmykcolor testsystemdict and and
+and not{/c 0 d}if}if}if c @ 1 ne ~ @ 3 ne ~ 4 ne and and{/c 0 d}if c 1 eq g{
+/expandbw{expandfactor mul round cvi bwclut ~ get 255 V}b/doclutimage{/bwclut ~
+d bpc @ 8 eq{! 255}{4 eq{15}{3}?}?/expandfactor ~ d[/expandbw ,/exec , @
+currenttransfer ~]cvx bind settransfer iw ih bpc[iw 0 0 ih 0 0]s image}b}e c @
+3 eq ~ 4 eq or g{/nullproc{{}}d/concatutil{/exec , 7 -1 $/exec ,}b/defsubclut{1
+add getinterval d}b/spconcattransfer{/Dclut ~ d/Cclut ~ d/Bclut ~ d/Aclut ~ d
+/ncompute ~ , d currentcolortransfer[{Aclut ncompute}concatutil]cvx[{Bclut
+ncompute}concatutil]cvx[{Cclut ncompute}concatutil]cvx[{Dclut ncompute}
+concatutil]cvx setcolortransfer}b/setuprgbcluts{/bit3x rgbclut length 3 sub d
+/bit1x bit3x 3 idiv d/rclut rgbclut d/gclut rclut 1 bit3x defsubclut/bclut
+rclut 2 bit3x defsubclut}b}e c 3 eq g{/3compute{~ bit3x mul round cvi get 255
+V}b/doclutimage{/rgbclut ~ d setuprgbcluts/3compute rclut gclut bclut @
+spconcattransfer iw ih bpc[iw 0 0 ih 0 0][s/exec ,/@ , @]cvx nullproc nullproc
+T 3 colorimage}b}e c 4 eq g{/ftoint{1 ~ sub 255 mul round cvi}b/stuffclut
+{cmykindex 3 -1 $ put}b/4compute{~ bit4x mul round cvi get 255 V}b
+/invalidcolortable? T d/computecmykclut{setuprgbcluts/bit4x rgbclut length 3
+idiv 4 mul 4 sub d/cmykclut bit4x 4 add string d/cclut cmykclut d/mclut cclut 1
+bit4x defsubclut/yclut cclut 2 bit4x defsubclut/kclut cclut 3 bit4x defsubclut
+/cmykindex 0 d 0 1 bit1x{@/cmykindex ~ bit1x ~ sub 4 mul d 3 mul @ rclut ~ get
+255 V ~ @ gclut ~ get 255 V ~ bclut ~ get 255 V setrgbcolor currentcmykcolor
+ftoint kclut stuffclut ftoint yclut stuffclut ftoint mclut stuffclut ftoint
+cclut stuffclut}for}b/doclutimage{/rgbclut ~ d invalidcolortable?
+{computecmykclut}if/4compute cclut mclut yclut kclut spconcattransfer iw ih bpc
+[iw 0 0 ih 0 0][s/exec ,/@ , @ @]cvx nullproc nullproc nullproc T 4 colorimage}
+b}e c 0 eq g{/a{3 mul 3 getinterval putinterval ~ 3 add ~ 3 copy}b/8lookup/a ,
+d/4lookup{/byte 1 ^ d -4 bitshift a byte 15 and a}b/2lookup{/byte 1 ^ d -6
+bitshift a byte -4 bitshift 3 and a byte -2 bitshift 3 and a byte 3 and a}b
+/colorexpand{mystringexp 0 rgbclut 3 copy 7 -1 $/mylookup , forall ! ! ! ! !}b
+/createexpandstr{/mystringexp ~ mystring length mul string d}b/doclutimage{
+/rgbclut ~ d/mylookup bpc 8 eq{3 createexpandstr/8lookup}{bpc 4 eq{6
+createexpandstr/4lookup}{12 createexpandstr/2lookup}?}? , d iw ih 8[iw 0 0 ih 0
+0][s/exec ,/colorexpand ,/exec ,]cvx F 3 colorimage}b}e/colorimage where{! T}
+{F}? g{/do24image{iw ih 8[iw 0 0 ih 0 0]s F 3 colorimage}b}DefIf_El{/rgbtogray{
+/str ~ d/len str length d/smlen len 3 idiv d/rstr str d/gstr str 1 len 1 sub
+getinterval d/bstr str 2 len 2 sub getinterval d str @ 0 1 smlen 1 sub{@ 3 mul
+rstr 1 ^ get .3 mul gstr 2 ^ get .59 mul add bstr 3 -1 $ get .11 mul add round
+cvi put @}for ! 0 smlen getinterval}b/do24image{iw ih 8[iw 0 0 ih 0 0][s/exec ,
+/rgbtogray ,/exec ,]cvx bind image}b}e/doNimage{bpc 24 eq{do24image}{iw ih bpc
+[iw 0 0 ih 0 0]s image}?}b
+%%EndResource
+end reinitialize
+: 1276 969 757 448 rc : 129 76 8 129 757 449 1276 969 F F 1 [ 0 ] F 
+X
+<
+000000 FFFFFF CC9966 CC9933 FFCC99 CCCC66 CC6633 CC0033
+FFCCCC CC3333 999933 FFCC66 666633 663300 333300 663333
+996633 FFFFCC 666666 333333 CCCC99 999999 CCCCCC 330000
+990033 660000 990000 999966 336666 CCFFFF 003366 000033
+9999CC 003333 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+000000 000000 000000 000000 000000 000000 000000 000000
+>
+doclutimage
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202000000000000020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202000000000000
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202000000000000020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+020202020202020303020202020202020202020202020202020202020202020202020202
+000000000000020202020202020202020202020202020202020202020202020202020202
+020202020202020202020202020202020202040402020202020502020202020202020202
+020202020202020202020202020202020202020202020203030202060706020203060302
+020202020202020202020202020202020202020202000000000000020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+040801010102020202020101040202020202020202020202020202020202020202020202
+020202030302020307090202030603020203070902020306030202020202020202020202
+02020202020200000000000002020202020202020202020202020202020202030A0A0A0A
+0A0A0A0302020202020202020202020202020B0801010101010104020202040101010104
+020202020202020202020202020202020202020202020202070702020203030202020202
+020202030302020907060202020202020202020202020202020202000000000000020202
+0202020202020202030A0C0D0E00000000000000000000000000000E0F10030202020202
+020204010101010101010111020202010101010101010402020202020202020202020202
+020202020609020202030302020202020202020202020202020202020303020202060903
+02020202020202020202020200000000000002020202020202100C0E0000000000000000
+00000000000000000000000000000000000D030202020202010101010101010101040B04
+010101010101010101020202020202020202020202020202020909020202020202020202
+020202020202020202020202020202020202060903020202020202020202020202000000
+000000020202020202021000000000000000000000000000000000000000000000000000
+000000000010020202080101010101010101010101010101010101010111020202020202
+020202020202060302020202020202020202020202020202020202020202020202020202
+02020202020202030603020202020202020200000000000002020202020202020F000000
+000000000000000000000000000000000000000000000000000000001002040101010101
+01010101010101010101010101010B020202020202020202020203070902020202020202
+020202020202020202020202020202020202020202020202020202020307090202020202
+0202020000000000000202020202020202020D0000000000000000000000000000000000
+00000000000000000000121300000E140101010101010101010101010101010101011102
+020202020202020202020202030302020202020202020202020202020202020202020202
+020202020202020202020202020203030202020202020202000000000000020202020202
+020202020D00000000000000000000000000000000000000000000000000131212121313
+150101010101010101010101010101010101010402020202020202020202020202020202
+020202020202020202020202020202020202020202020202020202020202020202020202
+02020202020202020200000000000002020202020202020202020E000000000000000000
+000000000000000000000000000000121212121212121501010101010101010101010101
+01010101010202050401040202020202020202020202020202020202020202030E0E0E0E
+0E0E0E0E0E0E0E1002020202020202020202020202020202020202020202000000000000
+020202020202020202020200000000000000000000000000000000000000000000000013
+121212121212121215010101010101010101010101010101010101010101010802020202
+020202020202020202020202020202020A00000000000000000000000C02020202020202
+020202020202020202020202020202000000000000020202020202020202020300000000
+000000000000000000000000000000000000000012121212121212121212150101010101
+010101010101010101010101010101010102020202020202020202020202020202020202
+020A00000000000000000000000C02020202020202020202020202020202020202020202
+000000000000020202020202020202021000000000000000000000000000000000000000
+000000001312121212121212121212121601080502020204110101010101010101010101
+010104020202020202020202020203100202020202020A00000000000000000000000C02
+020202020203100202020202020202020202020202000000000000020202020202020202
+020F00000000000000000000000000000000000000000000001212121212121212121212
+121202020202020202020401010101010101010101010108020202020202020202020300
+001002020202020A00000000000000000000000C02020202020300001002020202020202
+020202020202000000000000020202020202020202020E00000000000000000000000000
+00000000000000000013121212121212121212121212000E020202020202020204010101
+010101010101010101020202020202020202030000000010020202020A00000000000000
+000000000C02020202030000000010020202020202020202020202000000000000020202
+020202020202020000000000000000000000000000000000000000000000001312121212
+12121212121200000F020202020202020202110101010101010101010101040202020202
+0202030000000000001002020A0E00000000000000000000000E03020203000000000000
+1002020202020202020202020000000000000202020202020202020A0000000000000000
+000000000000000000000000000000000000131212121212121212000010020202020202
+020202040101010101010101010101080202020202020300000000000000000F00000000
+0000000000000000000000000E1000000000000000001002020202020202020202000000
+0000000202020202020202020C0000000000000000000000000000000000000000000000
+000000001212121212121213000003020202020202020202020101010101010101010108
+0B0202020202030000000000000000000000000000000000000000000000000000000000
+0000000000000000100202020202020202020000000000000202020202020202020C0000
+000000000000000000000000000000000000000000000000001212121212121213000E02
+020202020202020202020101010101010111040202020202020203000000000000000000
+000000000000000000000000000000000000000000000000000000000000100202020202
+020202000000000000020202020202020202030000000000121616120000000000000000
+000000000000000013131212121212121213000F02020202020202020202020101010101
+010104020202020202020300000000000000000000000000000000000000000000000000
+000000000000000000000000000000001002020202020202000000000000020202020202
+020202020000000015010101011500000000000000000000000000131212121212121212
+121213000A02020202020202020202020101010101010104020202020202030000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000010020202020202000000000000020202020202020202020E00001201010101010113
+000000000000000000000000121212121212121212121212000202020202020202020202
+040101010101010101040202020202030E00000000000000000000000000000000000000
+000000000000000000000000000000000000000000000003020202020202000000000000
+020202020202020202030000001501010101010116161616161616161616161300131212
+1212121212121212120C0202020202020202020202010101010101010101010104020202
+02030E000000000000000000000000000000000000000000000000000000000000000000
+0000000000000003020202020202020000000000000202020202020202020D0000001601
+010101010116151515151515151515151300001212121212121212121212160502020202
+0202020202080101010101010101010101010B02020202030E0000000000000000000000
+000000000000000000000000000000000000000000000000000000030202020202020202
+000000000000020202020202020203000000001501010101010112000000000000000000
+00000000121212121212121212121501010B020202020202020801010101010101010101
+010111020202020202030E000000000000000000000000000000000E0E0E000000000000
+00000000000000000000000302020202020202020200000000000002020202020202020C
+000000001301010101010100000000000000000000000000001312121212121212121215
+01010111040B020B0401010101010101010101010101010B020202020202021000000000
+0000000000000000000D030202020202030D000000000000000000000000001002020202
+020202020202000000000000020202020202020200000000000013160101161300000000
+000000000000000000000012121212121212121216010101010101010101010101010101
+010101010101011102020202020202020E00000000000000000000000E03020202020202
+020202030E00000000000000000000000D02020202020202020202000000000000020202
+020202021000000000000000001313000000000000000000000000000000000012121212
+131212121201010101010101010101010101010101010101010101010B02020202020202
+0300000000000000000000000D020202020202020202020202030E000000000000000000
+000003020202020202020202000000000000020202020202020E00000000000000000000
+000000000000000000000000000000000013131300001312121501010101010101010101
+0101010101010101010101011102020A0C0C0C0C0C0E000000000000000000000E020202
+02020202020202020202020300000000000000000000000D0C0C0C0C0C10020202000000
+00000002020202020202030D000000000000000000000000000000000000000000000000
+00000000000000001212150101010101010101010101010101010111020B1101010B0202
+0C00000000000000000000000000000000030202020202020202020202020202020A0000
+00000000000000000000000000000E020202000000000000020202020202020202030000
+000000000000000000000000000000000000000000000000000000000012121601010101
+010101010101010101010101020202020B040202020C0000000000000000000000000000
+000D02020202020202020202020202020202020E0000000000000000000000000000000E
+020202000000000000020202020202020202020000000000000000000000000000000017
+071700000000000000000000001312120101010101010101010101010101010101050202
+0202020202020C0000000000000000000000000000000302020202020202020202020202
+02020202100000000000000000000000000000000E020202000000000000020202020202
+020202020000000000000000000000000000000000181900000000000000000000001212
+1501010101010101010101010101010101010402020202020202020C0000000000000000
+000000000000000202020202020202020202020202020202020300000000000000000000
+00000000000E020202000000000000020202020202020202020000000000000000000000
+000000000000000000000000000000000000001212150101010101010B0B040101010101
+0101010102020202020202020C00000000000000000000000000000E0202020202020202
+02020202020202020202020000000000000000000000000000000E020202000000000000
+020202020202020202020E000000000000000000000000000000000000001A1900000000
+0000000000001401010101010802020201010101010101010102020202020202020C0000
+0000000000000000000000000E020202020202020202020202020202020202020E000000
+00000000000000000000000E020202000000000000020202020202020202020E00000000
+000000000000000000000000000000071A000000000000000000000C0B11010101020202
+0208010101010108040202020202020202020C00000000000000000000000000000E0202
+02020202020202020202020202020202020000000000000000000000000000000E020202
+000000000000020202020202020202020E00000000000000000000000000000000000000
+0000000000000000000000000C02020B1108020202020401010804020202020202020202
+0202020C0000000000000000000000000000000202020202020202020202020202020202
+02030000000000000000000000000000000E020202000000000000020202020202020202
+020E000000000000000000000000000000000000000000001A07000000000000000C0202
+0202020202020202040202020202020202020202020202020C0000000000000000000000
+000000000302020202020202020202020202020202021000000000000000000000000000
+00000E020202000000000000020202020202020202020E00000000000000000000000000
+000000000000000000171A000000000000000C0202020202020202020202020202020202
+0202020202020202020C0000000000000000000000000000000D02020202020202020202
+020202020202020E0000000000000000000000000000000E020202000000000000020202
+020202020202020E00000000000000000000000000000000000000000000000000001A19
+0000000C02020202020202020202020202020202020202020202020202020C0000000000
+0000000000000000000000030202020202020202020202020202020A0000000000000000
+00000000000000000E020202000000000000020202020202020202020E00000000000000
+0000000000000000000000000000000000000018070000000C0202020202020202020202
+0202020202020202020202020202020A0C0C0C0C0C0E000000000000000000000E020202
+02020202020202020202020300000000000000000000000D0C0C0C0C0C10020202000000
+000000020202020202020202020E00000000000000000000000000000000000000000000
+00000000000000001A090202020202020202020202020202020202020202020202020202
+0202020202020300000000000000000000000D020202020202020202020202030E000000
+000000000000000003020202020202020202000000000000020202020202020202020F0E
+00000000000000000000000000000000000000000000000000000000001A090202030302
+020202020202020202020202020202020202020202020202020202020E00000000000000
+000000000E03020202020202020202030000000000000000000000000D02020202020202
+020202000000000000020202020202020202020202020202020F00000000000000000000
+0000000000000000000000000000000C0202070702020303020202020202020202020202
+0202020202020202020202020210000000000000000000000000000D0302020202020A0D
+000000000000000000000000001002020202020202020202000000000000020202020202
+020202020202020202020C00000000000000000000000000000000000000000000000000
+0C0202030302020907030203060302020302020203030202020202020202020202030E00
+0000000000000000000000000000000E0E0E000000000000000000000000000000000003
+020202020202020202000000000000020202020202020202020202020202020C00000000
+0000000000000000000000000000000000000000000C0202020202020306030206070602
+0307070202090706020202020202020202030E0000000000000000000000000000000000
+000000000000000000000000000000000000000000030202020202020202000000000000
+020202020202020202020202020202020A00000000000000000000000000000000000000
+0000000000000C0202020202020202020202030302030606020203060302020202020202
+02030E000000000000000000000000000000000000000000000000000000000000000000
+000000000000000302020202020202000000000000020202020202020202020202020202
+020A00000000000000000000000000000000000000000000000000100202020202020202
+020202020202020202020202020202020202020202030E00000000000000000000000000
+000000000000000000000000000000000000000000000000000000000003020202020202
+000000000000020202020202020202020202020202021415120000000000000000000000
+000000000000000000001216010402020202020202020202020202020202020202020202
+020202020202030000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000010020202020202000000000000020202020202020202
+020202020202020101010115120000000000000000000000000000001315010101011102
+020202020202020202020202020202020202020202020202020202020300000000000000
+000000000000000000000000000000000000000000000000000000000000000000001002
+020202020202000000000000020202020202020202020202020202040101010101010115
+121300000000000000000012160101010101010102020202020202020202020202020202
+020202020202020202020202020203000000000000000000000000000000000000000000
+000000000000000000000000000000000000100202020202020202000000000000020202
+020202020202020202020202010101010101010101010116121300000013150101010101
+010101010108020202020202020202020202020202020202020202020202020202020202
+030000000000000000000000000000000000000000000000000000000000000000000000
+000010020202020202020202000000000000020202020202020202020202020204010101
+010101010101010101010116121501010101010101010101010101020202020202020202
+020202020202020202020202020202020202020202020300000000000000000F00000000
+0000000000000000000000000E1000000000000000001002020202020202020202000000
+000000020202020202020202020202020208010101010101010101010101010101001501
+0101010101010101010101011B0302020202020202020202020202020202020202020202
+0202020202020202030000000000001002020A0E00000000000000000000000E03020203
+000000000000100202020202020202020202000000000000020202020202020202020203
+0F001501010101010101010101010101011300130101010101010101010101010113000E
+0C1B0302020202020202020202030A10120C0E0E131C0C10030202020202030000000010
+020202020A00000000000000000000000C02020202030000000010020202020202020202
+020202000000000000130C100A1B0A100C0C1C0000000012010101010101010101010101
+01150000001501010101010101010101011D000000001E0000000E1C130E0E001E000000
+001E000000001E0000000012030202020300001002020202020A00000000000000000000
+000C020202020203000010020202020202020202020202020000000000001F0000001E1F
+0000001E1F00000000010101010101010101010101160000000000010101010101010101
+010120210000001E210000001E210000001E210000001E210000001E210000001E210E03
+020203100202020202020A00000000000000000000000C02020202020203100202020202
+0202020202020202020000000000001E000000211E000000211E00000000150101010101
+01010101010100000000000015010101010101010101011C1E000000211E000000211E00
+0000211E000000211E000000211E000000211E00000F0302020202020202020A00000000
+000000000000000C02020202020202020202020202020202020202020202000000000000
+1E000000001E000000001E00000000120101010101010101010101130000000000130101
+0101010101010101001E1F0000001E1F0000001E1F0000001E1F0000001E1F0000001E1F
+0000001E2100000E03020202020202020A00000000000000000000000C02020202020202
+0202020202020202020202020202020000000000001E1E0000001E1E000000211E000000
+000101010101010101010101160000000000160101010101010101011500211E00000021
+1E000000211E000000211E000000211E000000211E000000211E00000000030202020202
+02030E0E0E0E0E0E0E0E0E0E0E1002020202020202020202020202020202020202020202
+000000000000001E000000001E1F0000001E1F0000001501010101010101010101011500
+000012010101010101010101011200001E210000001E210000001E210000001E21000000
+1E210000001E210000001E21000000000302020202020202020202020202020202020202
+02020202020202020202020202020202020202020200000000000000211E000000211E00
+0000211E0000001201010101010101010101011500000015010101010101010101010000
+00211E000000211E000000211E000000211E000000211E000000211E000000211E000000
+000003020202020202020202020202020202020202020202020202020202020202020202
+02020202020200000000000000001E1F0000001E1F0000001E1F00000001010101010101
+01010101130000001301010101010101010115000000001E210000001E210000001E2100
+00001E210000001E210000001E210000001E210000000000030202020202020202020202
+020202020202020202020202020202020202020202020202020202000000000000000021
+1E000000211E000000211E00000015010101010101010101160000000000160101010101
+01010112000000001F1E0000001F1E0000001F1E0000001F1E0000001F1E0000001F1E00
+00001F1E00000000000E0202020202020202020202020202020202020202020202020202
+0202020202020202020202020000000000000000001E1F0000001E1F0000001E1F000012
+0101010101010101011200000000001201010101010101010000000000001E210000001E
+210000001E210000001E210000001E210000001E210000001E2100000000000C02020202
+020202020202020202020202020202020202020202020202020202020202020202000000
+000000000000212100000021210000002121000000010101010101010116000000000000
+001601010101010115000000000000211E000000211E000000211E000000211E00000021
+1E000000211E000000211E00000000000003020202020202020202020202020202020202
+020202020202020202020202020202020202000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000 Z
+; ; 16101 VM?
+T32RsrcBegin
+
+8
+/f [24 0 2 -61 26 0 ] 
+/f [24 61 true [1 0 0 1 -2 61 ]  0 0]
+[<0007fe
+001fff
+007fff
+00ffff
+00ffff
+01ffff
+01ffff
+03ff00
+03fc00
+03fc00
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+fffffc
+fffffc
+fffffc
+fffffc
+fffffc
+fffffc
+fffffc
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+03f800
+>
+ ]
+/TT22b00 AddT3T32Char
+
+9
+/a [46 0 3 -45 43 1 ] 
+/a [40 46 true [1 0 0 1 -3 45 ]  0 0]
+[<0001ffe000
+001ffffe00
+00ffffff80
+01ffffffc0
+07ffffffe0
+0ffffffff0
+0ffffffff8
+1ffe007ff8
+1ff0000ff8
+3fe00007fc
+3fc00003fc
+7f800003fc
+7f800001fc
+0f000001fc
+00000001fc
+00000001fc
+00000001fc
+00000007fc
+0000007ffc
+00003ffffc
+000ffffffc
+00fffffffc
+03fffffffc
+07fffffffc
+0ffffff9fc
+1fffff81fc
+3fffc001fc
+7ff00001fc
+7fc00001fc
+7f000001fc
+ff000001fc
+fe000003fc
+fe000003fc
+fe000007fc
+fe00000ffc
+ff00001ffc
+ff00003ffc
+7fc000fffc
+7ff007fffc
+3ffffffffc
+3ffffffdfe
+1ffffff9fe
+0ffffff0fe
+07ffffc0fe
+01ffff007f
+003ff00000
+>
+ ]
+/TT22b00 AddT3T32Char
+
+10
+/c [42 0 3 -45 41 1 ] 
+/c [38 46 true [1 0 0 1 -3 45 ]  0 0]
+[<0001ff8000
+000ffff000
+003ffffc00
+00fffffe00
+01ffffff00
+03ffffff80
+07ffffffc0
+0fff01ffe0
+1ffc003fe0
+1ff0001ff0
+3fe0000ff0
+3fc00007f0
+3f800007f8
+7f800003f8
+7f000003c0
+7f00000000
+7f00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+fe00000000
+7f000001e0
+7f000001fc
+7f000003fc
+7f800003f8
+3f800003f8
+3fc00007f8
+3fe0000ff0
+1ff0001ff0
+1ff8003fe0
+0fff01ffe0
+07ffffffc0
+03ffffff80
+01ffffff00
+00fffffe00
+003ffff800
+000ffff000
+0001ff0000
+>
+ ]
+/TT22b00 AddT3T32Char
+
+11
+/t [23 0 2 -59 23 1 ] 
+/t [21 60 true [1 0 0 1 -2 59 ]  0 0]
+[<001000
+003000
+00f000
+03f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+fffff0
+fffff0
+fffff0
+fffff0
+fffff0
+fffff0
+fffff0
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f000
+07f800
+07fc00
+07fff0
+03fff0
+03fff0
+01fff8
+01fff8
+007ff8
+001ff0
+>
+ ]
+/TT22b00 AddT3T32Char
+
+12
+/o [46 0 3 -45 43 1 ] 
+/o [40 46 true [1 0 0 1 -3 45 ]  0 0]
+[<0001ff8000
+000ffff000
+003ffffc00
+00ffffff00
+01ffffff80
+03ffffffc0
+07ffffffe0
+0fff00fff0
+0ffc003ff0
+1ff0000ff8
+3fe00007fc
+3fc00003fc
+3fc00003fc
+7f800001fe
+7f000000fe
+7f000000fe
+7f000000fe
+ff000000ff
+fe0000007f
+fe0000007f
+fe0000007f
+fe0000007f
+fe0000007f
+fe0000007f
+fe0000007f
+fe0000007f
+fe0000007f
+fe0000007f
+ff000000ff
+7f000000fe
+7f000000fe
+7f000000fe
+7f800001fe
+3fc00003fc
+3fc00003fc
+3fe00007fc
+1ff0000ff8
+0ffc003ff8
+0fff00fff0
+07ffffffe0
+03ffffffc0
+01ffffff80
+00ffffff00
+003ffffc00
+000ffff000
+0001ff8000
+>
+ ]
+/TT22b00 AddT3T32Char
+T32RsrcEnd
+1440 876 M <01>S 
+1500 876 M <02>S  1547 876 M <08>S  1570 876 M <09>S  1616 876 M <0A>S  1658 876 M <0B>S  1681 876 M <0C>S  1727 876 M <07>S  1755 876 M <06>S  1774 876 M <04>S  1820 876 M <05>S  
+LH
+(%%[Page: 1]%%) = 
+%%PageTrailer
+
+%%Trailer
+%%BoundingBox: 0 0 595 842
+%%DocumentNeededResources: 
+%%DocumentSuppliedResources: 
+%%+ procset Pscript_WinNT_ErrorHandler 5.0 0
+%%+ procset Pscript_FatalError 5.0 0
+%%+ procset Pscript_Win_Basic 5.0 0
+%%+ procset Pscript_Win_Utils_L1 5.0 0
+%%+ procset Pscript_Text 5.0 0
+%%+ procset Pscript_WinNT_Compat 5.0 0
+%%+ procset Pscript_T3Hdr 5.0 0
+%%+ procset Pscript_Win_Dib_L1 5.0 0
+Pscript_WinNT_Incr dup /terminate get exec
+%%Pages: 1
+(%%[LastPage]%%) = 
+%%EOF
+
