@@ -106,7 +106,7 @@ Ph.D.
 \align center
 
 \series bold
-SpIRIT: Smart Identification of Refactoring opportuniTIes
+SpIRIT: Smart Identification of Refactoring opportunITies
 \begin_inset Newline newline
 \end_inset
 
@@ -813,7 +813,7 @@ Another problem is that when tools are used to detect hot spots that should
 \begin_layout Standard
 The determination of the set of refactorings to be applied in order to solve
  a code smell is not trivial.
- This is because the refactoring to be applied depend on the code smell
+ This is because the refactoring to be applied depends on the code smell
  and the context in which the refactoring is applied.
  For example, in some scenarios the application of the refactoring proposed
  by the code smell is not possible.
@@ -1640,16 +1640,149 @@ Proposal
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Comment
+In order to performed a maintenance task, code refactorings 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fowler1999"
+
+\end_inset
+
+ must be applied to improve the internal structure of the source code without
+ altering the external behavior of it.
+ However, perform refactoring activities can be costly in time and money
+ for developers and customers respectively.
+ For this reason, the refactoring effort should be directed to restructure
+ only those code fragments that are critical for the systems.
+\end_layout
+
+\begin_layout Standard
+Along this line, in this Ph.
+ D.
+ thesis we propose the definition of a process that helps developers to
+ achieve the task of refactoring an object-oriented system in order to improve
+ its maintenance and evolvability.
+ 
+\color black
+We call this process SpIRIT: Smart Identification of Refactoring opportunITies.
+ The goal of Spirit is to assist the developer during the refactorization
+ process in order to simplify this task.
+ For this reason, the proposed approach assists the developer detecting
+ hot spots to be refactored, prioritizing them, making automatic analysis
+ of the costs and benefits of refactoring the hot spots and suggesting and
+ applying refactorings.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\color black
+Spirit intends to be a multi-language analysis tool, for this reason it
+ will be build using Moose
+\begin_inset Foot
 status open
 
 \begin_layout Plain Layout
-Aca tenemos que poner la hipotesis de la historia y otras hipotesis que
- haya
+
+\color black
+http://moosetechnology.org/
+\end_layout
+
+\end_inset
+
+ which is a platform for software analysis that allows the import of several
+ programming languages such as Smalltalk, Java or C++.
+\end_layout
+
+\begin_layout Standard
+
+\color black
+The Spirit process consists of a set of activities in which a system is
+ analyzed in order to find locations of the system that have potential architect
+ural or maintainability problems.
+ Then, owing to these hot spots need to be refactored but they importance
+ is not the same, Spirit will prioritize them because of they relevance.
+ When the developer choose a hot spot to be fixed, the process suggest a
+ set of refactorings that are suitable to it.
+ For each refactoring, Spirit will inform of the advantages and disadvantages
+ of their application.
+ Finally, the developer may choose to apply any of the listed refactorings.
+\end_layout
+
+\begin_layout Standard
+
+\color black
+In brief, in this 
+\color inherit
+Ph.
+ D.
+
+\color black
+ thesis we expect to contribute to the maintenance and evolution of systems
+ by proposing a refactoring process.
+ This process will help developers to achieve the task of refactoring an
+ object-oriented system by detecting an prioritizing hot spots to be refactored.
+ Also, the process suggest refactorings to be applied in the hot spots and
+ presents 
+\color inherit
+analysis of costs and benefits of applying each of them.
+\end_layout
+
+\begin_layout Standard
+In the next section the approach is described in detail.
+\end_layout
+
+\begin_layout Section
+
+\series bold
+Smart Identification of Refactoring Opportunities
+\end_layout
+
+\begin_layout Standard
+The Spirit process has as input an object-oriented system and it has as
+ output the same system refactored.
+ The goal is to identify and improve those fragments of code that difficult
+ the maintenance and evolution of the systems.
+\end_layout
+
+\begin_layout Standard
+The process has four steps (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:SPIRIT-process."
+
+\end_inset
+
+):
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/SpiritProcess.pdf
+	scale 70
+	BoundingBox 20bp 220bp 410bp 470bp
+	clip
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
-Multiplataforma, para eso usaremos Moose
+\begin_inset Caption
+
+\begin_layout Plain Layout
+SPIRIT process.
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:SPIRIT-process."
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -1657,8 +1790,163 @@ Multiplataforma, para eso usaremos Moose
 
 \end_layout
 
-\begin_layout Section
-Refactoring Patterns Recognition 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Identifying hot spots: several techniques are going to be used to identify
+ hot spots.
+ Some of then are code smells 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fowler1999"
+
+\end_inset
+
+, heuristics based on object-oriented metrics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lanza2001"
+
+\end_inset
+
+, anti-patterns to detect design violations 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wong2011"
+
+\end_inset
+
+, and test profiling 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bergel2012"
+
+\end_inset
+
+.
+ These techniques are going to search for different problems in the source
+ code.
+ Each of them must going to be associated with a set of refactorings to
+ fix it.
+ Depending on kind of the technique, the last version of the system or the
+ whole history of versions are going to be used to identify problems.
+ The use of the whole history of versions is useful to identify special
+ situations such as classes that have not been changed for a number of versions
+ or a class that grows more than certain percentage regarding it previous
+ version.
+ We also will experiment by identifying techniques that occurs together
+ in the history of a system.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Prioritizing hot spots: in order to determine the most critical hot spots
+ we propose an approach based on the rate of modification of the component
+ in time.
+ That is, the refactorizations will be proposed only on those components
+ which have suffered many changes over the life of the system.
+ The hypothesis of this idea is if a component had many changes during its
+ life is likely to continue having changes.
+ The benefits of this approach are twofold.
+ First, a more modifiable and maintainable system is obtained.
+ Second, the cost of refactoring is lower because only specific components
+ are restructured.
+ Also, we plan to provide other kind of techniques to determine the priority
+ of a hot spot such as the calculation of the quantitative ratio of improvement
+ in the quality of the source code after the refactorization of a hot spot.
+\end_layout
+
+\begin_layout Enumerate
+Suggesting refactorings: the refactorings to be suggested to the the developer
+ will be those associated with the hot spot under analysis.
+ However, owing to the refactoring to be applied depends on the context
+ of the hot spot, the suggestion of the refactorings will also be based
+ on the history of refactorings of the developer.
+ That is, the process keeps a record of the refactorings applied by the
+ developer and the circumstances in which those refactorings were applied.
+ In this way, we will achieve the identification of additional refactorings
+ to be applied in order to enable the application of the refactorings associated
+ with the hot spots.
+ Also, by mean of this technique the preferences of refactorization of a
+ developer are implicitly identified.
+\end_layout
+
+\begin_layout Enumerate
+Applying refactorings: The refactorings selected previously are applied
+ so that the hot spot under analysis is fixed.
+ The code refactorings are applied automatically by the process.
+ The developer’s intervention is eventually necessary for some decisions,
+ such as the choice of the name of a new method.
+ However, this step, as well all the refactoring process, must be supervised
+ by the developer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+Refactoring Patterns Recognition.
+ EXPLICAR EL PROCESO PASO A PASO.
+ POSIBLEMENTE CADA PASO AMERITE UNA SUBSECCION
+\end_layout
+
+\begin_layout Plain Layout
+Aca tenemos que poner la hipotesis de la historia y otras hipotesis que
+ haya
+\end_layout
+
+\begin_layout Plain Layout
+Tambien poner algo de profiling
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To validate our approach we will use different strategies:
+\end_layout
+
+\begin_layout Itemize
+Quantitative comparison
+\begin_inset space \quad{}
+\end_inset
+
+By means of this strategy we plan to create a branch of a system in order
+ to continue the development of it by using our approach (that is, refactorizing
+ a hot spot in the new version but not in the original).
+ At the same time, the development of the original version will continue.
+ Then, we will compare the new versions of the systems using different metrics.
+ 
+\end_layout
+
+\begin_layout Itemize
+Evaluation of other refactoring strategies
+\begin_inset space \quad{}
+\end_inset
+
+In this strategy we will compare the results of refactoring the same hot
+ spots using with different refactorings associated the the resolution of
+ a hot spot.
+ With this strategy we expect to analyze the improvements in the source
+ code by the use of different metrics.
+\end_layout
+
+\begin_layout Itemize
+Evaluation after refactoring
+\begin_inset space \quad{}
+\end_inset
+
+Through this evaluation the changes in a component after refactoring it
+ will be analyzed.
+ If a better separation of the functionality was achieved by mean of the
+ refactorization of a component, the changes in the component after refactoring
+ it should decrease.
 \end_layout
 
 \begin_layout Section
