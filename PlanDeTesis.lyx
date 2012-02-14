@@ -265,7 +265,7 @@ System Evolution
 
 \begin_layout Standard
 Once systems are developed and deployed, they will become progressively
- less useful owing to changes in the environment 
+ less useful due to changes in the environment 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Lehman1985"
@@ -273,15 +273,16 @@ key "Lehman1985"
 \end_inset
 
 .
- This behavior causes software aging 
+ The fact that a system becomes progressively less useful causes software
+ aging 
 \begin_inset CommandInset citation
 LatexCommand citep
 key "Parnas1994"
 
 \end_inset
 
- and the need to evolve the system to new requirements preserving the architectu
-re and simplicity of the software.
+ and the need to evolve the system to new requirements preserving the simplicity
+ and extensibility of the software.
  This situation was identified by Lehman 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -289,7 +290,7 @@ key "Lehman1985"
 
 \end_inset
 
- specifically by the following laws:
+ during the formulation of the following laws:
 \end_layout
 
 \begin_layout Itemize
@@ -299,12 +300,12 @@ Continuing Change: A system that is used in a real-world environment must
 
 \begin_layout Itemize
 Increasing Complexity: As a system is evolved, its complexity increases
- unless work is done to maintain or reduce it.
+ unless work is done to maintain or reduce such complexity.
 \end_layout
 
 \begin_layout Standard
 An inference from these laws is that software maintenance is necessary in
- order to avoid these problems and to simplify the evolution of systems.
+ order to avoid software aging and to simplify the evolution of systems.
  Software maintenance is defined as:
 \end_layout
 
@@ -322,7 +323,7 @@ key "IEEE1999-Std610-12"
 \end_layout
 
 \begin_layout Itemize
-The software product undergoes modification to code and associated documentation
+A software product undergoes modifications to code and associated documentation
  due to a problem or the need for improvement.
  The objective is to modify the existing software product while preserving
  its integrity 
@@ -367,7 +368,7 @@ Some research has shown that approximately 75% of maintenance falls into
  adaptive and perfective classes 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Lientz1980,Nosek"
+key "Lientz1980,Nosek,Pigoski1997"
 
 \end_inset
 
@@ -395,7 +396,7 @@ key "Demeyer2003"
 \end_inset
 
 : the original developers are not available, obsolete programming techniques
- or languages were used, large changes were applied without regard to the
+ or languages were used, large changes were applied disregarding to the
  original design, the documentation is incomplete or it does not exist,
  there are no test cases, etc.
  All of these problems make maintenance difficult and expensive.
@@ -412,18 +413,25 @@ key "Banker1993"
 \end_layout
 
 \begin_layout Standard
-For these reasons, in order to extend or adapt a legacy system, a reverse
- engineering application is used 
+For these reasons, in order to extend or adapt a legacy system, reverse
+ engineering techniques are generally used 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cross1992"
 
 \end_inset
 
-.
+ ( Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Addition-of-requirements"
+
+\end_inset
+
+).
  Reverse engineering is the process of analyzing a subject system to identify
- the system’s components and their interrelationships and create representations
- of the system in another form or at a higher level of abstraction.
+ the system’s components and their interrelationships and to create representati
+ons of the system in another form or at a higher level of abstraction.
  Once the system is understood, new requirements can be added to the system
  through re-engineering 
 \begin_inset CommandInset citation
@@ -436,14 +444,7 @@ key "Cross1992"
  Re-engineering is the examination and modification of a subject system
  to reconstitute it in a new form and the subsequent implementation of the
  new form.
- This process is illustrated in Figure 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:Addition-of-requirements"
-
-\end_inset
-
-.
+ 
 \begin_inset Float figure
 wide false
 sideways false
@@ -453,7 +454,7 @@ status collapsed
 \align center
 \begin_inset Graphics
 	filename images/ReverseEngineeringAndReengineering.eps
-	BoundingBox 25bp 595bp 375bp 827bp
+	BoundingBox 25bp 570bp 375bp 827bp
 	clip
 
 \end_inset
@@ -487,7 +488,7 @@ name "fig:Addition-of-requirements"
 
 \begin_layout Standard
 Incorporating requirements involves the addition of new source code and/or
- restructuring the existing code taking into account the maintainability
+ the restructuring of existing code, taking into account the maintainability
  and modularity of the resulting code.
  The technique known as refactoring 
 \begin_inset CommandInset citation
@@ -501,14 +502,13 @@ key "Fowler1999"
  that it does not alter the external behavior of the code yet improves its
  internal structure.
  This process allows the restructuration of the source code improving the
- time it takes and the effort needed to make future modifications of the
- system.
- Some benefits that are derived from the refactoring application are: reduction
+ effort needed to make future modifications of the system.
+ Some benefits that are derived from applying refactorings are: reduction
  of duplicate code, improvement of quality attributes such as the legibility
- of the code, maintenance, or reduction of coupling.
+ of the code, maintainability, conceptual integrity, or reduction of coupling.
  For these reasons, refactoring can be seen as a viable strategy to deal
  with software evolution.
- Furthermore, some methodologies of agile development, such as XP 
+ Furthermore, some agile development methodologies, such as XP 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Beck2004"
@@ -519,8 +519,7 @@ key "Beck2004"
 \end_layout
 
 \begin_layout Standard
-The activities for the refactoring application can be summed up as follows
- 
+The refactoring activities of the code are the following 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Mens2004"
@@ -535,7 +534,7 @@ Identify the code fragments where the system should be refactored.
 \end_layout
 
 \begin_layout Enumerate
-Determine which refactorings should be applied to the identified code fragments.
+Determine which refactorings should be applied to the code fragments.
 \end_layout
 
 \begin_layout Enumerate
@@ -556,12 +555,12 @@ Assess the effects of the refactoring on quality characteristics of the
 \end_layout
 
 \begin_layout Enumerate
-Maintain the consistency between the refactored code and the other software
- artifacts (e.g., documentation, requirements, tests).
+Maintain consistency between the refactored code and related software artifacts
+ (e.g., documentation, requirements, tests).
 \end_layout
 
 \begin_layout Standard
-With the goal of easily applying a refactoring, most of the current IDEs
+With the goal of easily applying refactorings, most of the current IDEs
  (e.g., Eclipse
 \begin_inset Foot
 status open
@@ -582,8 +581,8 @@ http://www.netbeans.org/
 
 \end_inset
 
-) include tools that support refactoring by allowing its application semi-automa
-tically.
+) include tools that support the semi-automatic application of specific
+ refactorings.
  These tools are useful because they increase productivity and reduce debugging
  and testing 
 \begin_inset CommandInset citation
@@ -595,6 +594,16 @@ key "OConnor2005"
 .
 \end_layout
 
+\begin_layout Standard
+In spite of the automation of these tools the developer must participate
+ actively in the process of refactoring.
+ Also, as most of the refactoring tools does not support the assessing of
+ the effects of applying a refactoring, the developer must apply a refactoring
+ in order to measure the effects.
+ If the effects are not as expected the developer should undo the changes
+ being this task time-consuming.
+\end_layout
+
 \begin_layout Section
 Improving Maintenance with Refactoring
 \end_layout
@@ -603,7 +612,17 @@ Improving Maintenance with Refactoring
 As mentioned above, the first activity of a refactoring process is the identific
 ation of the code fragments that should be refactorized in order to improve
  its evolvability.
- This activity is usually achieve by the use of code smells 
+ In this context, we call 
+\emph on
+hot spots
+\emph default
+ to these code fragments in which a problem was detected.
+ 
+\end_layout
+
+\begin_layout Standard
+The activity of identifying hot spots is usually achieved by means of code
+ smells 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Fowler1999"
@@ -613,13 +632,13 @@ key "Fowler1999"
 .
  Code smells are symptoms in the source code that usually allow the identificati
 on of a deeper problem.
- In this way, the code smells acts as an anti-pattern indicating code that
+ In this way, a code smell acts as an anti-pattern indicating code that
  should be improved.
- Some of the symptoms used by code smells are duplicated code, methods or
- classes too large, too many parameters, violations in the encapsulation
+ Some of the symptoms used by code smells are duplicated code, too large
+ methods or classes, long list of parameters, violations in the encapsulation
  of a class, etc.
- The most popular catalog of code smells is that proposed by Fowler and
- Beck 
+ A popular catalog of code smells is the one proposed by Fowler and Beck
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Fowler1999"
@@ -637,7 +656,7 @@ reference "tab:A-code-smell"
  For each code smell, there is an associated refactoring (or a group of
  them) to solve the problem.
  In order to help the developer to find code smells in systems, several
- tools have been presented such as PMD
+ tools such as PMD
 \begin_inset Foot
 status open
 
@@ -657,7 +676,7 @@ http://findbugs.sourceforge.net/
 
 \end_inset
 
-.
+ are available.
 \begin_inset Float table
 wide false
 sideways false
@@ -675,7 +694,7 @@ status collapsed
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Scope
 \end_layout
 
 \end_inset
@@ -770,28 +789,35 @@ name "tab:A-code-smell"
 \end_layout
 
 \begin_layout Standard
-Also, the use of object-oriented metrics 
+Also, object-oriented metrics 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Chidamber1994"
 
 \end_inset
 
- is useful to identify hot spots to be refactored.
- Through the use of this kind of metrics several problems can be spotted
- such as methods with high complexity or too many dependencies between classes.
+ are useful to identify hot spots to be refactored.
+ Through the use of this kind of metrics several problems such as methods
+ with high complexity or excessive dependencies between classes can be spotted.
 \end_layout
 
 \begin_layout Standard
-Nevertheless, the identification of code fragments that should be refactorized
- is still a problem.
- Many of the bad smell identified by the refactoring tools not always indicate
- a problem.
+Depending on the technique to identify the hot spots, they can been detected
+ by analyzing the last version of a system or the whole history of the system.
+ The latter, is specially useful to understand when and how the hot spot
+ was created.
+\end_layout
+
+\begin_layout Standard
+Nevertheless, the identification of code fragments that should be refactored
+ is still challenging.
+ Many of the hot spots identified by the refactoring tools do not always
+ indicate a problem, that is, they are false positives.
  For example, some long methods are not necessarily a design problem.
- Also, the way in which a code smell should be refactored is not always
- trivial.
- In some case several restructurings of the code are needed in order to
- ensure that the behavior of the code does not change 
+ Also, determining the way in which a hot spot should be refactored is not
+ always straightforward.
+ In some cases several code restructurings are needed in order to ensure
+ that the behavior of the code does not change 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Mens2004"
@@ -804,30 +830,59 @@ key "Mens2004"
 
 \begin_layout Standard
 Another problem is that when tools are used to detect hot spots that should
- be refactored, they usually find a large number of them.
+ be refactored, the tools usually find a large number of hot spots.
  So, the developer does not know with certainty which of them should have
- a higher priority because of they relevance.
- 
+ a high priority because of their relevance.
+ Regarding the priority of the components to be refactorized, some researchers
+ have suggested that those components of code that suffered many changes
+ in the past (specially the recent past), are more likely to be modified
+ in the future than those that were not modified 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mens2001"
+
+\end_inset
+
+.
+ However, few studies have been published following this hypothesis wit
+ the goal of prioritizing refactorings.
 \end_layout
 
 \begin_layout Standard
-The determination of the set of refactorings to be applied in order to solve
- a code smell is not trivial.
+Determining the set of refactorings to be applied in order to fix a hot
+ spot is not trivial.
  This is because the refactoring to be applied depends on the code smell
  and the context in which the refactoring is applied.
  For example, in some scenarios the application of the refactoring proposed
  by the code smell is not possible.
  So, an additional refactoring should be applied in order to enable the
  application of the proposed refactoring.
+ For example, several code smells can be fixed by applying 
+\emph on
+Move Method
+\emph default
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Fowler1999"
+
+\end_inset
+
+.
+ However, if the method to be moved uses an instance variable that it is
+ only used inside the method, the variable should be moved first using 
+\emph on
+Move Field
+\emph default
+.
 \end_layout
 
 \begin_layout Standard
-Finally, when a hot spot is found the developer does not know the costs
- and benefits of refactoring it.
- This analysis should be based in time to completion and a set of metrics
- to show the developer the possible improvements in the quality of the source
- code.
+When a hot spot is found it is difficult for the developer to asses the
+ pros and cons of refactoring it.
+ This analysis should be based in the effort required to apply the refactoring
+ and a set of metrics to show the developer the possible improvements in
+ the quality of the source code.
 \end_layout
 
 \begin_layout Standard
@@ -894,14 +949,18 @@ Related Work
 
 \begin_layout Standard
 In this section we review different approaches for analyzing the evolution
- of systems.
+ and maintenance of systems.
 \end_layout
 
 \begin_layout Standard
-Several approaches have been presented to analyze some aspects of the history
- of systems.
- Some of them try to discover bad smells in the source code in order to
- propose refactorings to remove them.
+Several approaches have been focused on the analyze of several aspects of
+ the history of systems.
+ Some of the approaches try to discover bad smells in the source code in
+ order to propose refactorings to remove those bad smells.
+ Other approaches have dealt with the use of software metrics to discover
+ potential design problems in the source code.
+ Additionally, some works use visualization techniques in order to identify
+ the changes during the evolution of a system.
  
 \end_layout
 
@@ -914,7 +973,7 @@ key "Chatzigeorgiou2010"
 \end_inset
 
  study the evolution of the bad smells of a system through its history.
- Specifically, they analyze the occurrence of three kind of bad smell initially
+ Specifically, they analyze the occurrence of three kind of bad smells initially
  presented by Fowler 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -923,9 +982,9 @@ key "Fowler1999"
 \end_inset
 
 .
- This study identified that most of the bad smells were create when new
- features are added to the systems.
- Also, it identified that most of them were not removed.
+ This study identified that most of the bad smells were created when new
+ features were added to the systems.
+ Also, it identified that most of the bad smells were not removed.
 \end_layout
 
 \begin_layout Standard
@@ -947,179 +1006,6 @@ key "Hayashi2006"
 \end_layout
 
 \begin_layout Standard
-Ratzinger et al.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Ratzinger2005"
-
-\end_inset
-
- extends the definition of bad smells to 
-\emph on
-change smells
-\emph default
- in order to identify possible classes of a system to be refactorized.
- This work proposes two change smells to identify coupling between classes.
- Specifically, one of them identifies the situation in which a main class
- of the systems is modified at the same time that other peripheral classes.
- The other smell identifies the situation in which a class only define access
- methods to its variables and other class implements features based on the
- first class.
- Once that a change smell is detected a Fowler's refactoring is proposed
- to be applied.
-\end_layout
-
-\begin_layout Standard
-Liu et al.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Liu2011"
-
-\end_inset
-
- analyze the relationships between a set of 11 bad smells with the goal
- of proposing an order of the refactorings to be applied when more than
- a bad smell was found in a fragment of code.
- The sequence of refactorings proposed is based on different criteria that
- allows a lower number of restructurings.
- However, it does not consider other factors, such as the severity of bad
- smells.
- Owing to the algorithm used to calculate the sequence of refactorings rely
- on a previous manual analysis of the dependencies between bad smell it
- is not possible to consider other bad smells in the sequences.
- 
-\begin_inset Note Comment
-status open
-
-\begin_layout Plain Layout
-We analyze the relationships among different kinds of bad smells and their
- influence on detection and resolution sequences.
- We identify the need to arrange detection and resolution sequences of different
- kinds of bad smells using a motivating example.
- We also recommend a resolution sequence for commonly occurring bad smells,
- and validate it on two nontrivial applications.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Tsantalis and Chatzigeorgiou 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Tsantalis2011"
-
-\end_inset
-
- follow the hypothesis that those fragments of code that were modified in
- the past are more likely to be modified in the future.
- Using this hypothesis the authors rank refactoring suggestions to solve
- bad smell.
- In this ranking, those refactorings whose target code was modified in the
- past will have the highest priority.
- To calculate the probability of change of a component the approach uses
- historical volatility models taken from the field of financial markets.
-\end_layout
-
-\begin_layout Standard
-Tsantalis and Chatzigeorgiou also present approaches to identify state-checking
- problems and the decomposition of large methods 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Tsantalis2010,Tsantalis2011a"
-
-\end_inset
-
-.
- In these approaches the proposed refactorings are ranked according the
- impact of the refactorings on the code (i.e.
- number of modified statements).
-\end_layout
-
-\begin_layout Standard
-Marinescu et al.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Marinescu2010"
-
-\end_inset
-
- presents a tool to detect design problems through the use of bad smells.
- For each design problem detected, the tool proposes a list of 
-\emph on
-refactorings tips
-\emph default
- to be applied.
-\end_layout
-
-\begin_layout Standard
-Macia et al.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Macia2012,Macia2012a"
-
-\end_inset
-
- analyze the impact of bad smells in the architectural design of systems.
- They found that, in 60% of cases, the removal of a bad smell helps the
- architecture, stopping its degradation.
- Also, they identify that some kind of bad smells negatively affects the
- evolution of systems.
- For this reason, they identification during early stages of the development
- of systems alleviate the architecture degradation process.
-\end_layout
-
-\begin_layout Standard
-Other approaches have dealt with the use of software metrics to discover
- potential design problems in the source code.
-\end_layout
-
-\begin_layout Standard
-Demeyer et al.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Demeyer2000"
-
-\end_inset
-
- propose an approach to identify which refactorings were applied during
- the history of a system.
- This work is based on heuristics that use different metrics such as the
- total number of lines of code of a method or the number of hierarchy relationsh
-ips of a class.
-\end_layout
-
-\begin_layout Standard
-Gîrba et al.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Girba2004"
-
-\end_inset
-
- present a technique to discover classes that should be refactorized.
- This work is based on the hypothesis that those classes that were modified
- more frequently in the past, are more likely to be modified in the future.
- For this reason, this work analyze each class of a version of a system
- using an algorithm that helps to determine the probability of change of
- the class in future versions.
- If the class is likely to change, then it is marked as candidate class
- to be refactored.
- To measure the change of a class between versions only the addition or
- deletion of methods is used.
- The paper does not cover the analysis of possible problems in the classes
- to be refactored or the suggestion of the refactorings that should be applied.
-\end_layout
-
-\begin_layout Standard
 Gîrba and Ducasse 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1130,9 +1016,8 @@ key "Girba2006"
  present a meta-model called Hismo to analyze the evolution of systems through
  their history.
  Hismo is constructed in a generic way (therefore, it can be used with any
- programming language) and it models evolution as a first class entity.
- The validation of this meta-model is conducted through it application to
- different case studies.
+ programming language) and it models evolution as a first-class entity.
+ The validation of this meta-model involves different case studies.
 \end_layout
 
 \begin_layout Standard
@@ -1152,6 +1037,194 @@ key "LinHui2010"
 \end_layout
 
 \begin_layout Standard
+Tsantalis and Chatzigeorgiou 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tsantalis2011"
+
+\end_inset
+
+ follow the hypothesis that those fragments of code that were modified in
+ the past are more likely to be modified in the future 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mens2001"
+
+\end_inset
+
+.
+ Using this hypothesis the authors rank refactoring suggestions to deal
+ with bad smells.
+ In this ranking, those refactorings whose target code was modified in the
+ past will have the highest priority.
+ To calculate the probability of change of a given component, the approach
+ uses historical volatility models taken from the field of financial markets.
+\end_layout
+
+\begin_layout Standard
+Tsantalis and Chatzigeorgiou also present approaches to identify state-checking
+ problems (the use of if clauses to decide the behavior of an object instead
+ of polymorphism) and the decomposition of large methods 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tsantalis2010,Tsantalis2011a"
+
+\end_inset
+
+.
+ In these approaches the proposed refactorings are ranked according to the
+ impact of the refactorings on the code (i.e.
+ number of modified statements).
+\end_layout
+
+\begin_layout Standard
+Marinescu et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Marinescu2010"
+
+\end_inset
+
+ present a tool to detect a set of bad smells such as God Class, and Feature
+ Envy.
+ For each bad smell detected, the tool proposes a list of 
+\emph on
+refactorings tips
+\emph default
+ to be applied.
+\end_layout
+
+\begin_layout Standard
+Macia et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Macia2012,Macia2012a"
+
+\end_inset
+
+ analyze the impact of bad smells in the architectural design of systems.
+ They found that, in 60% of cases, the removal of a bad smell helps the
+ architecture, stopping its degradation.
+ Also, they report that some kind of bad smells negatively affects the evolution
+ of systems.
+ For this reason, their identification during early development stages alleviate
+ the architecture degradation process.
+\end_layout
+
+\begin_layout Standard
+Demeyer et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Demeyer2000"
+
+\end_inset
+
+ propose an approach to identify which refactorings were applied during
+ the history of a system.
+ This work is based on heuristics that use different metrics such as the
+ total number of lines of code of a method or the number of hierarchy relationsh
+ips of a class.
+ This approach could be useful to understand the evolution of a system and
+ to identify which components had a high degree of modification.
+\end_layout
+
+\begin_layout Standard
+Ratzinger et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ratzinger2005"
+
+\end_inset
+
+ extends the definition of bad smells to 
+\emph on
+change smells
+\emph default
+ in order to identify possible classes of a system to be refactorized.
+ This work proposes two change smells to identify coupling between classes.
+ Specifically, one of them identifies the situation in which a main class
+ is modified at the same time that other peripheral classes.
+ The other smell identifies the situation in which a class only defines
+ access methods to its variables and other class implements features based
+ on the first class.
+ Once a change smell is detected, a Fowler's refactoring is proposed.
+ This work has identified an interesting relationship between the analysis
+ of dependencies and the identification of bad smells.
+\end_layout
+
+\begin_layout Standard
+Gîrba et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Girba2004"
+
+\end_inset
+
+ present a technique to discover classes that should be refactored.
+ As 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tsantalis2011"
+
+\end_inset
+
+, this work is based on the hypothesis that those classes that were modified
+ more frequently in the past, are more likely to be modified in the future.
+ For this reason, this work analyze each class of a version of a system
+ using an algorithm that determines the probability of change of the class
+ in future versions.
+ If the class is likely to change, then it is marked as candidate class
+ to be refactored.
+ To measure the change of a class between versions, only the addition or
+ deletion of methods are considered.
+ The paper does not cover the analysis of possible problems in the classes
+ to be refactored or the suggestion of the refactorings that should be applied.
+\end_layout
+
+\begin_layout Standard
+Liu et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2011"
+
+\end_inset
+
+ analyze the relationships between a set of 11 bad smells with the goal
+ of proposing an order of the refactorings to be applied.
+ The goal of the approach is obtain a lower number of restructurings than
+ the case in which the refactorings are applied in a random sequence.
+ The sequence of refactorings is based on how the refactorings affect the
+ source code.
+ However, the approach does not consider other factors, such as the severity
+ of bad smells.
+ Since the algorithm used to compute the sequence of refactorings relied
+ on a previous manual analysis of the dependencies between bad smell it
+ is not possible to consider other bad smells in the sequences.
+ 
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+We analyze the relationships among different kinds of bad smells and their
+ influence on detection and resolution sequences.
+ We identify the need to arrange detection and resolution sequences of different
+ kinds of bad smells using a motivating example.
+ We also recommend a resolution sequence for commonly occurring bad smells,
+ and validate it on two nontrivial applications.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Ratzinger et al.
  
 \begin_inset CommandInset citation
@@ -1160,29 +1233,14 @@ key "Ratzinger2007"
 
 \end_inset
 
- propose the use of data mining techniques to predict the refactorings applicati
-on during the history of a system.
- Several metrics are used in the identification such as size of a class,
+ propose the use of data mining techniques to predict refactorings based
+ on the history of a system.
+ Several metrics are used in the identification, such as size of a class,
  number of authors of a class, complexity, number of bugs, etc.
- Using these metrics the approach identify the refactorings that were applied
- in the past.
- After the training phase the approach predicts the number of refactorings
+ Using these metrics, the approach identifies the refactorings that were
+ applied in the past.
+ After a training phase, the approach can predict the number of refactorings
  that could be applied in a future version.
-\end_layout
-
-\begin_layout Standard
-Schofield et al.
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Schofield2006"
-
-\end_inset
-
- analyze the changes during the history of a system using heuristics.
- These heuristics are based on different metrics, analysis of return of
- inversions after an application of a refactorings, and differences of design
- between different versions.
 \end_layout
 
 \begin_layout Standard
@@ -1197,8 +1255,8 @@ key "Wong2011"
  propose an approach to detect violations in the modularity of components.
  This detection is achieved by identifying which components had evolved
  together during the history of a system.
- In these cases the authors have the assumption that the component must
- be very coupled and a violation to the modularity must exist.
+ In these cases, the authors assume that the components are very coupled
+ and a violation to the modularity must exist.
 \end_layout
 
 \begin_layout Standard
@@ -1225,11 +1283,6 @@ key "Xing2003"
 \end_layout
 
 \begin_layout Standard
-In order to identify the changes during the evolution of a system some approache
-s have presented 
-\end_layout
-
-\begin_layout Standard
 D'Ambros and Lanza 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -1237,8 +1290,8 @@ key "D'Ambros2009"
 
 \end_inset
 
- present visualizations to analyze the evolution of a system based on its
- different versions.
+ present visualization techniques to analyze the evolution of a system based
+ on its different versions.
  They present two groups of visualizations: 
 \emph on
 in the large
@@ -1251,25 +1304,35 @@ in the small
  The former focuses on identifying changes and different commits into a
  class.
  The latter focuses on finding bugs in the classes and also on analyzing
- the size and complexity of them.
+ the size and complexity of the bugs.
+ The same authors propose a visualization technique to calculate coupling
+ between modules, correlation between classes and complexity of classes
  
-\end_layout
-
-\begin_layout Standard
-D'Ambros and Lanza 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "D'Ambros2010"
 
 \end_inset
 
- propose an approach to analyze the evolution of systems using different
- kind of visualizations.
- The visualizations help to calculate coupling between modules, correlation
- between classes and complexity of classes.
+.
  An interesting feature of this work is that it focuses on the collaborative
  work during the maintenance of a system through the addition of annotations
  on the visualizations of the components.
+\end_layout
+
+\begin_layout Standard
+Schofield et al.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Schofield2006"
+
+\end_inset
+
+ analyze the changes during the history of a system using heuristics.
+ These heuristics are based on different metrics, analysis of return of
+ investment after applying a refactoring, and differences of code between
+ different versions.
 \end_layout
 
 \begin_layout Standard
@@ -1291,6 +1354,9 @@ key "Lanza2001"
  These categories are patterns found during the history and they are based
  on the size of the classes, the percentage of modification between versions,
  and the creation or deletion of classes.
+ While these patterns can help to identify several problems in the code,
+ the supervision of the developer is needed because a high percentage of
+ false positives.
  
 \end_layout
 
@@ -1305,9 +1371,9 @@ key "Pinzger2005"
 
  use Kiviat diagrams to analyze the trend of several metrics during the
  history of a system.
- The approach focuses on two kind of graphics: the fist one shows metrics
- for a module and the second one focuses on metrics related with the relationshi
-ps between the modules.
+ The approach focuses on two kind of graphics: the first one shows metrics
+ for a module and the second one focuses on metrics related to the relationships
+ between modules.
 \end_layout
 
 \begin_layout Standard
@@ -1321,10 +1387,10 @@ key "Voinea2005"
 
  present a technique to visualize the evolution of systems using line-oriented
  displays.
- The different views presented have the goal of showing the changes of a
- component during the versions of a system, indicating the developers that
- made changes, establishing correlations between changes, and displaying
- which components have a higher ratio of volatility.
+ The different views have the goal of showing the changes of a component
+ during the versions of a system, indicating the developers that made changes,
+ establishing correlations between changes, and displaying which components
+ have a high volatility ratio.
  
 \begin_inset Note Comment
 status collapsed
@@ -1604,20 +1670,27 @@ The most well-known critic of Sadie’s findings is … who argued / proposed
 \end_layout
 
 \begin_layout Standard
-Previous work has been limited to propose refactorings to those approaches
- that look for bad smells.
- The approaches that use software metrics usually only focus on discovering
- the problems but no solutions are proposed.
+As can be seen, the process of maintaining and evolving a system is a difficult
+ and complex task.
+ Also, it is a time-consuming task for developers and a costly one for customers.
+ From the analysis of previous work can be observed that they have been
+ limited to identify hot spots in the source code and to propose a set of
+ predetermined refactorings in order to fix the hot spots.
+ The approaches that use software metrics mostly focus on discovering the
+ problems but no solutions are proposed.
  Also, few researchers have worked on software metrics related to package
  or methods levels, instead, most of them are based on classes.
- Additionally, there is still a need for analyzing the relationship between
- methods, classes, and packages in order to discover design flaws.
+ Working with different levels of granularity could help to identify other
+ kind of problems in the source code.
+ For this reason, we think that there is still a need for analyzing the
+ relationship between methods, classes, and packages in order to discover
+ potential maintenance and evolution problems.
 \end_layout
 
 \begin_layout Standard
 A challenging issue is how to prioritize the refactorings to be proposed.
  We think that has been little discussion on the ranking of refactorings
- using several criteria and in the achievement of risk-benefit analysis
+ using several criteria and in the achievement of cost-benefit analysis
  of refactorings.
 \end_layout
 
@@ -1636,11 +1709,12 @@ It is evident that not all refactoring have the same importance or effect
 \end_layout
 
 \begin_layout Section
-Proposal
+The Thesis Proposal
 \end_layout
 
 \begin_layout Standard
-In order to performed a maintenance task, code refactorings 
+In order to performed a task to improved the maintenance and evolution of
+ a system code refactorings 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Fowler1999"
@@ -1649,35 +1723,60 @@ key "Fowler1999"
 
  must be applied to improve the internal structure of the source code without
  altering the external behavior of it.
- However, perform refactoring activities can be costly in time and money
- for developers and customers respectively.
- For this reason, the refactoring effort should be directed to restructure
- only those code fragments that are critical for the systems.
-\end_layout
-
-\begin_layout Standard
-Along this line, in this Ph.
- D.
- thesis we propose the definition of a process that helps developers to
- achieve the task of refactoring an object-oriented system in order to improve
- its maintenance and evolvability.
- 
-\color black
-We call this process SpIRIT: Smart Identification of Refactoring opportunITies.
- The goal of Spirit is to assist the developer during the refactorization
- process in order to simplify this task.
- For this reason, the proposed approach assists the developer detecting
- hot spots to be refactored, prioritizing them, making automatic analysis
- of the costs and benefits of refactoring the hot spots and suggesting and
- applying refactorings.
+ However, performing refactoring activities can be costly in time and money
+ for both developers and customers.
+ Additionally, when tools are used to identify possible hot spots to be
+ refactored, the tools usually return a large list of hot spots.
+ Due to the number of refactorings needed to fulfill with the fix of the
+ hot spots proposed by the tools, the refactoring process is a difficult
+ and time-consuming process for the developer.
+ For this reason, our hypothesis is that if the refactoring effort is directed
+ to restructure only those code fragments that are critical for the systems,
+ the maintenance and evolution of the system will increase without spending
+ a lot of valuable time restructuring the system.
+ The criticality of a component can be determined for different criteria
+ such as the ratio of modification of the component, or the values of code
+ metrics (e.g.
+ cyclomatic complexity, number of dependencies, etc.) after applying a refactorin
+g.
  
 \end_layout
 
 \begin_layout Standard
+Along this line, in this thesis we propose an approach that helps developers
+ to achieve the task of refactoring an object-oriented system in order to
+ improve its maintenance and evolvability.
+ 
+\color black
+We call this approach SpIRIT: Smart Identification of Refactoring opportunITies.
+ The goal of Spirit is to helps the developer during the refactorization
+ process in order to simplify this task by: (1) assisting the developer
+ detecting hot spots to be refactored, (2) prioritizing them, (3) making
+ automated analysis of the costs and benefits of refactoring the hot spots
+ and (4) suggesting and applying refactorings.
+ 
+\end_layout
+
+\begin_layout Standard
 
 \color black
-Spirit intends to be a multi-language analysis tool, for this reason it
- will be build using Moose
+The Spirit approach consists of a set of activities in which a system is
+ analyzed in order to find locations of the system that have potential evolution
+ary or maintainability problems.
+ Then, in order to reduce the number of hot spots to be refactored, Spirit
+ will prioritize them based on their relevance.
+ When the developer chooses a hot spot to be fixed, the process suggest
+ a set of refactorings that are suitable to it.
+ For each refactoring, Spirit will inform of the advantages and disadvantages
+ of their application.
+ Finally, the developer may choose to apply any of the listed refactorings.
+\end_layout
+
+\begin_layout Standard
+
+\color black
+The scope of Spirit intends to support different programing languages, for
+ this reason it will be build using Moose
 \begin_inset Foot
 status open
 
@@ -1696,52 +1795,35 @@ http://moosetechnology.org/
 \begin_layout Standard
 
 \color black
-The Spirit process consists of a set of activities in which a system is
- analyzed in order to find locations of the system that have potential architect
-ural or maintainability problems.
- Then, owing to these hot spots need to be refactored but they importance
- is not the same, Spirit will prioritize them because of they relevance.
- When the developer choose a hot spot to be fixed, the process suggest a
- set of refactorings that are suitable to it.
- For each refactoring, Spirit will inform of the advantages and disadvantages
- of their application.
- Finally, the developer may choose to apply any of the listed refactorings.
-\end_layout
-
-\begin_layout Standard
-
-\color black
-In brief, in this 
-\color inherit
-Ph.
- D.
-
-\color black
- thesis we expect to contribute to the maintenance and evolution of systems
- by proposing a refactoring process.
- This process will help developers to achieve the task of refactoring an
+In brief, in this thesis we expect to contribute to the maintenance and
+ evolution of systems by proposing a refactoring approach.
+ This approach will help developers to achieve the task of refactoring an
  object-oriented system by detecting an prioritizing hot spots to be refactored.
  Also, the process suggest refactorings to be applied in the hot spots and
  presents 
 \color inherit
 analysis of costs and benefits of applying each of them.
+ In this way, we expect to reduce the effort needed to refactor a system
+ by restructuring only those hot spots that are critical for a system.
 \end_layout
 
 \begin_layout Standard
 In the next section the approach is described in detail.
 \end_layout
 
-\begin_layout Section
+\begin_layout Subsection
 
 \series bold
 Smart Identification of Refactoring Opportunities
 \end_layout
 
 \begin_layout Standard
-The Spirit process has as input an object-oriented system and it has as
- output the same system refactored.
- The goal is to identify and improve those fragments of code that difficult
- the maintenance and evolution of the systems.
+The Spirit approach follows a refactoring process that takes as input an
+ object-oriented system and it produces as output the same system refactored.
+ The goal is to identify and improve those fragments of code that make it
+ difficult the maintenance and evolution of the systems.
+ In order to fulfill with the activities of the process, Spirit uses several
+ techniques such as artificial intelligence ones.
 \end_layout
 
 \begin_layout Standard
@@ -1775,7 +1857,7 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-SPIRIT process.
+The refactoring process.
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:SPIRIT-process."
@@ -1831,15 +1913,17 @@ key "Bergel2012"
  code.
  Each of them must going to be associated with a set of refactorings to
  fix it.
- Depending on kind of the technique, the last version of the system or the
+ Depending on the kind of technique, the last version of the system or the
  whole history of versions are going to be used to identify problems.
  The use of the whole history of versions is useful to identify special
  situations such as classes that have not been changed for a number of versions
  or a class that grows more than certain percentage regarding it previous
  version.
- We also will experiment by identifying techniques that occurs together
- in the history of a system.
- 
+ In contrast, the use of the last version of a system allow the identification
+ of problems such as code duplication, or high complexity.
+ We also will experiment by identifying patterns of hot spots that occurs
+ together in the history of a system.
+ Visualization will be helpful to accomplish this task.
 \end_layout
 
 \begin_layout Enumerate
@@ -1848,23 +1932,32 @@ Prioritizing hot spots: in order to determine the most critical hot spots
  in time.
  That is, the refactorizations will be proposed only on those components
  which have suffered many changes over the life of the system.
- The hypothesis of this idea is if a component had many changes during its
- life is likely to continue having changes.
+ The hypothesis behind this idea is that if a component had many changes
+ during its life is likely to continue having changes 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mens2001"
+
+\end_inset
+
+.
  The benefits of this approach are twofold.
  First, a more modifiable and maintainable system is obtained.
- Second, the cost of refactoring is lower because only specific components
- are restructured.
+ Second, the cost of refactoring is lower than refactoring all the hot spots
+ detected because only specific components are restructured.
  Also, we plan to provide other kind of techniques to determine the priority
- of a hot spot such as the calculation of the quantitative ratio of improvement
+ of a hot spot.
+ Specifically, we are going to make analysis of costs and benefits of applying
+ a refactoring such as the calculation of the quantitative ratio of improvement
  in the quality of the source code after the refactorization of a hot spot.
 \end_layout
 
 \begin_layout Enumerate
-Suggesting refactorings: the refactorings to be suggested to the the developer
+Suggesting refactorings: the refactorings to be suggested to the developer
  will be those associated with the hot spot under analysis.
- However, owing to the refactoring to be applied depends on the context
- of the hot spot, the suggestion of the refactorings will also be based
- on the history of refactorings of the developer.
+ However, since the refactoring to be applied depends on the context of
+ the hot spot, the suggestion of the refactorings will also be based on
+ the history of refactorings of the developer.
  That is, the process keeps a record of the refactorings applied by the
  developer and the circumstances in which those refactorings were applied.
  In this way, we will achieve the identification of additional refactorings
@@ -1872,6 +1965,11 @@ Suggesting refactorings: the refactorings to be suggested to the the developer
  with the hot spots.
  Also, by mean of this technique the preferences of refactorization of a
  developer are implicitly identified.
+ An additional advantage of keeping track of the refactorings applied for
+ a developer is that in this way the refactorings to be applied to fix a
+ hot spot can be inferred.
+ This is specially useful when the set of refactorings to fix a hot spot
+ are not predefined.
 \end_layout
 
 \begin_layout Enumerate
@@ -1908,8 +2006,20 @@ Tambien poner algo de profiling
 
 \end_layout
 
+\begin_layout Subsection
+Validation
+\end_layout
+
 \begin_layout Standard
-To validate our approach we will use different strategies:
+To validate our approach we will use different strategies which were used
+ by related works to evaluated their approaches 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Liu2011,Ratzinger2005,Tsantalis2010,Wong2011"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Itemize
@@ -1917,12 +2027,71 @@ Quantitative comparison
 \begin_inset space \quad{}
 \end_inset
 
-By means of this strategy we plan to create a branch of a system in order
- to continue the development of it by using our approach (that is, refactorizing
- a hot spot in the new version but not in the original).
- At the same time, the development of the original version will continue.
- Then, we will compare the new versions of the systems using different metrics.
+We plan to apply our approach in different systems.
+ Then, we will analyze the improvements of the systems by evaluating different
+ code metrics such as cyclomatic complexity and coupling between objects
  
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chidamber1994"
+
+\end_inset
+
+.
+ We also will analyze the performance of the component and refactorings
+ suggested by calculating the precision and recall values.
+\end_layout
+
+\begin_layout Itemize
+Laboratory experiment
+\begin_inset space \quad{}
+\end_inset
+
+Two group of developers will refactor a system.
+ Both will obtain a list of identified hot spots but only one group will
+ use our approach.
+ We will evaluate the benefits of our approach comparing the time spending
+ for each group in the refactorization and the quality of the resulting
+ code by mean of a set of metrics.
+\end_layout
+
+\begin_layout Itemize
+Evolution analysis
+\begin_inset space \quad{}
+\end_inset
+
+We will create a branch of a system in order to continue its development
+ by using our approach (that is, refactoring hot spots in the new version
+ but not in the original).
+ At the same time, the development of the original version will continue.
+ Then, we will compare the new versions of the systems by analyzing the
+ remaining hot spots and by evaluating different code metrics such as cyclomatic
+ complexity and coupling between objects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chidamber1994"
+
+\end_inset
+
+.
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Itemize
+We plan to create a branch of a system in order to continue its development
+ by using our approach (that is, refactoring hot spots in the new version
+ but not in the original).
+ At the same time, the development of the original version will continue.
+ Then, we will compare the new versions of the systems by analyzing the
+ remaining hot spots and by evaluating different code metrics such as cyclomatic
+ complexity and coupling between objects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Chidamber1994"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Itemize
@@ -1949,8 +2118,74 @@ Through this evaluation the changes in a component after refactoring it
  it should decrease.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-State of Development
+Current State
+\end_layout
+
+\begin_layout Standard
+Currently, the detection of several bad smells and anti-patterns based on
+ software metrics is under implementation.
+ Also, the first draft of the architecture of Spirit have been created.
+\end_layout
+
+\begin_layout Standard
+In order to identify those components which have suffered many changes over
+ the life of the system the Hismo
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+http://www.moosetechnology.org/docs/hismo
+\end_layout
+
+\end_inset
+
+ project is used.
+ Hismo is a meta-model for software evolution analysis that allows the compariso
+n of the different versions of a system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Girba2006"
+
+\end_inset
+
+.
+ In this way, the first experimentation with the models of different Java
+ and Smalltalk systems have been achieved.
+\end_layout
+
+\begin_layout Standard
+Regarding the algorithm to identify the refactorings to be applied to a
+ hot spot and possible additional restructurings, it was developed during
+ a previous work to migrate OO systems to aspect-oriented ones 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Vidal2010,Vidal2012"
+
+\end_inset
+
+.
+ The results obtained during the suggestion of refactoring for aspects makes
+ the algorithm promising for its application in this thesis.
+ This algorithm uses association rules and a Markov model to 
+\color black
+identify the refactoring to be applied and the proposition of additional
+ restructurings when they are necessary.
+ In this context, a database of refactorings is used which contains information
+ about the developer's interaction with the approach such as the context
+ in which a refactoring was applied.
+ Specifically, the association rules algorithm allows the generation of
+ rules for identifying and proposing refactorings for a given hot spot.
+ In addition, the Markov Model helps in the identification of additional
+ activities to the refactoring that must be performed.
+
+\color inherit
+ 
 \end_layout
 
 \begin_layout Section
@@ -1968,20 +2203,20 @@ Design and implementation of the Spirit user interface.
 \end_layout
 
 \begin_layout Itemize
-Design and implementation of the Spirit mechanisms to detect hotspots in
- the history to be refactored.
+Design and implementation of the Spirit mechanisms to detect hotspots to
+ be refactored.
  Time estimated: 4 months.
 \end_layout
 
 \begin_layout Itemize
 Design and implementation of the Spirit mechanisms to prioritize hotspots
- based on urgency.
+ based on the rate of modification of the component.
  Time estimated: 2 months.
 \end_layout
 
 \begin_layout Itemize
 Design and implementation of the Spirit mechanisms to rank refactorings
- to be applied to a hotspot based on risk-analysis.
+ to be applied to a hotspot based on cost-benefits analysis.
  Time estimated: 5 months.
 \end_layout
 
@@ -2001,13 +2236,12 @@ Analysis of the experimentation results.
 \end_layout
 
 \begin_layout Itemize
-Publication of results (done simultaneously with the others tasks).
+Publication of results (in parallel with previous tasks).
  
 \end_layout
 
 \begin_layout Itemize
-Redaction of a thesis report.
- Time estimated: 3 months.
+Writing of a thesis report (in parallel with previous tasks).
 \end_layout
 
 \begin_layout Standard
