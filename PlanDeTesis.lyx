@@ -290,7 +290,7 @@ key "Lehman1985"
 
 \end_inset
 
- during the formulation of the following laws:
+ with the formulation of the following laws:
 \end_layout
 
 \begin_layout Itemize
@@ -364,8 +364,8 @@ Preventive: prevention of future problems.
 \end_layout
 
 \begin_layout Standard
-Some research has shown that approximately 75% of maintenance falls into
- adaptive and perfective classes 
+Research has shown that approximately 75% of maintenance falls into adaptive
+ and perfective classes 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Lientz1980,Nosek,Pigoski1997"
@@ -388,21 +388,43 @@ key "Bennett2000"
 \begin_layout Standard
 In order to make changes in a system, it is necessary to understand it.
  This is hard to do because when a legacy system must be extended, adapted
- or restructured to obtain a more modular system some of the following problems
- may emerge 
+ or restructured to obtain a more modular system, some of the following
+ problems may emerge (among others) 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Demeyer2003"
 
 \end_inset
 
-: the original developers are not available, obsolete programming techniques
- or languages were used, large changes were applied disregarding to the
- original design, the documentation is incomplete or it does not exist,
- there are no test cases, etc.
- All of these problems make maintenance difficult and expensive.
+: 
+\end_layout
+
+\begin_layout Enumerate
+The original developers are not available.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Obsolete programming techniques or languages were used.
+\end_layout
+
+\begin_layout Enumerate
+Large changes were applied disregarding to the original design.
+\end_layout
+
+\begin_layout Enumerate
+The documentation is incomplete or it does not exist.
+\end_layout
+
+\begin_layout Enumerate
+There are no test cases.
+ 
+\end_layout
+
+\begin_layout Standard
+All these problems make maintenance difficult and expensive.
  Another attribute of the system that must be considered is its complexity.
- The more complex a system is, the more expensive it is to maintain 
+ The more complex a system is, the more expensive it is to maintain it 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Banker1993"
@@ -414,15 +436,19 @@ key "Banker1993"
 \end_layout
 
 \begin_layout Standard
-For these reasons, in order to extend, adapt or improve the code a legacy
- system, reverse engineering techniques are generally used 
+For these reasons, reverse engineering techniques are generally used on
+ legacy code 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Cross1992"
 
 \end_inset
 
- (Figure 
+.
+ Reverse engineering is the process of analyzing a subject system to identify
+ the system’s components and their interrelationships and to create representati
+ons of the system in another form or at a higher level of abstraction (Figure
+ 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Addition-of-requirements"
@@ -430,9 +456,6 @@ reference "fig:Addition-of-requirements"
 \end_inset
 
 ).
- Reverse engineering is the process of analyzing a subject system to identify
- the system’s components and their interrelationships and to create representati
-ons of the system in another form or at a higher level of abstraction.
  Once the system is understood, new requirements or restructurings can be
  added to the system through re-engineering 
 \begin_inset CommandInset citation
@@ -467,7 +490,14 @@ status collapsed
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Addition of requirements to a legacy system.
+Addition of requirements to a legacy system (Adapted from 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Demeyer2003"
+
+\end_inset
+
+).
 \begin_inset CommandInset label
 LatexCommand label
 name "fig:Addition-of-requirements"
@@ -498,11 +528,11 @@ key "Fowler1999"
 
 \end_inset
 
- is used in order to achieve this goal.
+ is used to achieve that goal.
  Refactoring is the process of changing a software system in such a way
- that it does not alter the external behavior of the code yet improves its
- internal structure.
- This process allows the restructuration of the source code improving the
+ it does not alter the external behavior of the code yet improves its internal
+ structure.
+ This process allows the restructuration of the source code, improving the
  effort needed to make future modifications of the system.
  Some benefits that are derived from applying refactorings are: reduction
  of duplicate code, improvement of quality attributes such as the legibility
@@ -520,7 +550,7 @@ key "Beck2004"
 \end_layout
 
 \begin_layout Standard
-The refactoring activities of the code are the following 
+The steps for performing the refactoring of the code are the following 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Mens2004"
@@ -582,10 +612,10 @@ http://www.netbeans.org/
 
 \end_inset
 
-) include tools that support the semi-automatic application of specific
+) include tools that support the semi-automated application of specific
  refactorings.
  These tools are useful because they increase productivity and reduce debugging
- and testing 
+ and testing efforts 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "OConnor2005"
@@ -598,10 +628,10 @@ key "OConnor2005"
 \begin_layout Standard
 In spite of the automation of these tools the developer must participate
  actively in the process of refactoring.
- Also, as most of the refactoring tools does not support the assessing of
- the effects of applying a refactoring, the developer must apply a refactoring
- in order to measure the effects.
- If the effects are not as expected the developer should undo the changes
+ Also, as most of the refactoring tools does not support the assessment
+ of the effects of applying a refactoring, the developer must apply a refactorin
+g in order to evaluate the effects.
+ If the effects are not as expected, the developer should undo the changes
  being this task time-consuming.
 \end_layout
 
@@ -611,8 +641,7 @@ Improving Maintenance with Refactoring
 
 \begin_layout Standard
 As mentioned above, the first activity of a refactoring process is the identific
-ation of the code fragments that should be refactorized in order to improve
- its evolvability.
+ation of the code fragments that should be refactorized.
  In this context, we call 
 \emph on
 hot spots
@@ -635,7 +664,7 @@ key "Fowler1999"
 on of a deeper problem.
  In this way, a code smell acts as an anti-pattern indicating code that
  should be improved.
- Some of the symptoms used by code smells are duplicated code, too large
+ Some of the symptoms used by code smells are duplicated code, very large
  methods or classes, long list of parameters, violations in the encapsulation
  of a class, etc.
  A popular catalog of code smells is the one proposed by Fowler and Beck
@@ -658,14 +687,11 @@ reference "tab:A-code-smell"
  them) to solve the problem.
  For example, the code smell Data Class identifies the situation in which
  a class contains data but not behavior.
- In this case, the refactoring suggested is to add behavior that belongs
+ In this case, the suggested refactoring is to add behavior that belongs
  to the class but that is implemented in other classes by using the Move
  Method refactoring.
-\end_layout
-
-\begin_layout Standard
-In order to help the developer to find code smells in systems, several tools
- such as PMD
+ In order to help the developer to find code smells in systems, several
+ tools such as PMD
 \begin_inset Foot
 status open
 
@@ -806,8 +832,8 @@ key "Chidamber1994"
 \end_inset
 
  are useful to identify hot spots to be refactored.
- Through the use of this kind of metrics several problems such as methods
- with high complexity or excessive dependencies between classes can be spotted.
+ Through this kind of metrics, several problems such as methods with high
+ complexity or excessive dependencies between classes can be spotted.
 \end_layout
 
 \begin_layout Standard
@@ -819,7 +845,7 @@ key "Lanza2006,Tsantalis2010"
 
 \end_inset
 
- or the whole history of the system 
+ or the history of the system 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Lanza2001,Ratzinger2007"
@@ -827,8 +853,8 @@ key "Lanza2001,Ratzinger2007"
 \end_inset
 
 .
- The latter, is specially useful to understand when and how a hot spot was
- created.
+ The latter is particularly useful to understand when and how a hot spot
+ was created.
 \end_layout
 
 \begin_layout Standard
@@ -840,7 +866,7 @@ Nevertheless, the identification of code fragments that should be refactored
  are not necessarily a design problem.
  Also, determining the way in which a hot spot should be refactored is not
  always straightforward.
- In some cases several code restructurings are needed in order to ensure
+ In some cases, several code refactorings are needed in order to ensure
  that the behavior of the code does not change 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -853,15 +879,15 @@ key "Mens2004"
 \end_layout
 
 \begin_layout Standard
-Another problem is that when tools are used to detect hot spots that should
- be refactored, the tools usually find a large number of hot spots.
+Another problem, when tools are used to detect hot spots, is that the tools
+ usually find a large number of hot spots.
  The refactoring of all the hot spots is a time and effort consuming task.
- Furthermore, the refactorization of a hot spot is not necessarily urgent.
- So, the developer does not know with certainty which of them should have
- a high priority because of their relevance.
+ Furthermore, the refactorization of some hot spots may not be urgent.
+ So, the developer does not know with certainty which ones should have a
+ high priority because of their relevance.
  Regarding the priority of the components to be refactorized, some researchers
  have suggested that those components of code that suffered many changes
- in the past (specially the recent past), are more likely to be modified
+ in the past (particularly the recent past), are more likely to be modified
  in the future than those that were not modified 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -870,19 +896,19 @@ key "Mens2001,Girba2004"
 \end_inset
 
 .
- However, few studies have been published following this hypothesis with
- the goal of prioritizing refactorings.
+ However, little work has been reported on using this assumption to deal
+ with the prioritization of refactorings.
 \end_layout
 
 \begin_layout Standard
 Determining the set of refactorings to be applied in order to fix a hot
  spot is not trivial.
- This is because the refactoring to be applied depends on the code smell
- and the context in which the refactoring is applied.
+ This is because the refactoring depends on the code smell and the context
+ in which the refactoring is applied.
  For example, in some scenarios the application of the refactoring proposed
  by the code smell is not possible.
- So, additional refactorings should be applied in order to enable the applicatio
-n of the proposed refactoring.
+ So, additional refactorings should be applied to enable the application
+ of the proposed refactoring.
  For example, several code smells can be fixed by applying 
 \emph on
 Move Method
@@ -896,7 +922,7 @@ key "Fowler1999"
 
 .
  However, if the method to be moved uses an instance variable that it is
- only used inside the method, the variable should be moved first using 
+ only used inside the method, the variable should be first moved using 
 \emph on
 Move Field
 \emph default
@@ -904,21 +930,26 @@ Move Field
 \end_layout
 
 \begin_layout Standard
-When a hot spot is found it is difficult for the developer to asses the
+When a hot spot is found, it is difficult for the developer to asses the
  pros and cons of refactoring it.
- This analysis should be based in the effort required to apply the refactoring
- and a set of metrics to show the developer the possible improvements in
- the quality of the source code.
+ This analysis should be based on the effort required to apply the refactoring
+ as well as on a set of metrics to show the developer the possible improvements
+ in the quality of the source code.
 \end_layout
 
 \begin_layout Standard
-For these reasons, 
+For the reasons above, 
 \color black
 we believe that it is desirable to have tools that provide better assistance
- to the developer during the refactoring process detecting hot spots, prioritizi
-ng them, making automatic analysis of
+ to the developer during the refactoring process.
+ The key tasks to include in this assistance are detecting hot spots, prioritizi
+ng them, making 
 \color inherit
- tradeoff and suggesting and applying refactorings.
+tradeoff
+\color black
+ analysis
+\color inherit
+ and suggesting and applying refactorings.
  
 \begin_inset Note Comment
 status collapsed
@@ -979,15 +1010,15 @@ In this section we review different approaches for analyzing the evolution
 \end_layout
 
 \begin_layout Standard
-Several approaches have been focused on the analyze of several aspects of
- the history of systems.
- Some of the approaches try to discover bad smells in the source code in
- order to propose refactorings to remove those bad smells.
+Several approaches have focused on the analysis of several aspects of the
+ history of systems.
+ Some approaches try to discover bad smells in the source code in order
+ to propose refactorings to remove those bad smells.
  Other approaches have dealt with the use of software metrics to discover
  potential design problems in the source code.
  Additionally, some works use visualization techniques in order to identify
  the changes during the evolution of a system.
- 
+ Some of these approaches are briefly describe next.
 \end_layout
 
 \begin_layout Standard
@@ -1133,6 +1164,9 @@ key "Lanza2006"
  that have to exceed a predetermine threshold.
  They also proposes the use of a visualization technique called Class Blueprint
  in order to complement the detection strategy.
+ In order to prioritize the disharmonies to be refactored, the authors propose
+ a naive approach in which the classes (or methods) that present a high
+ number of disharmonies should be refactored first.
 \end_layout
 
 \begin_layout Standard
@@ -1255,7 +1289,7 @@ key "Liu2011"
 
  analyze the relationships between a set of 11 bad smells with the goal
  of proposing an order of the refactorings to be applied.
- The goal of the approach is obtain a lower number of restructurings than
+ The goal of the approach is obtain a lower number of refactorings than
  the case in which the refactorings are applied in a random sequence.
  The sequence of refactorings is based on how the refactorings affect the
  source code.
@@ -1413,8 +1447,8 @@ key "Lanza2001"
  on the size of the classes, the percentage of modification between versions,
  and the creation or deletion of classes.
  While these patterns can help to identify several problems in the code,
- the supervision of the developer is needed because a high percentage of
- false positives.
+ the developer's supervision is needed because of a high percentage of false
+ positives.
  
 \end_layout
 
@@ -1728,10 +1762,11 @@ The most well-known critic of Sadie’s findings is … who argued / proposed
 \end_layout
 
 \begin_layout Standard
-As can be seen, the process of maintaining and evolving a system is a difficult
- and complex task.
- Also, it is a time-consuming task for developers and a costly one for customers.
- From the analysis of previous work can be observed that they have been
+As it can be seen, the process of maintaining and evolving a system is difficult
+ and complex.
+ Also, it is a time-consuming process for developers and a costly one for
+ customers.
+ From the analysis of previous work, we can observe that they have been
  limited to identify hot spots in the source code and to propose a set of
  predetermined refactorings in order to fix the hot spots.
  The approaches that use software metrics mostly focus on discovering the
@@ -1741,15 +1776,16 @@ As can be seen, the process of maintaining and evolving a system is a difficult
  Working with different levels of granularity could help to identify other
  kind of problems in the source code.
  For this reason, we think that there is still a need for analyzing the
- relationship between methods, classes, and packages in order to discover
+ relationships between methods, classes, and packages in order to discover
  potential maintenance and evolution problems.
 \end_layout
 
 \begin_layout Standard
-A challenging issue is how to prioritize the refactorings to be proposed.
- We think that has been little discussion on the ranking of refactorings
- using several criteria and in the achievement of cost-benefit analysis
- of refactorings.
+A challenging issue for refactoring tools is how to prioritize the refactorings
+ to be proposed to the developers.
+ We think that there is little discussion on the ranking of refactorings
+ according to several criteria and in the accomplishment of a cost-benefit
+ analysis of refactorings.
 \end_layout
 
 \begin_layout Standard
@@ -1767,7 +1803,7 @@ It is evident that not all refactoring have the same importance or effect
 \end_layout
 
 \begin_layout Section
-The Thesis Proposal
+The Thesis
 \end_layout
 
 \begin_layout Standard
@@ -1781,64 +1817,96 @@ key "Fowler1999"
 
  must be applied to improve the internal structure of the source code without
  altering the external behavior of it.
- However, performing refactoring activities can be costly in time and money
- for both developers and customers.
- Additionally, when tools are used to identify possible hot spots to be
- refactored, the tools usually return a large list of hot spots.
- Due to the number of refactorings needed to fulfill with the fix of the
- hot spots proposed by the tools, the refactoring process is a difficult
- and time-consuming process for the developer.
- For this reason, our hypothesis is that if the refactoring effort is directed
- to restructure only those code fragments that are critical for the systems,
- the maintenance and evolution of the system will increase without spending
- excessive time restructuring the system.
  
 \end_layout
 
 \begin_layout Standard
-Along this line, in this thesis we propose an approach that helps developers
- to achieve the task of refactoring an object-oriented system in order to
- improve its maintenance and evolvability.
+However, performing refactoring activities can be costly in time and money
+ for developers and customers respectively.
+ Furthermore, when existing tools are used to identify possible hot spots
+ to be refactored, the tools usually return a large list of hot spots.
+ Due to the large number of refactorings needed to fix all the hot spots,
+ the refactoring process is difficult and can consume valuable time.
+ In this context, our hypothesis is the following:
+\end_layout
+
+\begin_layout Quotation
+Focusing the refactoring effort on refactoring only those code fragments
+ that are critical for the system, the maintenance and evolution of the
+ system will increase without spending excessive time refactoring the system.
+\end_layout
+
+\begin_layout Standard
+In this thesis, we propose a semi-automated approach that helps developers
+ to achieve the refactoring of an object-oriented system in order to improve
+ its maintenance and evolvability.
  
 \color black
 We call this approach SpIRIT: Smart Identification of Refactoring opportunITies.
- The goal of SpIRIT is to help the developer during the refactorization
- process in order to simplify this task by: (1) assisting the developer
- detecting hot spots to be refactored, (2) prioritizing them, (3) making
- automated analysis of the costs and benefits of refactoring the hot spots
- and (4) suggesting and applying refactorings.
+ The goal of SpIRIT is to help the developer in concrete task, namely: 
+\end_layout
+
+\begin_layout Enumerate
+
+\color black
+Assisting the developer detecting hot spots to be refactored.
+\end_layout
+
+\begin_layout Enumerate
+
+\color black
+Prioritizing the hot spots.
+\end_layout
+
+\begin_layout Enumerate
+
+\color black
+Making automated analysis of the costs and benefits of refactoring the hot
+ spots
+\end_layout
+
+\begin_layout Enumerate
+
+\color black
+Suggesting and applying refactorings.
  
 \end_layout
 
 \begin_layout Standard
 
 \color black
-The SpIRIT approach consists of a set of activities in which a system is
- analyzed in order to find locations of the system that have potential evolution
-ary or maintainability problems.
- Then, in order to reduce the number of hot spots to be refactored, SpIRIT
- will prioritize them based on their relevance.
+We envision the use of the SpIRIT approach in the following scenario: a
+ developer that is working in a system only has one hour per week to refactor
+ the system.
+ If he/she has a large list of hot spots to be refactored, how he/she should
+ spend his/her time?.
+ That is, what will be the hot spots that should be prioritized to be refactored
+ due to the available time?.
+ In this way, the developer will use Spirit to (a) analyze the system to
+ find components (such as packages, classes or methods) that have potential
+ evolutionary or maintainability problems.
+ These components will be marked as hot spots by the approach; (b) then,
+ the hot spots will be ranked by SpIRIT based on their relevance.
  
 \color inherit
-The relevance of a component can be determined for different criteria such
- as the ratio of modification of the component, or the values of code metrics
- (e.g.
+The relevance of a hot spot can be determined by different criteria such
+ as the ratio of modification of the component affected by the hot spot,
+ or the values of code metrics (e.g.
  cyclomatic complexity, number of dependencies, etc.) after applying a refactorin
-g.
-
+g
 \color black
- When the developer chooses a hot spot to be fixed, the process suggest
+; (c) when the developer chooses a hot spot to be fixed, the approach suggest
  a set of refactorings that are suitable to it.
  For each refactoring, SpIRIT will inform of the advantages and disadvantages
- of their application.
- Finally, the developer may choose to apply any of the listed refactorings.
+ of their application; (d) the developer will choose to apply any of the
+ listed refactorings.
 \end_layout
 
 \begin_layout Standard
 
 \color black
-The scope of SpIRIT intends to support different programing languages, for
- this reason it will be build using Moose
+The scope of SpIRIT intends to support different programing languages.
+ For this reason, it will be build using Moose
 \begin_inset Foot
 status open
 
@@ -1850,27 +1918,40 @@ http://moosetechnology.org/
 
 \end_inset
 
- which is a platform for software analysis that allows the import of several
- programming languages such as Smalltalk, Java or C++.
+, which is a platform for software analysis that is independent of any programmi
+ng languages supporting languages such as Smalltalk, Java or C++.
+\end_layout
+
+\begin_layout Standard
+For the purpose of supporting the proposed refactoring approach, a tool
+ is under construction.
+ This tool is based on Moose.
 \end_layout
 
 \begin_layout Standard
 
 \color black
-In brief, in this thesis we expect to contribute to the maintenance and
- evolution of systems by proposing a refactoring approach.
- This approach will help developers to achieve the task of refactoring an
- object-oriented system by detecting an prioritizing hot spots to be refactored.
- Also, the process suggest refactorings to be applied in the hot spots and
- presents 
+In brief, in this thesis we will make the following contributions: First,
+ prioritization criteria based on the modification of the history and 
 \color inherit
-analysis of costs and benefits of applying each of them.
- In this way, we expect to reduce the effort needed to refactor a system
- by restructuring only those hot spots that are critical for a system.
+costs and benefits
+\color black
+ analysis; Second, application of artificial intelligence techniques to
+ suggests the refactorings to be applied to fix a hot spot; Third, a semi-automa
+ted tool that allows the assistance of the developer integrating the previous
+ contributions.
+ 
+\color inherit
+In this way, we expect to
+\color black
+ 
+\color inherit
+reduce the effort needed to refactor a system by restructuring only those
+ hot spots that are critical for a system.
 \end_layout
 
 \begin_layout Standard
-In the next section the approach is described in detail.
+In the next section, we provide more details about the approach.
 \end_layout
 
 \begin_layout Subsection
@@ -1888,7 +1969,7 @@ SpIRIT
  system and it produces as output the same system refactored.
  The goal is to identify and improve those fragments of code that make it
  difficult the maintenance and evolution of the systems.
- As was aforementioned, we call hot spots to these fragments of code.
+ As we mentioned before, we call hot spots to these fragments of code.
  In order to fulfill with the activities of the process, 
 \color black
 SpIRIT
@@ -1898,7 +1979,7 @@ SpIRIT
 \end_layout
 
 \begin_layout Standard
-The process has four steps (Figure 
+The process has four main steps (Figure 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:SPIRIT-process."
@@ -1949,24 +2030,22 @@ name "fig:SPIRIT-process."
 \end_layout
 
 \begin_layout Enumerate
-Identifying hot spots: in this step is accomplished the identification of
- the code fragments that should be refactorized in order to improve the
- maintenance and evolution of the system.
+Identifying hot spots: In this step, the identification of the code fragments
+ that should be refactorized is accomplished.
 \end_layout
 
 \begin_layout Enumerate
-Prioritizing hot spots: due to the priority of refactoring a hot spot or
- another is not the same, the identified hot spots should be ranked by different
- criteria.
+Prioritizing hot spots: Since not all the hot spots are according equally
+ important, the identified hot spots should be ranked to different criteria.
 \end_layout
 
 \begin_layout Enumerate
-Suggesting refactorings: a set of refactorings are suggested to the developer
- to be applied to the hot spot.
+Suggesting refactorings: Once a hot spot is chosen, a set of refactorings
+ are suggested to the developer to be applied to that hot spot.
 \end_layout
 
 \begin_layout Enumerate
-Applying refactorings: the refactorings selected previously are applied
+Applying refactorings: The refactorings selected previously are applied
  so that the hot spot under analysis is fixed.
  
 \end_layout
@@ -1980,7 +2059,7 @@ Identifying Hot Spots
 \end_layout
 
 \begin_layout Standard
-Several techniques are going to be used to identify hot spots.
+Several techniques will be used to identify hot spots.
  Some of then are code smells 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2010,21 +2089,28 @@ key "Bergel2012"
 \end_inset
 
 .
- These techniques are going to search for different problems in the source
+ These techniques essentially search for different problems in the source
  code.
- Each of them must going to be associated with a set of refactorings to
- fix it.
- Depending on the kind of technique, the last version of the system or the
- whole history of versions are going to be used to identify problems.
- The use of the whole history of versions is useful to identify special
- situations such as classes that have not been changed for a number of versions
- or a class that grows more than certain percentage regarding it previous
- version.
- In contrast, the use of the last version of a system allow the identification
- of problems such as code duplication, or high complexity.
+ Each problem will be associated to a set of refactorings to fix it.
+ Depending on the kind of technique, the latest version of the system or
+ the history of versions can be used to identify problems.
+ The use of the history of versions is useful to identify special situations
+ such as classes that did not change for a number of versions or a class
+ that grew more than certain percentage regarding it previous version.
+ In contrast, the use of the latest version of a system allows the identificatio
+n of problems such as code duplication, or high complexity.
  We also will experiment by identifying patterns of hot spots that occurs
- together in the history of a system.
- Visualization will be helpful to accomplish this task.
+ together in the history of a system in order to detect relationships between
+ the hot spots.
+ Visualization will be helpful to accomplish this task in order to localize
+ potential structural design problems 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lanza2006"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -2033,14 +2119,14 @@ Prioritizing Hot Spots
 
 \begin_layout Standard
 In order to determine the most critical hot spots we propose the use of
- two strategies:
+ three strategies:
 \end_layout
 
 \begin_layout Enumerate
 The first strategy is based on the rate of modification of the component
  in time.
  That is, the refactorizations will be proposed only on those components
- which have suffered many changes over the life of the system.
+ which suffered many changes over the life of the system.
  The hypothesis behind this idea is that if a component had many changes
  during its life is likely to continue having changes 
 \begin_inset CommandInset citation
@@ -2050,22 +2136,58 @@ key "Mens2001"
 \end_inset
 
 .
- The benefits of this strategy are twofold.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Enumerate
+The benefits of this strategy are twofold.
  First, a more modifiable and maintainable system is obtained.
  Second, the cost of refactoring is lower than refactoring all the hot spots
- detected because only specific components are restructured.
+ detected because only specific components are refactored.
  
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
-The second strategy is based on the analysis of costs and benefits of applying
+The goal of the second strategy is to identify the tendency of modification
+ of a component.
+ To accomplish this goal financial technical analysis indicators such as
+ moving average trends 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Murphy1999"
+
+\end_inset
+
+ will be used.
+ The hypothesis of this strategy is that if the trend of a component is
+ bullish it means that the component is likely to continue having changes.
+\end_layout
+
+\begin_layout Enumerate
+The third strategy is based on the analysis of costs and benefits of applying
  a refactoring.
- That is, we plan to use several metrics such as the calculation of the
- quantitative ratio of improvement in the quality of the source code after
- the refactorization of a hot spot or the calculation of the effort needed
- to apply a refactoring.
- The goal of calculating these metrics is to create tradeoff analysis of
- the application of a refactoring (or a group of them).
+ That is, we plan to use a set of metrics to calculate the improvement and
+ the effort needed to apply a set of refactoring.
+ 
+\begin_inset Note Comment
+status open
+
+\begin_layout Enumerate
+such as the calculation of the quantitative ratio of improvement in the
+ quality of the source code after the refactorization of a hot spot or the
+ calculation of the effort needed to apply a refactoring.
+\end_layout
+
+\end_inset
+
+ The goal of computing these metrics is to have a tradeoff analysis of the
+ application of a refactoring (or a group of them).
 \end_layout
 
 \begin_layout Subsubsection
@@ -2085,10 +2207,20 @@ The refactorings to be suggested to the developer will be those associated
  with the hot spots.
  Also, by mean of this technique the preferences of refactorization of a
  developer are implicitly identified.
- An additional advantage of keeping track of the refactorings applied for
- a developer is that in this way the refactorings to be applied to fix a
- hot spot can be inferred.
- This is specially useful when the set of refactorings to fix a hot spot
+ 
+\end_layout
+
+\begin_layout Standard
+An additional advantage of keeping track of the refactorings applied for
+ a developer is that the refactorings to be applied to fix a hot spot can
+ be inferred.
+ For example, consider the case in which the refactorings to be applied
+ to fix a hot spot could not be determined by the approach.
+ If the developer apply a set of refactoring, they will be saved in the
+ history of refactorings.
+ For this reason, they could be proposed the next time in which a similar
+ hot spot should be refactored.
+ This is particularly useful when the set of refactorings to fix a hot spot
  are not predefined.
  This step will be accomplished by using a technique based on association
  rules 
@@ -2106,10 +2238,9 @@ key "Rabiner1989"
 \end_inset
 
 .
- We think that this is an appropriate approach because of the fact that
- these kind of techniques help to learn developers' habits, preferences
- and interests to provide them personalized assistance with the tasks they
- perform with software applications 
+ We think that these techniques are appropriated because they help to learn
+ developers' habits, preferences and interests, and provide them personalized
+ assistance with the tasks they perform with software applications 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Lieberman1997,Hsu1999"
@@ -2117,6 +2248,24 @@ key "Lieberman1997,Hsu1999"
 \end_inset
 
 .
+ In fact, we had evidence from previous work that the use of these techniques
+ are helpful in the context of system refactorization 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Vidal2012,Vidal2011a"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Finally, as was mentioned before, a tradeoff analysis of the application
+ of a set refactorings will be performed to rank hot spots.
+ For this reason, this same strategy would be useful to suggest refactorings
+ that have better benefits that others.
+ 
 \end_layout
 
 \begin_layout Subsubsection
@@ -2124,15 +2273,44 @@ Applying Refactorings
 \end_layout
 
 \begin_layout Standard
-As was said, in this step the refactorings selected previously are refactored
- in order to fix a hot spot.
- The code refactorings are applied automatically by the process.
- The developer’s intervention is eventually necessary for some decisions,
- such as the choice of the name of a new method.
- However, this step, as well all the refactoring process, must be supervised
+In this step, the refactorings selected previously are refactored in order
+ to fix a hot spot.
+ The code refactorings are applied automatically by the approach.
+ The developer’s intervention can be necessary for some decisions, such
+ as the choice of the name of a new method.
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+However, this step, as well all the refactoring process, must be supervised
  by the developer.
- In order to fulfill with this step, the existing IDE refactoring tools
- will be used.
+\end_layout
+
+\end_inset
+
+ In order to fulfill this step, existing refactoring tools presented by
+ different programing IDEs will be used (e.g.
+ Eclipse
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.eclipse.org/
+\end_layout
+
+\end_inset
+
+, Pharo
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://pharo-project.org/
+\end_layout
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Subsection
@@ -2156,18 +2334,43 @@ Quantitative comparison
 \begin_inset space \quad{}
 \end_inset
 
-We plan to apply our approach in different systems.
- Then, we will analyze the improvements of the systems by evaluating different
- code metrics such as cyclomatic complexity and coupling between objects
- 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Chidamber1994"
+The objective of this evaluation is the analysis of the performance of the
+ approach.
+ We plan to apply our approach in different systems that we used in previous
+ case studies such as Mondrian
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.moosetechnology.org/tools/mondrian
+\end_layout
+
+\end_inset
+
+, JHotDraw
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://www.jhotdraw.org/
+\end_layout
+
+\end_inset
+
+, or Filezilla
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+http://filezilla-project.org/
+\end_layout
 
 \end_inset
 
 .
- We also will analyze the performance of the component and refactorings
+ Then, we will analyze the improvements of the systems by evaluating a set
+ of metrics.
+ We also will analyze the performance of the hot spots ranked and refactorings
  suggested by calculating the precision and recall values.
 \end_layout
 
@@ -2176,12 +2379,16 @@ Laboratory experiment
 \begin_inset space \quad{}
 \end_inset
 
-Two group of developers will refactor a system.
- Both will obtain a list of identified hot spots but only one group will
- use our approach.
- We will evaluate the benefits of our approach comparing the time spending
- for each group in the refactorization and the quality of the resulting
- code by mean of a set of metrics.
+The goal of this evaluation is the determination of how the approach affects
+ the refactoring process.
+ Two groups of developers will refactor a given system.
+ Both group will obtain from us a list of identified hot spots.
+ The first group will be asked to fix the hot spots using our approach.
+ The second group will accomplish the same task manually.
+ Both group will have a maximum time of one hour to accomplish the task.
+ We will evaluate the benefits of our approach comparing the time spent
+ by each group in the refactorization and the quality of the resulting code
+ by mean of a set of metrics.
 \end_layout
 
 \begin_layout Itemize
@@ -2189,20 +2396,15 @@ Evolution analysis
 \begin_inset space \quad{}
 \end_inset
 
-We will create a branch of a system in order to continue its development
- by using our approach (that is, refactoring hot spots in the new version
- but not in the original).
+The goal of this evaluation is determine if the application of the approach
+ makes simpler the system evolution of the system when new requirements
+ are added in the future.
+ We will create a branch of a given system in order to continue its development
+ with the support of our approach (that is, refactoring hot spots in the
+ new version but not in the original one).
  At the same time, the development of the original version will continue.
  Then, we will compare the new versions of the systems by analyzing the
- remaining hot spots and by evaluating different code metrics such as cyclomatic
- complexity and coupling between objects 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Chidamber1994"
-
-\end_inset
-
-.
+ remaining hot spots and by evaluating a set of metrics.
 \begin_inset Note Comment
 status collapsed
 
@@ -2253,7 +2455,7 @@ Through this evaluation the changes in a component after refactoring it
 \end_layout
 
 \begin_layout Section
-Current State
+Current State and Next Steps
 \end_layout
 
 \begin_layout Standard
@@ -2263,7 +2465,7 @@ Currently, the detection of several bad smells and anti-patterns based on
 \color black
 SpIRIT
 \color inherit
- have been created.
+ has been created.
 \end_layout
 
 \begin_layout Standard
@@ -2288,17 +2490,17 @@ key "Girba2006"
 \end_inset
 
 .
- In this way, the first experimentation with the models of different Java
- and Smalltalk systems have been achieved.
+ In this way, initial experiments with the models of different Java and
+ Smalltalk systems have been achieved.
 \end_layout
 
 \begin_layout Standard
 Regarding the algorithm to identify the refactorings to be applied to a
- hot spot and possible additional restructurings, it was developed and was
- tested in the context of migrating OO systems to aspect-oriented ones 
+ hot spot and possible additional restructurings, we developed and tested
+ it in the context of migrating OO systems to aspect-oriented ones 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Vidal2010,Vidal2012"
+key "Vidal2010,Vidal2012,Vidal2011a"
 
 \end_inset
 
@@ -2312,8 +2514,8 @@ identify the refactoring to be applied and the proposition of additional
  In this context, a database of refactorings is used which contains information
  about the developer's interaction with the approach such as the context
  in which a refactoring was applied.
- Specifically, the association rules algorithm allows the generation of
- rules for identifying and proposing refactorings for a given hot spot.
+ Specifically, the association rules algorithm allow the generation of rules
+ for identifying and proposing refactorings for a given hot spot.
  In addition, the Markov Model helps in the identification of additional
  activities to the refactoring that must be performed.
 
@@ -2321,13 +2523,9 @@ identify the refactoring to be applied and the proposition of additional
  
 \end_layout
 
-\begin_layout Section
-Task Schedule
-\end_layout
-
 \begin_layout Standard
-In this section we describe the activities that must be accomplished in
- order to finish the proposed approach:
+The activities that must be accomplished in order to finish the proposed
+ approach are listed below:
 \end_layout
 
 \begin_layout Itemize
@@ -2336,7 +2534,7 @@ Design and implementation of the
 SpIRIT
 \color inherit
  user interface.
- Time estimated: 2 months.
+ Estimated time: 2 months.
 \end_layout
 
 \begin_layout Itemize
@@ -2345,7 +2543,7 @@ Analysis and implementation of the
 SpIRIT
 \color inherit
  mechanisms to detect hotspots to be refactored.
- Time estimated: 4 months.
+ Estimated time: 4 months.
 \end_layout
 
 \begin_layout Itemize
@@ -2354,8 +2552,8 @@ Analysis and implementation of the
 SpIRIT
 \color inherit
  mechanisms to prioritize hotspots based on the rate of modification of
- the component.
- Time estimated: 2 months.
+ the component and cost-benefits analysis.
+ Estimated time: 5 months.
 \end_layout
 
 \begin_layout Itemize
@@ -2363,24 +2561,26 @@ Analysis and implementation of the
 \color black
 SpIRIT
 \color inherit
- mechanisms to rank refactorings to be applied to a hotspot based on cost-benefi
-ts analysis.
- Time estimated: 5 months.
+ mechanisms to suggest refactorings to be applied to a hotspot based on
+ artificial intelligence techniques.
+ Estimated time: 4 months.
 \end_layout
 
 \begin_layout Itemize
 Implementation of strategies to visualize hotspots in the history.
- Time estimated: 2 months.
+ Estimated time: 3 months.
 \end_layout
 
 \begin_layout Itemize
-Experimentation with systems to evaluate and validate the approach.
- Time estimated: 3 months.
+Experimentation with case studies to evaluate and validate the approach.
+ According to the feedback obtained from the case studies, the necessary
+ changes will be made in the tool and the techniques.
+ Estimated time: 4 months.
 \end_layout
 
 \begin_layout Itemize
 Analysis of the experimentation results.
- Time estimated: 1 month.
+ Estimated time: 2 month.
 \end_layout
 
 \begin_layout Itemize
